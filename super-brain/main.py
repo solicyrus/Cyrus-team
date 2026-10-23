@@ -8,15 +8,14 @@ import uvicorn
 import threading
 from config import config
 from core.brain import SuperBrain
-from core.robot_manager import RobotManager
 from core.task_scheduler import SmartScheduler
-from robots.sample_robots import SAMPLE_ROBOTS
+from robots.real_robots import RealRobotManager, register_all_real_robots
 from api import server
 
 async def main_loop():
     # 1. بیدار کردن مغز
     brain = SuperBrain()
-    manager = RobotManager(brain)
+    manager = RealRobotManager(brain)  # real execution (subclass; core untouched)
     scheduler = SmartScheduler()
 
     # اتصال به API
@@ -30,15 +29,18 @@ async def main_loop():
     print(f"📡 API: http://localhost:{config.API_PORT}/docs")
     print(f"{'='*50}\n")
 
-    # 2. ثبت ربات های نمونه (شما ربات های خودت رو جایگزین کن)
-    for r in SAMPLE_ROBOTS:
-        manager.register_robot(r["name"], r["type"], r["capabilities"])
+    # 2. ثبت ربات های واقعی (نمونه های شبیه سازی شده بازنشسته شدن)
+    register_all_real_robots(manager)
 
-    # 3. اضافه کردن چند کار نمونه
-    scheduler.add_task("تمیز کردن سالن اصلی", "cleaning", priority=6, duration=4)
-    scheduler.add_task("بررسی دوربین های امنیتی", "security", priority=9, duration=2)
-    scheduler.add_task("تحویل بسته به انبار", "delivery", priority=7, duration=3)
-    scheduler.add_task("تحلیل داده های امروز", "data_analysis", priority=5, duration=5)
+    # 3. چند کار واقعی نمونه
+    scheduler.add_task("چک سلامت سایت اصلی", "web_check", priority=8,
+                       payload={"url": "https://victoriatourandadventure.com"})
+    scheduler.add_task("چک سلامت اپ", "web_check", priority=8,
+                       payload={"url": "https://app.victoriatourandadventure.com"})
+    scheduler.add_task("قیمت لحظه ای بازار", "market_data", priority=6,
+                       payload={"symbols": ["BTC-USD", "ETH-USD", "CAD=X"]})
+    scheduler.add_task("جستجوی وب نمونه", "web_search", priority=5,
+                       payload={"query": "Victoria BC tourism"})
 
     # 4. اجرای خودکار کارها
     while scheduler.queue:
