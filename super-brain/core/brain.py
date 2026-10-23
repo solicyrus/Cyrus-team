@@ -6,6 +6,7 @@ import psutil
 from datetime import datetime
 from typing import Dict, List
 from config import config
+from .llm import ask_decision
 
 class SuperBrain:
     """مغز مرکزی سوپر هوشمند"""
@@ -31,19 +32,39 @@ class SuperBrain:
             json.dump(self.memory, f, ensure_ascii=False, indent=2)
 
     async def think(self, context: dict) -> dict:
-        """تفکر و تصمیم گیری هوشمند"""
-        # 1. تحلیل وضعیت
+        """تفکر و تصمیم گیری هوشمند — اول AI واقعی، اگر نشد قوانین داخلی.
+
+        Every subordinate robot decides through this method (via
+        RobotManager.assign_task), so wiring AI here gives the WHOLE team
+        real thinking with one change.
+        """
+        # 1. تحلیل وضعیت سیستم
         system_health = self._check_system_health()
-        # 2. اولویت بندی
-        priority = self._calculate_priority(context)
-        # 3. تصمیم گیری
+
+        # 2. اول AI واقعی (در ترد جدا تا حلقه async قفل نشه)
+        ai_decision, ai_used = await asyncio.to_thread(
+            ask_decision, context, system_health)
+
+        if ai_used and ai_decision:
+            priority = ai_decision["priority"]
+            action = ai_decision["action"]
+            reasoning = ai_decision["reasoning"]
+        else:
+            # 3. fallback قوانین داخلی (بدون کلید API هم کار می‌کنه)
+            priority = self._calculate_priority(context)
+            action = self._decide_action(context, priority, system_health)
+            reasoning = (f"با توجه به اولویت {priority} و سلامت سیستم "
+                         f"{system_health['cpu']}%, بهترین اقدام انتخاب شد.")
+
+        # 4. ثبت تصمیم
         decision = {
             "timestamp": datetime.now().isoformat(),
             "context": context,
             "system_health": system_health,
             "priority": priority,
-            "action": self._decide_action(context, priority, system_health),
-            "reasoning": f"با توجه به اولویت {priority} و سلامت سیستم {system_health['cpu']}%, بهترین اقدام انتخاب شد."
+            "action": action,
+            "reasoning": reasoning,
+            "ai_used": ai_used,
         }
         self.decision_log.append(decision)
         self.memory["experiences"].append(decision)
