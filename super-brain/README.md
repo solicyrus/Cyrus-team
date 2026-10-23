@@ -19,3 +19,15 @@ python main.py
 ```
 
 API: http://localhost:8000/docs
+
+## 🧠 AI Thinking (wired 2026-10-22)
+The brain thinks with a real LLM first (`core/llm.py`, gpt-4o-mini):
+every robot's task goes through `SuperBrain.think()`, so the WHOLE team
+gets AI decisions automatically — priority, action and Persian reasoning.
+If no `OPENAI_API_KEY` is set (or the API fails), it falls back to the
+built-in rule logic. Set the key in your environment:
+```bash
+export OPENAI_API_KEY="sk-..."
+python main.py
+```
+Cost: ~200 tokens/decision (~$0.001 on gpt-4o-mini).
