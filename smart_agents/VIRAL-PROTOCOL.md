@@ -113,6 +113,12 @@ stays real-footage; the prompts never pretend to be media.
 
 ## 4. THE STRICT QA GATE — THE 4 QUESTIONS (QA — The Strict QA)
 
+> **Status under Forever Protocol v2 (§8): ADVISORY
+> SCORING.** These four questions are still answered and
+> recorded, and their hook judgement is load-bearing
+> evidence for v2 gate Q2 — but the pass/fail gate is now
+> the FIVE questions of §8 Law 4.
+
 Before any package can be finalised, QA answers these four
 questions LITERALLY, each with pass/fail + a stated reason,
 recorded on the queue entry:
@@ -191,6 +197,73 @@ effective 2026-10-27, on these exact terms:
 | 09:15 | QA gate (fact-scan + critic + 4-question viral checklist + media QA) | Strict QA |
 | 09:30 | Draft ready in the approval queue for Cyrus's review | Pipeline |
 | — | Publish ONLY after Cyrus approves (approval gate unchanged) | Developer |
+
+## 8. FOREVER PROTOCOL v2 (LOCKED — Cyrus, 2026-10-27)
+
+**v2 supersedes the v1 zero-waste QA list.** Everything the
+team does is governed by the four laws below. Born from
+Critical Failure #001 (see `ERROR-LOG.md`): a Las Vegas video
+rendered over orca-whale footage passed every gate because
+footage selection was topic-blind and QA never looked at the
+picture. This section is locked; it overrides any conflicting
+habit elsewhere in this document.
+
+**LAW 1 — Visual-Script Alignment 100%.** The script's
+keywords (place / topic / objects) must have a direct,
+undeniable link to the selected footage. Absolute ban on
+off-topic imagery: city / Vegas / restaurant / tech scripts
+get NO nature, animals, or generic scenes. The pre-render
+metadata filter runs before any API credit is spent.
+
+**LAW 2 — Viral Mechanics.** The 4-beat retention formula
+(§2): 0–3 Hook, 3–15 Tension, 15–25 Climax (the best feature
+/ secret spot), 25–30 Narrative Loop. Clip repetition is
+forbidden; the loop is verbal only.
+
+**LAW 3 — Real & Cinematic Quality.** Real footage only,
+1080×1920 vertical, cinematic angles. Synthetic, blurry, or
+cheap-looking footage is banned. Stock picks must be
+natively sharp at vertical 1080×1920 or cleanly croppable
+(no meaningful upscale) — enforced at selection in the
+developer (native-resolution crop factor ≤ 1.05), and again
+by the vision tier at QA.
+
+**LAW 4 — The ZERO-WASTE QA GATE: FIVE questions.** QA
+answers each in text; ALL must be YES or the video is
+REJECTED (the §4 viral checklist continues as advisory
+scoring only):
+Q1 — Does the recorded image match the narrator's text 100%?
+(Every sampled frame on-topic; the measured voice↔scene sync
+offsets — real cut points vs per-beat voice boundaries,
+tolerance ±0.75s — are recorded as evidence under this
+answer.)
+Q2 — Does the 3-second hook have thumb-stopping power?
+Q3 — Is the footage real, clear, and free of ugly effects?
+Q4 — Are the narrator voice and sound effects clean and
+cinematic? (Measured: peak/RMS levels, longest mid-video
+silence, speech present in every beat.)
+Q5 — Is the closing verbal loop executed smoothly?
+A gate that cannot run also rejects — **no untested
+delivery, ever.**
+
+**Supporting machinery (unchanged from v1, still binding):**
+- *Pre-render order — cheap first, credit last:* (a) the
+  FREE metadata gate (content-class contradiction = STOP with
+  zero further spend, logged); (b) vision verification of the
+  surviving clips; (c) only then, the render. Footage is
+  sourced per topic by the script's direct keywords from real
+  stock sources — never filled from a topic-blind bank. If
+  topic-matched footage cannot cover the video, the package
+  STOPS and reports honestly.
+- *Beat-synced rendering:* the render is assembled on the
+  voice — each beat's WAV is fitted to its formula window,
+  scene cuts land on the beat boundaries, and the plan +
+  measured boundaries are recorded on the package as Q1
+  evidence.
+- *Error logging:* every STOP and rejection from these gates
+  is appended to `smart_agents/ERROR-LOG.md` by the agents
+  themselves. Failures are memory, not embarrassment: they
+  are written down the day they happen.
 
 ## 7. RUNTIME STANDARD — INTERPRETER (added 2026-10-27)
 
