@@ -22,9 +22,12 @@ keys live only in a local `.env` / Actions secrets at activation.
 
 ## Protocol 1 — secure key configuration
 
-`.env.example` (verbatim; every name below was audited against the
-actual `os.environ` reads in the code — nothing missing, nothing
-invented):
+`.env.example` (verbatim; every name the code reads via
+`os.environ` is present — audited name by name. PIPER_BIN /
+PIPER_MODEL / CYRUS_FOOTAGE_DIR are optional config the Director
+reads; IMAGE_PUBLIC_URL is reserved for the Instagram activation
+step — the Developer currently receives public image/video URLs
+per queue entry):
 
 ```
 # Cyrus Team — credential NAMES only. Copy to .env (never commit
