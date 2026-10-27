@@ -1,0 +1,2345 @@
+[
+  {
+    "id": "2388058d",
+    "idea": {
+      "hook": "Is This the Ultimate Grand Canyon Road Trip?",
+      "title": "Ultimate Grand Canyon Road Trip Guide",
+      "angle": "Explore the best stops and hidden gems on a Grand Canyon road trip to make the most of your adventure.",
+      "topic": "travel",
+      "source_urls": [
+        "https://www.mygrandcanyonpark.com/category/road-trips/road-trip-itineraries/",
+        "https://www.earthtrekkers.com/10-day-itinerary-american-southwest-hiking-road-trip/"
+      ]
+    },
+    "script": {
+      "hook": "Ready for the ultimate Grand Canyon road trip?",
+      "title": "Ultimate Grand Canyon Road Trip Guide",
+      "script": "Imagine cruising along open roads, the horizon painted with red rock formations. Discover hidden gems like the vibrant Antelope Canyon and the serene Horseshoe Bend. Feel the thrill at every stop. This isn't just a drive, it's an adventure. Make your trip unforgettable with Cyrus AI's expert planning. Start your journey today.",
+      "on_screen_text": "Grand Canyon Road Trip, Hidden Gems, Antelope Canyon, Horseshoe Bend, Adventure Awaits",
+      "caption": "Explore the Grand Canyon like never before. Adventure awaits!",
+      "description": "Embark on the ultimate Grand Canyon road trip and uncover its hidden treasures. From the breathtaking vistas of Antelope Canyon to the awe-inspiring Horseshoe Bend, each stop is a new adventure waiting to be explored. Plan your unforgettable journey with Cyrus AI and make the most of every moment. Start planning today with Cyrus AI Tour Guide on Google Play. For more travel inspiration, follow us on our channels: youtube: Cyrus AI — https://www.youtube.com/@CyrusAIGuide, facebook: Cyrus Outdoors — https://www.facebook.com/cyrus.soli, whatsapp: Cyrus Team — https://whatsapp.com/channel/0029VbDkc9g6WaKg0owHJE3B, telegram: Cyrus Team Bot — https://t.me/Cyrus_team_bot, telegram_channel: Cyrus AI — https://t.me/CyrusAIGuide, website: Victoria Tour and Adventure — https://victoriatourandadventure.com, app: Cyrus AI Tour Guide (Google Play) — https://play.google.com/store/apps/details?id=com.victoriatourandadventure.app",
+      "hashtags": [
+        "GrandCanyon",
+        "RoadTrip",
+        "TravelGuide",
+        "Adventure",
+        "HiddenGems",
+        "Explore",
+        "CyrusAI",
+        "TravelPlanning",
+        "NatureLovers"
+      ]
+    },
+    "image_prompt": "A stunning road trip scene through the Grand Canyon, featuring a winding open road with a classic car cruising past majestic red rock formations under a bright blue sky. In the foreground, vibrant Antelope Canyon's swirling sandstone walls are visible, while in the background, the iconic Horseshoe Bend curves gracefully along the Colorado River. The composition captures the thrill of adventure with vibrant natural light illuminating the landscape, creating a photorealistic and cinematic atmosphere, designed for vertical display.",
+    "video_prompt": {
+      "scenes": [
+        {
+          "scene": 1,
+          "duration_s": 10,
+          "prompt": "Aerial shot of open road with red rock formations in the background, camera slowly zooming out, golden hour light, adventurous mood."
+        },
+        {
+          "scene": 2,
+          "duration_s": 10,
+          "prompt": "Close-up of vibrant Antelope Canyon's swirling sandstone walls, camera gliding smoothly through the narrow passage, warm light filtering in, awe-inspiring mood."
+        },
+        {
+          "scene": 3,
+          "duration_s": 10,
+          "prompt": "Wide shot of Horseshoe Bend with the Colorado River, camera panning across the landscape, bright daylight, serene and breathtaking mood."
+        }
+      ],
+      "style": "vibrant and adventurous"
+    },
+    "image": null,
+    "video_path": "/home/hatch/workspace/cyrus-team/work/2388058d/video.mp4",
+    "channels": [
+      "telegram"
+    ],
+    "created_at": "2026-10-27T17:27:24.585914",
+    "status": "published",
+    "render": {
+      "ok": true,
+      "path": "/home/hatch/workspace/cyrus-team/work/2388058d/video.mp4",
+      "duration_s": 30.0,
+      "planned_s": 30.0,
+      "width": 1080,
+      "height": 1920,
+      "has_audio": true
+    },
+    "voice": {
+      "ok": true,
+      "path": "/home/hatch/workspace/cyrus-team/work/2388058d/voice.wav",
+      "duration_s": 23.86267573696145,
+      "model": "en_US-amy-medium.onnx"
+    },
+    "qa_verdict": {
+      "passed": true,
+      "reasons": [],
+      "warnings": [
+        "critic score: 7.0/10 — Strong hook and clear call to action, but lacks a unique ending decision."
+      ],
+      "critic_score": 7.0,
+      "media_facts": {
+        "exists": true,
+        "readable": true,
+        "duration_s": 30.0,
+        "width": 1080,
+        "height": 1920,
+        "has_audio": true,
+        "has_video": true,
+        "error": null
+      }
+    },
+    "approved_by": "manual",
+    "approved_at": "2026-10-27T17:56:32.588837",
+    "results": {
+      "telegram": {
+        "ok": true,
+        "message_id": 12,
+        "chat_id": "-1004341440981"
+      }
+    },
+    "published_at": "2026-10-27T17:57:07.343200"
+  },
+  {
+    "id": "0a947b1d",
+    "idea": {
+      "hook": "7 Days, 1 Epic Grand Canyon Journey!",
+      "title": "One Week Grand Canyon Road Trip Itinerary",
+      "angle": "Discover how to spend an unforgettable week exploring the Grand Canyon and its surroundings.",
+      "topic": "travel",
+      "source_urls": [
+        "https://www.shakaguide.com/article/grand-canyon/grand-canyon-road-trip-7-day-itinerary"
+      ]
+    },
+    "script": {
+      "hook": "7 Days, One Epic Grand Canyon Adventure Awaits!",
+      "title": "One Week Grand Canyon Road Trip Itinerary",
+      "script": "Discover the Grand Canyon like never before! Start your journey with breathtaking sunrise views at the South Rim. Explore hidden trails and secret spots only locals know. Capture stunning photos of the canyon's vibrant hues. Dive into history at the Grand Canyon Village. Experience the thrill of rafting on the Colorado River. End your days with unforgettable sunsets. Ready for an epic week? Start planning now!",
+      "on_screen_text": "7 Days of Adventure, South Rim Sunrise, Hidden Trails, Capture Stunning Photos, Dive into History, Raft the Colorado River, Unforgettable Sunsets",
+      "caption": "Embark on a 7-day journey through the Grand Canyon. Are you ready?",
+      "description": "Uncover the wonders of the Grand Canyon with our 7-day itinerary! From sunrise vistas to thrilling river rafting, make every moment count. Plan your epic adventure today with Cyrus AI. For more travel inspiration, visit our channels: youtube: Cyrus AI — https://www.youtube.com/@CyrusAIGuide, facebook: Cyrus Outdoors — https://www.facebook.com/cyrus.soli, whatsapp: Cyrus Team — https://whatsapp.com/channel/0029VbDkc9g6WaKg0owHJE3B, telegram: Cyrus Team Bot — https://t.me/Cyrus_team_bot, telegram_channel: Cyrus AI — https://t.me/CyrusAIGuide, website: Victoria Tour and Adventure — https://victoriatourandadventure.com, app: Cyrus AI Tour Guide (Google Play) — https://play.google.com/store/apps/details?id=com.victoriatourandadventure.app",
+      "hashtags": [
+        "GrandCanyon",
+        "RoadTrip",
+        "AdventureTravel",
+        "CanyonViews",
+        "TravelItinerary",
+        "ExploreNature",
+        "Wanderlust",
+        "EpicJourneys",
+        "TravelGuide",
+        "CyrusAI"
+      ]
+    },
+    "image_prompt": "A breathtaking sunrise illuminating the South Rim of the Grand Canyon, showcasing vibrant hues of orange, pink, and gold reflecting off the canyon walls. In the foreground, a hidden trail winding through lush vegetation, leading to a secret viewpoint with a panoramic view of the canyon. A group of adventurous travelers capturing the moment with their cameras, while in the distance, the Colorado River flows, with rafts navigating the rapids. The scene is bathed in vibrant natural light, emphasizing the grandeur and beauty of the landscape, with a vertical-friendly composition that draws the viewer into the adventure. No text or words inside the image.",
+    "video_prompt": {
+      "scenes": [
+        {
+          "scene": 1,
+          "duration_s": 10,
+          "prompt": "Subject: Sunrise at the South Rim; Setting: Grand Canyon South Rim with vibrant sky colors; Camera Movement: Slow pan across the canyon; Light: Soft, warm sunrise light; Mood: Awe-inspiring and tranquil."
+        },
+        {
+          "scene": 2,
+          "duration_s": 10,
+          "prompt": "Subject: Hidden trails and secret spots; Setting: Lesser-known trails with lush vegetation; Camera Movement: Steady handheld shots following a hiker; Light: Natural daylight filtering through trees; Mood: Adventurous and intimate."
+        },
+        {
+          "scene": 3,
+          "duration_s": 10,
+          "prompt": "Subject: Rafting on the Colorado River; Setting: Thrilling rapids with canyon walls in the background; Camera Movement: Dynamic tracking shot alongside the raft; Light: Bright daylight; Mood: Exciting and exhilarating."
+        }
+      ],
+      "style": "Vibrant and immersive travel documentary"
+    },
+    "image": null,
+    "video_path": "/home/hatch/workspace/cyrus-team/work/0a947b1d/video.mp4",
+    "channels": [
+      "telegram"
+    ],
+    "created_at": "2026-10-27T17:30:10.251090",
+    "status": "published",
+    "render": {
+      "ok": true,
+      "path": "/home/hatch/workspace/cyrus-team/work/0a947b1d/video.mp4",
+      "duration_s": 30.0,
+      "planned_s": 30.0,
+      "width": 1080,
+      "height": 1920,
+      "has_audio": true
+    },
+    "voice": {
+      "ok": true,
+      "path": "/home/hatch/workspace/cyrus-team/work/0a947b1d/voice.wav",
+      "duration_s": 29.35047619047619,
+      "model": "en_US-amy-medium.onnx"
+    },
+    "qa_verdict": {
+      "passed": true,
+      "reasons": [],
+      "warnings": [
+        "critic score: 7.0/10 — Strong hook and clear itinerary, but lacks a decisive call to action at the end."
+      ],
+      "critic_score": 7.0,
+      "media_facts": {
+        "exists": true,
+        "readable": true,
+        "duration_s": 30.0,
+        "width": 1080,
+        "height": 1920,
+        "has_audio": true,
+        "has_video": true,
+        "error": null
+      }
+    },
+    "approved_by": "manual",
+    "approved_at": "2026-10-27T17:56:32.704703",
+    "results": {
+      "telegram": {
+        "ok": true,
+        "message_id": 13,
+        "chat_id": "-1004341440981"
+      }
+    },
+    "published_at": "2026-10-27T17:57:18.624526"
+  },
+  {
+    "id": "78b5e59b",
+    "idea": {
+      "hook": "Why is TikTok making Vegas younger?",
+      "title": "TikTok's Influence on Young Vegas Travelers",
+      "angle": "Explore how TikTok is reshaping Las Vegas travel by attracting a younger crowd, with insights into the hottest spots featured on the platform.",
+      "loop": "And that's why TikTok is making Vegas younger.",
+      "topic": "travel",
+      "source_urls": [
+        "https://www.8newsnow.com/news/local-news/las-vegas-crowds-are-getting-younger-heres-why/",
+        "https://www.8newsnow.com/entertainment-news/tiktok-is-deciding-where-people-go-in-las-vegas-but-is-it-worth-the-hype/"
+      ]
+    },
+    "script": {
+      "hook": "Why is TikTok making Vegas younger?",
+      "title": "TikTok's Influence on Young Vegas Travelers",
+      "script": "Why is TikTok making Vegas younger? Vegas is evolving. TikTok's vibrant videos spotlight hidden gems, rooftop pools, and neon-lit adventures. Young travelers are flocking to these hotspots. But how exactly is TikTok shaping their experience? It's all about discovery. TikTok showcases the best of Vegas nightlife, trendy eateries, and unique experiences. Young adventurers are following the buzz, creating a new wave of travel excitement. Plan your own TikTok-inspired Vegas trip with Cyrus AI for just CA$10. And that's why TikTok is making Vegas younger.",
+      "beats": {
+        "hook_0_3": "Why is TikTok making Vegas younger?",
+        "tension_3_15": "Vegas is evolving. TikTok's vibrant videos spotlight hidden gems, rooftop pools, and neon-lit adventures. Young travelers are flocking to these hotspots. But how exactly is TikTok shaping their experience?",
+        "climax_15_25": "It's all about discovery. TikTok showcases the best of Vegas nightlife, trendy eateries, and unique experiences. Young adventurers are following the buzz, creating a new wave of travel excitement.",
+        "loop_cta_25_30": "Plan your own TikTok-inspired Vegas trip with Cyrus AI for just CA$10. And that's why TikTok is making Vegas younger."
+      },
+      "on_screen_text": "Why is TikTok making Vegas younger?, Hidden gems, Rooftop pools, Neon adventures, Discover Vegas, Plan your trip",
+      "caption": "Discover how TikTok is transforming Las Vegas for young travelers! 🎉",
+      "description": "Explore the vibrant influence of TikTok on Las Vegas travel, attracting a younger crowd to hidden gems and trendy spots. Plan your Vegas adventure with Cyrus AI for just CA$10! Follow us on our channels for more travel insights.\n\nYouTube: Cyrus AI — https://www.youtube.com/@CyrusAIGuide\nFacebook: Cyrus Outdoors — https://www.facebook.com/cyrus.soli\nWhatsApp: Cyrus Team — https://whatsapp.com/channel/0029VbDkc9g6WaKg0owHJE3B\nTikTok: Cyrus Outdoors — https://www.tiktok.com/@cyrusoutdoor\nTelegram: Cyrus Team Bot — https://t.me/Cyrus_team_bot\nTelegram Channel: Cyrus AI — https://t.me/CyrusAIGuide\nWebsite: Victoria Tour and Adventure — https://victoriatourandadventure.com\nApp: Cyrus AI Tour Guide (Google Play) — https://play.google.com/store/apps/details?id=com.victoriatourandadventure.app",
+      "hashtags": [
+        "VegasTravel",
+        "TikTokInfluence",
+        "YoungAdventurers",
+        "TravelTrends",
+        "CyrusAI",
+        "VegasNights",
+        "HiddenGems",
+        "NeonAdventures",
+        "TravelInspiration",
+        "PlanYourTrip"
+      ]
+    },
+    "image_prompt": "A vibrant, photorealistic scene capturing a group of young travelers enjoying a rooftop pool party in Las Vegas, surrounded by neon lights and stunning city views at sunset. The image should feature diverse individuals laughing and engaging with their phones, sharing moments on TikTok, while colorful cocktails and trendy snacks are displayed on a nearby table. The atmosphere is lively and energetic, with tropical plants and stylish lounge furniture enhancing the cinematic feel, all under a warm, natural light that accentuates the excitement of the Vegas nightlife. Vertical-friendly composition, no text or words inside the image.",
+    "video_prompt": {
+      "scenes": [
+        {
+          "scene": 1,
+          "beat": "hook_0_3",
+          "duration_s": 3,
+          "prompt": "A vibrant aerial shot of the Las Vegas Strip at sunset, showcasing the iconic neon lights beginning to illuminate the city. The camera glides smoothly over the skyline, capturing the bustling energy below.",
+          "camera": "aerial drone shot, gliding smoothly",
+          "lighting": "golden hour sunlight, warm tones from the setting sun, contrasting with the cool neon lights",
+          "lens": "wide-angle lens for expansive views",
+          "texture": "highly detailed cityscape with visible textures of buildings and streets",
+          "subject_motion": "camera moves forward over the Strip, revealing the vibrant nightlife below",
+          "negative_prompt": "no warped or morphing subjects, no deformed hands/faces, no gibberish text, no cartoon/CGI look, no cheap stock look, no flicker and watermarks"
+        },
+        {
+          "scene": 2,
+          "beat": "tension_3_15",
+          "duration_s": 12,
+          "prompt": "A series of quick cuts showcasing young travelers enjoying hidden gems in Vegas: rooftop pools with stunning views, vibrant street art, and lively nightlife scenes. Each segment features diverse groups of friends laughing and capturing moments for TikTok.",
+          "camera": "dynamic handheld shots with quick pans and zooms",
+          "lighting": "bright, colorful lighting from neon signs and ambient sources, creating an energetic atmosphere",
+          "lens": "standard lens for a natural perspective",
+          "texture": "rich textures of water, concrete, and vibrant colors of street art",
+          "subject_motion": "travelers jumping into pools, taking selfies, and dancing to music",
+          "negative_prompt": "no warped or morphing subjects, no deformed hands/faces, no gibberish text, no cartoon/CGI look, no cheap stock look, no flicker and watermarks"
+        },
+        {
+          "scene": 3,
+          "beat": "climax_15_25",
+          "duration_s": 10,
+          "prompt": "A montage of TikTok clips showing young adventurers exploring trendy eateries and nightlife spots, with text overlays of popular hashtags. The camera captures the excitement of discovering new experiences in Vegas.",
+          "camera": "fast-paced montage with quick transitions between scenes",
+          "lighting": "vibrant, colorful lighting emphasizing the nightlife and food aesthetics",
+          "lens": "close-up lens for detailed shots of food and drinks",
+          "texture": "textured surfaces of food and drink, with glistening effects under lights",
+          "subject_motion": "friends toasting drinks, sharing food, and laughing together",
+          "negative_prompt": "no warped or morphing subjects, no deformed hands/faces, no gibberish text, no cartoon/CGI look, no cheap stock look, no flicker and watermarks"
+        },
+        {
+          "scene": 4,
+          "beat": "loop_cta_25_30",
+          "duration_s": 5,
+          "prompt": "A final shot of a group of young travelers looking excitedly at their phones, planning their next TikTok-inspired Vegas adventure, with the iconic Vegas sign in the background.",
+          "camera": "static shot with a slight zoom-in on the group",
+          "lighting": "soft, ambient lighting with a hint of neon glow from the sign",
+          "lens": "standard lens for a clear view",
+          "texture": "natural skin textures and details of clothing against the bright sign",
+          "subject_motion": "group members animatedly discussing and pointing at their phones",
+          "negative_prompt": "no warped or morphing subjects, no deformed hands/faces, no gibberish text, no cartoon/CGI look, no cheap stock look, no flicker and watermarks"
+        }
+      ],
+      "style": "vibrant and energetic with a focus on youth culture",
+      "negative_prompt": "no warped or morphing subjects, no deformed hands/faces, no gibberish text, no cartoon/CGI look, no cheap stock look, no flicker and watermarks"
+    },
+    "image": null,
+    "video_path": "/home/hatch/workspace/cyrus-team/work/78b5e59b/video.mp4",
+    "channels": [
+      "telegram"
+    ],
+    "created_at": "2026-10-27T22:23:40.737773",
+    "status": "draft",
+    "render": {
+      "ok": true,
+      "path": "/home/hatch/workspace/cyrus-team/work/78b5e59b/video.mp4",
+      "duration_s": 42.763,
+      "planned_s": 30.0,
+      "width": 1080,
+      "height": 1920,
+      "has_audio": true
+    },
+    "voice": {
+      "ok": true,
+      "path": "/home/hatch/workspace/cyrus-team/work/78b5e59b/voice.wav",
+      "duration_s": 42.762630385487526,
+      "model": "en_US-amy-medium.onnx"
+    },
+    "qa_verdict": {
+      "passed": true,
+      "reasons": [],
+      "warnings": [
+        "critic score: 7.0/10 — Strong hook and clear theme, but ending lacks a decisive call to action.",
+        "viral Q1 [PASS]: The hook presents a clear and intriguing question about TikTok's impact on Vegas, promising an explanation.",
+        "viral Q2 [PASS]: The video maintains tension by exploring TikTok's influence and delivers a clear payoff about discovery and excitement.",
+        "viral Q3 [PASS]: The visual prompts are detailed and cinematic, specifying camera techniques and avoiding cheap effects.",
+        "viral Q4 [PASS]: The final line connects back to the hook, reinforcing the theme of TikTok making Vegas younger."
+      ],
+      "critic_score": 7.0,
+      "viral_checklist": {
+        "ai_used": true,
+        "passed": true,
+        "answers": [
+          {
+            "question": "Hook strength — does the first-3-seconds hook have multi-million-view stopping power (a real pattern interrupt plus a clear promise in the opening line)?",
+            "pass": true,
+            "reason": "The hook presents a clear and intriguing question about TikTok's impact on Vegas, promising an explanation."
+          },
+          {
+            "question": "Pacing — do story and rhythm hold all the way to second 30: no filler, tension maintained through 3-15s, and the payoff landing at 15-25s?",
+            "pass": true,
+            "reason": "The video maintains tension by exploring TikTok's influence and delivers a clear payoff about discovery and excitement."
+          },
+          {
+            "question": "Prompt quality — are the visual prompts genuinely cinematic (camera, lighting, lens, texture specified) and free of cheap/artificial effects, with negative prompts guarding against them?",
+            "pass": true,
+            "reason": "The visual prompts are detailed and cinematic, specifying camera techniques and avoiding cheap effects."
+          },
+          {
+            "question": "Loop integrity — does the narrative loop actually work: does the final line of the script connect back into the opening hook line so an auto-replay feels seamless?",
+            "pass": true,
+            "reason": "The final line connects back to the hook, reinforcing the theme of TikTok making Vegas younger."
+          }
+        ]
+      },
+      "media_facts": {
+        "exists": true,
+        "readable": true,
+        "duration_s": 42.763,
+        "width": 1080,
+        "height": 1920,
+        "has_audio": true,
+        "has_video": true,
+        "error": null
+      }
+    }
+  },
+  {
+    "id": "a4f904cd",
+    "idea": {
+      "hook": "Secret spots on the Las Vegas Strip revealed!",
+      "title": "Hidden Gems of the Las Vegas Strip",
+      "angle": "Uncover secret attractions on the Las Vegas Strip that are gaining fame through social media, and learn how to find them.",
+      "loop": "Now you know the secret spots on the Las Vegas Strip.",
+      "topic": "travel",
+      "source_urls": [
+        "https://midor.info/post/las-vegas-usa-the-iconic-neondrenched-strip-and-its-social-media-fame",
+        "https://neondigitalmedia.com/blogs/las-vegas-seo-digital-marketing-blog/social-media-marketing-trends-in-las-vegas"
+      ]
+    },
+    "script": {
+      "hook": "Secret spots on the Las Vegas Strip revealed!",
+      "title": "Hidden Gems of the Las Vegas Strip",
+      "script": "Secret spots on the Las Vegas Strip revealed! Ever wondered what lies beyond the neon lights? Discover hidden gems gaining fame on social media. From secret speakeasies to rooftop gardens, these spots are not on your average itinerary. Find a hidden bar behind an unmarked door or stumble upon a rooftop with breathtaking views. Each spot offers a unique experience, waiting for you to uncover. Plan your trip now with Cyrus AI for CA$10. Secret spots on the Las Vegas Strip revealed!",
+      "beats": {
+        "hook_0_3": "Secret spots on the Las Vegas Strip revealed!",
+        "tension_3_15": "Ever wondered what lies beyond the neon lights? Discover hidden gems gaining fame on social media. From secret speakeasies to rooftop gardens, these spots are not on your average itinerary.",
+        "climax_15_25": "Find a hidden bar behind an unmarked door or stumble upon a rooftop with breathtaking views. Each spot offers a unique experience, waiting for you to uncover.",
+        "loop_cta_25_30": "Plan your trip now with Cyrus AI for CA$10. Secret spots on the Las Vegas Strip revealed!"
+      },
+      "on_screen_text": "Secret spots revealed!, Discover hidden gems, Not on your itinerary, Unique experiences await, Plan with Cyrus AI",
+      "caption": "Uncover the hidden gems of the Las Vegas Strip! 🌟 #LasVegasSecrets",
+      "description": "Dive into the hidden attractions of the Las Vegas Strip that social media can't stop buzzing about. From secret speakeasies to rooftop gardens, these gems offer unique experiences. Plan your adventure with Cyrus AI for just CA$10! Visit Victoria Tour and Adventure for more details. \n\nFollow us on our channels for more travel tips: \nYouTube: Cyrus AI — https://www.youtube.com/@CyrusAIGuide \nFacebook: Cyrus Outdoors — https://www.facebook.com/cyrus.soli \nWhatsApp: Cyrus Team — https://whatsapp.com/channel/0029VbDkc9g6WaKg0owHJE3B \nTikTok: Cyrus Outdoors — https://www.tiktok.com/@cyrusoutdoor \nTelegram: Cyrus Team Bot — https://t.me/Cyrus_team_bot \nTelegram Channel: Cyrus AI — https://t.me/CyrusAIGuide \nWebsite: Victoria Tour and Adventure — https://victoriatourandadventure.com \nApp: Cyrus AI Tour Guide (Google Play) — https://play.google.com/store/apps/details?id=com.victoriatourandadventure.app",
+      "hashtags": [
+        "LasVegasSecrets",
+        "HiddenGems",
+        "TravelTips",
+        "VegasStrip",
+        "CyrusAI",
+        "AdventureAwaits",
+        "ExploreMore",
+        "TravelSmart",
+        "VictoriaTour",
+        "TourGuideApp"
+      ]
+    },
+    "image_prompt": "A photorealistic image capturing a hidden speakeasy on the Las Vegas Strip, featuring an unmarked door partially open, revealing a warm, inviting interior with vintage decor and soft, ambient lighting. Outside, vibrant neon lights of the Strip glow in the background, while a lush rooftop garden with cozy seating and twinkling fairy lights is visible above, showcasing breathtaking views of the city skyline at dusk. The composition is vertical-friendly, emphasizing the contrast between the bustling Strip and the serene hidden oasis, with no text or words in the image.",
+    "video_prompt": {
+      "scenes": [
+        {
+          "scene": 1,
+          "beat": "hook_0_3",
+          "duration_s": 3,
+          "prompt": "A close-up shot of a hidden speakeasy door with intricate woodwork, slightly ajar, revealing a warm, inviting glow from within. The camera slowly dollies in towards the door, creating a sense of intrigue.",
+          "camera": "dolly in",
+          "lighting": "warm, soft light emanating from inside the speakeasy, creating a golden hue",
+          "lens": "50mm lens for a shallow depth of field",
+          "texture": "detailed wood grain and soft light reflections",
+          "subject_motion": "camera moves towards the door, enhancing the sense of secrecy",
+          "negative_prompt": "no warped or morphing subjects, deformed hands/faces, gibberish text, cartoon/CGI look, cheap stock look, flicker and watermarks"
+        },
+        {
+          "scene": 2,
+          "beat": "tension_3_15",
+          "duration_s": 12,
+          "prompt": "A sweeping aerial shot of a hidden rooftop garden with lush greenery and vibrant flowers, contrasting against the urban backdrop of the Las Vegas Strip. The camera pans smoothly across the garden, showcasing its beauty and the stunning skyline beyond.",
+          "camera": "aerial pan",
+          "lighting": "natural sunlight with a golden hour glow, casting soft shadows",
+          "lens": "wide-angle lens to capture the expansive view",
+          "texture": "rich foliage detail and smooth sky gradients",
+          "subject_motion": "camera glides over the garden, revealing its hidden charm",
+          "negative_prompt": "no warped or morphing subjects, deformed hands/faces, gibberish text, cartoon/CGI look, cheap stock look, flicker and watermarks"
+        },
+        {
+          "scene": 3,
+          "beat": "climax_15_25",
+          "duration_s": 10,
+          "prompt": "A dynamic shot of a bartender mixing a signature cocktail behind a concealed bar. The camera focuses on the bartender's skilled hands as they pour, shake, and garnish the drink, with soft, ambient lighting highlighting their movements.",
+          "camera": "close-up tracking shot",
+          "lighting": "soft, warm bar lighting with subtle highlights on the glassware",
+          "lens": "macro lens for intricate detail",
+          "texture": "smooth glass textures and vibrant colors of the cocktail",
+          "subject_motion": "bartender's hands in fluid motion, creating a sense of craftsmanship",
+          "negative_prompt": "no warped or morphing subjects, deformed hands/faces, gibberish text, cartoon/CGI look, cheap stock look, flicker and watermarks"
+        },
+        {
+          "scene": 4,
+          "beat": "loop_cta_25_30",
+          "duration_s": 5,
+          "prompt": "A quick, engaging shot of a smartphone displaying the Cyrus AI app interface, highlighting the 'Plan Your Trip' feature. The camera zooms in on the screen, emphasizing the ease of use.",
+          "camera": "quick zoom in",
+          "lighting": "bright, clear lighting to showcase the app interface",
+          "lens": "standard lens for clarity",
+          "texture": "smooth screen texture with vibrant app colors",
+          "subject_motion": "camera zooms in on the phone screen to draw attention to the app",
+          "negative_prompt": "no warped or morphing subjects, deformed hands/faces, gibberish text, cartoon/CGI look, cheap stock look, flicker and watermarks"
+        }
+      ],
+      "style": "Cinematic and vibrant, showcasing the hidden allure of the Las Vegas Strip.",
+      "negative_prompt": "no warped or morphing subjects, deformed hands/faces, gibberish text, cartoon/CGI look, cheap stock look, flicker and watermarks"
+    },
+    "image": null,
+    "video_path": "/home/hatch/workspace/cyrus-team/work/a4f904cd/video.mp4",
+    "channels": [
+      "telegram"
+    ],
+    "created_at": "2026-10-27T22:25:57.623885",
+    "status": "superseded",
+    "render": {
+      "ok": true,
+      "path": "/home/hatch/workspace/cyrus-team/work/a4f904cd/video.mp4",
+      "duration_s": 34.537,
+      "planned_s": 30.0,
+      "width": 1080,
+      "height": 1920,
+      "has_audio": true
+    },
+    "voice": {
+      "ok": true,
+      "path": "/home/hatch/workspace/cyrus-team/work/a4f904cd/voice.wav",
+      "duration_s": 34.53750566893424,
+      "model": "en_US-amy-medium.onnx"
+    },
+    "qa_verdict": {
+      "passed": true,
+      "reasons": [],
+      "warnings": [
+        "critic score: 7.0/10 — Strong hook and clear focus on unique experiences, but ending lacks a decisive call to action.",
+        "viral Q1 [PASS]: The hook promises secret spots on the Las Vegas Strip, which is intriguing and specific.",
+        "viral Q2 [PASS]: The video maintains tension and interest with a clear payoff, avoiding filler.",
+        "viral Q3 [PASS]: Visual prompts are cinematic with detailed camera and lighting instructions, avoiding cheap effects.",
+        "viral Q4 [PASS]: The final line re-enters the hook, creating a seamless narrative loop."
+      ],
+      "critic_score": 7.0,
+      "viral_checklist": {
+        "ai_used": true,
+        "passed": true,
+        "answers": [
+          {
+            "question": "Hook strength — does the first-3-seconds hook have multi-million-view stopping power (a real pattern interrupt plus a clear promise in the opening line)?",
+            "pass": true,
+            "reason": "The hook promises secret spots on the Las Vegas Strip, which is intriguing and specific."
+          },
+          {
+            "question": "Pacing — do story and rhythm hold all the way to second 30: no filler, tension maintained through 3-15s, and the payoff landing at 15-25s?",
+            "pass": true,
+            "reason": "The video maintains tension and interest with a clear payoff, avoiding filler."
+          },
+          {
+            "question": "Prompt quality — are the visual prompts genuinely cinematic (camera, lighting, lens, texture specified) and free of cheap/artificial effects, with negative prompts guarding against them?",
+            "pass": true,
+            "reason": "Visual prompts are cinematic with detailed camera and lighting instructions, avoiding cheap effects."
+          },
+          {
+            "question": "Loop integrity — does the narrative loop actually work: does the final line of the script connect back into the opening hook line so an auto-replay feels seamless?",
+            "pass": true,
+            "reason": "The final line re-enters the hook, creating a seamless narrative loop."
+          }
+        ]
+      },
+      "media_facts": {
+        "exists": true,
+        "readable": true,
+        "duration_s": 34.537,
+        "width": 1080,
+        "height": 1920,
+        "has_audio": true,
+        "has_video": true,
+        "error": null
+      }
+    },
+    "superseded_reason": "Render measured 34.5s — over the hard 30s standard. Superseded by the regenerated package under the tightened beat word budget + QA duration gate (fix order 2026-10-27).",
+    "superseded_by": "77302239",
+    "superseded_at": "2026-10-27T22:38:49.984056"
+  },
+  {
+    "id": "77302239",
+    "idea": {
+      "hook": "Secret spots on the Las Vegas Strip revealed!",
+      "title": "Hidden Gems of the Las Vegas Strip",
+      "angle": "Uncover secret attractions on the Las Vegas Strip that are gaining fame through social media, and learn how to find them.",
+      "loop": "Now you know the secret spots on the Las Vegas Strip.",
+      "topic": "travel",
+      "source_urls": [
+        "https://midor.info/post/las-vegas-usa-the-iconic-neondrenched-strip-and-its-social-media-fame",
+        "https://neondigitalmedia.com/blogs/las-vegas-seo-digital-marketing-blog/social-media-marketing-trends-in-las-vegas"
+      ]
+    },
+    "script": {
+      "hook": "Secret spots on the Las Vegas Strip!",
+      "title": "Hidden Gems of the Las Vegas Strip",
+      "script": "Secret spots on the Las Vegas Strip! Uncover hidden attractions gaining fame. Social media buzz reveals these secret gems. Explore vibrant murals, tucked-away bars, and elusive art pieces. Discover more with Cyrus AI. Secret spots await!",
+      "beats": {
+        "hook_0_3": "Secret spots on the Las Vegas Strip!",
+        "tension_3_15": "Uncover hidden attractions gaining fame. Social media buzz reveals these secret gems.",
+        "climax_15_25": "Explore vibrant murals, tucked-away bars, and elusive art pieces.",
+        "loop_cta_25_30": "Discover more with Cyrus AI. Secret spots await!"
+      },
+      "on_screen_text": "Secret spots, Las Vegas Strip, Hidden gems, Social media buzz, Discover more, Cyrus AI",
+      "caption": "Discover the Las Vegas Strip's secret spots! 🎰✨",
+      "description": "Explore the hidden gems of the Las Vegas Strip that are gaining fame through social media. From vibrant murals to tucked-away bars, uncover the secrets that await. Plan your next adventure with Cyrus AI — https://www.youtube.com/@CyrusAIGuide, https://www.facebook.com/cyrus.soli, https://whatsapp.com/channel/0029VbDkc9g6WaKg0owHJE3B, https://www.tiktok.com/@cyrusoutdoor, https://t.me/Cyrus_team_bot, https://t.me/CyrusAIGuide, https://victoriatourandadventure.com, https://play.google.com/store/apps/details?id=com.victoriatourandadventure.app",
+      "hashtags": [
+        "LasVegasStrip",
+        "HiddenGems",
+        "TravelSecrets",
+        "CyrusAI",
+        "Adventure"
+      ]
+    },
+    "image_prompt": "A vibrant, photorealistic scene showcasing a hidden gem on the Las Vegas Strip, featuring a colorful mural on a secluded wall, surrounded by lush greenery and twinkling fairy lights. In the foreground, an inviting, tucked-away bar with unique decor and a cozy atmosphere, illuminated by warm, natural light. The background reveals glimpses of iconic Las Vegas architecture, creating a cinematic feel. The composition is vertical-friendly, capturing the essence of exploration and discovery without any text or words inside the image.",
+    "video_prompt": {
+      "scenes": [
+        {
+          "scene": 1,
+          "beat": "hook_0_3",
+          "duration_s": 3,
+          "prompt": "A sweeping aerial shot of the Las Vegas Strip at dusk, showcasing the vibrant lights and bustling atmosphere. The camera glides smoothly from high above, capturing the iconic skyline and hinting at secret spots below.",
+          "camera": "aerial drone movement, descending towards the ground",
+          "lighting": "golden hour sunlight fading into neon lights, warm and inviting",
+          "lens": "wide-angle lens for expansive view",
+          "texture": "detailed cityscape with reflections on glass buildings",
+          "subject_motion": "the camera moves from a high altitude to a lower vantage point, revealing hidden gems",
+          "negative_prompt": "no warped or morphing subjects, deformed hands/faces, gibberish text, cartoon/CGI look, cheap stock look, flicker and watermarks"
+        },
+        {
+          "scene": 2,
+          "beat": "tension_3_15",
+          "duration_s": 12,
+          "prompt": "Close-up shots of social media posts and influencers as they discover hidden attractions on the Strip. Each post reveals a new gem, with dynamic transitions between screens and real-life reactions.",
+          "camera": "quick cuts between handheld shots and static close-ups",
+          "lighting": "soft, diffused lighting from mobile screens, mixed with ambient light from the surroundings",
+          "lens": "standard lens for clarity and intimacy",
+          "texture": "high-resolution details on smartphone screens and vibrant colors of the Strip",
+          "subject_motion": "influencers scrolling through their phones, excitedly sharing their discoveries",
+          "negative_prompt": "no warped or morphing subjects, deformed hands/faces, gibberish text, cartoon/CGI look, cheap stock look, flicker and watermarks"
+        },
+        {
+          "scene": 3,
+          "beat": "climax_15_25",
+          "duration_s": 10,
+          "prompt": "A montage of vibrant murals, tucked-away bars, and elusive art pieces. The camera moves through narrow alleyways and secret entrances, showcasing the artistic diversity and hidden beauty of the Strip.",
+          "camera": "steady cam movement through various locations, panning and tilting to reveal details",
+          "lighting": "dramatic lighting highlighting the colors of the murals, with shadows adding depth",
+          "lens": "macro lens for intricate details on art pieces",
+          "texture": "rich textures of wall art, bar interiors, and unique decor",
+          "subject_motion": "the camera glides smoothly past murals and into bars, capturing the essence of each hidden gem",
+          "negative_prompt": "no warped or morphing subjects, deformed hands/faces, gibberish text, cartoon/CGI look, cheap stock look, flicker and watermarks"
+        },
+        {
+          "scene": 4,
+          "beat": "loop_cta_25_30",
+          "duration_s": 5,
+          "prompt": "A final shot of a mysterious entrance leading to one of the hidden spots, illuminated by soft lighting. The camera slowly zooms in, inviting viewers to explore further.",
+          "camera": "slow zoom-in on the entrance",
+          "lighting": "soft, inviting glow from the entrance, contrasting with the darker surroundings",
+          "lens": "telephoto lens for focused detail",
+          "texture": "smooth surfaces of the entrance contrasted with rough textures of the surrounding area",
+          "subject_motion": "the camera moves steadily towards the entrance, creating intrigue",
+          "negative_prompt": "no warped or morphing subjects, deformed hands/faces, gibberish text, cartoon/CGI look, cheap stock look, flicker and watermarks"
+        }
+      ],
+      "style": "Cinematic exploration of hidden urban gems with vibrant colors and dynamic movements.",
+      "negative_prompt": "no warped or morphing subjects, deformed hands/faces, gibberish text, cartoon/CGI look, cheap stock look, flicker and watermarks"
+    },
+    "image": null,
+    "video_path": "work/77302239/video.mp4",
+    "channels": [
+      "telegram"
+    ],
+    "created_at": "2026-10-27T22:36:59.697866",
+    "status": "superseded",
+    "regenerated_from": "a4f904cd",
+    "render": {
+      "ok": true,
+      "path": "work/77302239/video.mp4",
+      "duration_s": 30.0,
+      "planned_s": 30.0,
+      "width": 1080,
+      "height": 1920,
+      "has_audio": true
+    },
+    "voice": {
+      "ok": true,
+      "path": "work/77302239/voice.wav",
+      "duration_s": 19.46249433106576,
+      "model": "en_US-amy-medium.onnx"
+    },
+    "qa_verdict": {
+      "passed": true,
+      "reasons": [],
+      "warnings": [
+        "critic score: 6.0/10 — Strong hook and clear theme, but lacks a decisive ending.",
+        "viral Q1 [PASS]: The hook 'Secret spots on the Las Vegas Strip!' is a clear promise and pattern interrupt.",
+        "viral Q2 [PASS]: The pacing maintains tension and delivers a payoff with no filler.",
+        "viral Q3 [PASS]: Visual prompts are cinematic with specific camera and lighting details, and negative prompts are included.",
+        "viral Q4 [PASS]: The final line 'Secret spots await!' effectively loops back to the hook."
+      ],
+      "critic_score": 6.0,
+      "viral_checklist": {
+        "ai_used": true,
+        "passed": true,
+        "answers": [
+          {
+            "question": "Hook strength — does the first-3-seconds hook have multi-million-view stopping power (a real pattern interrupt plus a clear promise in the opening line)?",
+            "pass": true,
+            "reason": "The hook 'Secret spots on the Las Vegas Strip!' is a clear promise and pattern interrupt."
+          },
+          {
+            "question": "Pacing — do story and rhythm hold all the way to second 30: no filler, tension maintained through 3-15s, and the payoff landing at 15-25s?",
+            "pass": true,
+            "reason": "The pacing maintains tension and delivers a payoff with no filler."
+          },
+          {
+            "question": "Prompt quality — are the visual prompts genuinely cinematic (camera, lighting, lens, texture specified) and free of cheap/artificial effects, with negative prompts guarding against them?",
+            "pass": true,
+            "reason": "Visual prompts are cinematic with specific camera and lighting details, and negative prompts are included."
+          },
+          {
+            "question": "Loop integrity — does the narrative loop actually work: does the final line of the script connect back into the opening hook line so an auto-replay feels seamless?",
+            "pass": true,
+            "reason": "The final line 'Secret spots await!' effectively loops back to the hook."
+          }
+        ]
+      },
+      "media_facts": {
+        "exists": true,
+        "readable": true,
+        "duration_s": 30.0,
+        "width": 1080,
+        "height": 1920,
+        "has_audio": true,
+        "has_video": true,
+        "error": null
+      },
+      "duration_gate": {
+        "measured_s": 30.0,
+        "max_s": 31.0,
+        "passed": true
+      }
+    },
+    "superseded_by": "cb84c943",
+    "supersede_reason": "Visual-script mismatch: footage showed orca whales in nature under a Las Vegas script — rejected by Cyrus 2026-10-27. Regenerated with topic-matched real Las Vegas footage under Forever Protocol v2."
+  },
+  {
+    "id": "b5f69133",
+    "idea": {
+      "hook": "Secret spots on the Las Vegas Strip revealed!",
+      "title": "Hidden Gems of the Las Vegas Strip",
+      "angle": "Uncover secret attractions on the Las Vegas Strip that are gaining fame through social media, and learn how to find them.",
+      "loop": "Now you know the secret spots on the Las Vegas Strip.",
+      "topic": "travel",
+      "source_urls": [
+        "https://midor.info/post/las-vegas-usa-the-iconic-neondrenched-strip-and-its-social-media-fame",
+        "https://neondigitalmedia.com/blogs/las-vegas-seo-digital-marketing-blog/social-media-marketing-trends-in-las-vegas"
+      ]
+    },
+    "script": {
+      "hook": "Secret spots on the Las Vegas Strip!",
+      "title": "Hidden Gems of the Las Vegas Strip",
+      "script": "Secret spots on the Las Vegas Strip! Uncover hidden attractions gaining fame. Social media buzz reveals these secret gems. Explore vibrant murals, tucked-away bars, and elusive art pieces. Discover more with Cyrus AI. Secret spots await!",
+      "beats": {
+        "hook_0_3": "Secret spots on the Las Vegas Strip!",
+        "tension_3_15": "Uncover hidden attractions gaining fame. Social media buzz reveals these secret gems.",
+        "climax_15_25": "Explore vibrant murals, tucked-away bars, and elusive art pieces.",
+        "loop_cta_25_30": "Discover more with Cyrus AI. Secret spots await!"
+      },
+      "on_screen_text": "Secret spots, Las Vegas Strip, Hidden gems, Social media buzz, Discover more, Cyrus AI",
+      "caption": "Discover the Las Vegas Strip's secret spots! 🎰✨",
+      "description": "Explore the hidden gems of the Las Vegas Strip that are gaining fame through social media. From vibrant murals to tucked-away bars, uncover the secrets that await. Plan your next adventure with Cyrus AI — https://www.youtube.com/@CyrusAIGuide, https://www.facebook.com/cyrus.soli, https://whatsapp.com/channel/0029VbDkc9g6WaKg0owHJE3B, https://www.tiktok.com/@cyrusoutdoor, https://t.me/Cyrus_team_bot, https://t.me/CyrusAIGuide, https://victoriatourandadventure.com, https://play.google.com/store/apps/details?id=com.victoriatourandadventure.app",
+      "hashtags": [
+        "LasVegasStrip",
+        "HiddenGems",
+        "TravelSecrets",
+        "CyrusAI",
+        "Adventure"
+      ]
+    },
+    "image_prompt": "A vibrant, photorealistic scene showcasing a hidden gem on the Las Vegas Strip, featuring a colorful mural on a secluded wall, surrounded by lush greenery and twinkling fairy lights. In the foreground, an inviting, tucked-away bar with unique decor and a cozy atmosphere, illuminated by warm, natural light. The background reveals glimpses of iconic Las Vegas architecture, creating a cinematic feel. The composition is vertical-friendly, capturing the essence of exploration and discovery without any text or words inside the image.",
+    "video_prompt": {
+      "scenes": [
+        {
+          "scene": 1,
+          "beat": "hook_0_3",
+          "duration_s": 3,
+          "prompt": "A sweeping aerial shot of the Las Vegas Strip at dusk, showcasing the vibrant lights and bustling atmosphere. The camera glides smoothly from high above, capturing the iconic skyline and hinting at secret spots below.",
+          "camera": "aerial drone movement, descending towards the ground",
+          "lighting": "golden hour sunlight fading into neon lights, warm and inviting",
+          "lens": "wide-angle lens for expansive view",
+          "texture": "detailed cityscape with reflections on glass buildings",
+          "subject_motion": "the camera moves from a high altitude to a lower vantage point, revealing hidden gems",
+          "negative_prompt": "no warped or morphing subjects, deformed hands/faces, gibberish text, cartoon/CGI look, cheap stock look, flicker and watermarks"
+        },
+        {
+          "scene": 2,
+          "beat": "tension_3_15",
+          "duration_s": 12,
+          "prompt": "Close-up shots of social media posts and influencers as they discover hidden attractions on the Strip. Each post reveals a new gem, with dynamic transitions between screens and real-life reactions.",
+          "camera": "quick cuts between handheld shots and static close-ups",
+          "lighting": "soft, diffused lighting from mobile screens, mixed with ambient light from the surroundings",
+          "lens": "standard lens for clarity and intimacy",
+          "texture": "high-resolution details on smartphone screens and vibrant colors of the Strip",
+          "subject_motion": "influencers scrolling through their phones, excitedly sharing their discoveries",
+          "negative_prompt": "no warped or morphing subjects, deformed hands/faces, gibberish text, cartoon/CGI look, cheap stock look, flicker and watermarks"
+        },
+        {
+          "scene": 3,
+          "beat": "climax_15_25",
+          "duration_s": 10,
+          "prompt": "A montage of vibrant murals, tucked-away bars, and elusive art pieces. The camera moves through narrow alleyways and secret entrances, showcasing the artistic diversity and hidden beauty of the Strip.",
+          "camera": "steady cam movement through various locations, panning and tilting to reveal details",
+          "lighting": "dramatic lighting highlighting the colors of the murals, with shadows adding depth",
+          "lens": "macro lens for intricate details on art pieces",
+          "texture": "rich textures of wall art, bar interiors, and unique decor",
+          "subject_motion": "the camera glides smoothly past murals and into bars, capturing the essence of each hidden gem",
+          "negative_prompt": "no warped or morphing subjects, deformed hands/faces, gibberish text, cartoon/CGI look, cheap stock look, flicker and watermarks"
+        },
+        {
+          "scene": 4,
+          "beat": "loop_cta_25_30",
+          "duration_s": 5,
+          "prompt": "A final shot of a mysterious entrance leading to one of the hidden spots, illuminated by soft lighting. The camera slowly zooms in, inviting viewers to explore further.",
+          "camera": "slow zoom-in on the entrance",
+          "lighting": "soft, inviting glow from the entrance, contrasting with the darker surroundings",
+          "lens": "telephoto lens for focused detail",
+          "texture": "smooth surfaces of the entrance contrasted with rough textures of the surrounding area",
+          "subject_motion": "the camera moves steadily towards the entrance, creating intrigue",
+          "negative_prompt": "no warped or morphing subjects, deformed hands/faces, gibberish text, cartoon/CGI look, cheap stock look, flicker and watermarks"
+        }
+      ],
+      "style": "Cinematic exploration of hidden urban gems with vibrant colors and dynamic movements.",
+      "negative_prompt": "no warped or morphing subjects, deformed hands/faces, gibberish text, cartoon/CGI look, cheap stock look, flicker and watermarks"
+    },
+    "image": null,
+    "video_path": null,
+    "channels": [
+      "telegram"
+    ],
+    "created_at": "2026-10-27T23:02:33.266363",
+    "status": "rejected",
+    "regen_of": "77302239",
+    "regen_reason": "visual-script mismatch — orca/nature footage under a Las Vegas script; rejected by Cyrus 2026-10-27; regenerated under the Zero-Waste Protocol",
+    "qa_reasons": [
+      "footage STOP: first sourcing attempt found 0 candidates — AI-derived queries were too long for stock engines; query broadening added and the package regenerated (Zero-Waste Protocol working as designed: stop, don't fill)"
+    ]
+  },
+  {
+    "id": "9f15fa69",
+    "idea": {
+      "hook": "Secret spots on the Las Vegas Strip revealed!",
+      "title": "Hidden Gems of the Las Vegas Strip",
+      "angle": "Uncover secret attractions on the Las Vegas Strip that are gaining fame through social media, and learn how to find them.",
+      "loop": "Now you know the secret spots on the Las Vegas Strip.",
+      "topic": "travel",
+      "source_urls": [
+        "https://midor.info/post/las-vegas-usa-the-iconic-neondrenched-strip-and-its-social-media-fame",
+        "https://neondigitalmedia.com/blogs/las-vegas-seo-digital-marketing-blog/social-media-marketing-trends-in-las-vegas"
+      ]
+    },
+    "script": {
+      "hook": "Secret spots on the Las Vegas Strip!",
+      "title": "Hidden Gems of the Las Vegas Strip",
+      "script": "Secret spots on the Las Vegas Strip! Uncover hidden attractions gaining fame. Social media buzz reveals these secret gems. Explore vibrant murals, tucked-away bars, and elusive art pieces. Discover more with Cyrus AI. Secret spots await!",
+      "beats": {
+        "hook_0_3": "Secret spots on the Las Vegas Strip!",
+        "tension_3_15": "Uncover hidden attractions gaining fame. Social media buzz reveals these secret gems.",
+        "climax_15_25": "Explore vibrant murals, tucked-away bars, and elusive art pieces.",
+        "loop_cta_25_30": "Discover more with Cyrus AI. Secret spots await!"
+      },
+      "on_screen_text": "Secret spots, Las Vegas Strip, Hidden gems, Social media buzz, Discover more, Cyrus AI",
+      "caption": "Discover the Las Vegas Strip's secret spots! 🎰✨",
+      "description": "Explore the hidden gems of the Las Vegas Strip that are gaining fame through social media. From vibrant murals to tucked-away bars, uncover the secrets that await. Plan your next adventure with Cyrus AI — https://www.youtube.com/@CyrusAIGuide, https://www.facebook.com/cyrus.soli, https://whatsapp.com/channel/0029VbDkc9g6WaKg0owHJE3B, https://www.tiktok.com/@cyrusoutdoor, https://t.me/Cyrus_team_bot, https://t.me/CyrusAIGuide, https://victoriatourandadventure.com, https://play.google.com/store/apps/details?id=com.victoriatourandadventure.app",
+      "hashtags": [
+        "LasVegasStrip",
+        "HiddenGems",
+        "TravelSecrets",
+        "CyrusAI",
+        "Adventure"
+      ]
+    },
+    "image_prompt": "A vibrant, photorealistic scene showcasing a hidden gem on the Las Vegas Strip, featuring a colorful mural on a secluded wall, surrounded by lush greenery and twinkling fairy lights. In the foreground, an inviting, tucked-away bar with unique decor and a cozy atmosphere, illuminated by warm, natural light. The background reveals glimpses of iconic Las Vegas architecture, creating a cinematic feel. The composition is vertical-friendly, capturing the essence of exploration and discovery without any text or words inside the image.",
+    "video_prompt": {
+      "scenes": [
+        {
+          "scene": 1,
+          "beat": "hook_0_3",
+          "duration_s": 3,
+          "prompt": "A sweeping aerial shot of the Las Vegas Strip at dusk, showcasing the vibrant lights and bustling atmosphere. The camera glides smoothly from high above, capturing the iconic skyline and hinting at secret spots below.",
+          "camera": "aerial drone movement, descending towards the ground",
+          "lighting": "golden hour sunlight fading into neon lights, warm and inviting",
+          "lens": "wide-angle lens for expansive view",
+          "texture": "detailed cityscape with reflections on glass buildings",
+          "subject_motion": "the camera moves from a high altitude to a lower vantage point, revealing hidden gems",
+          "negative_prompt": "no warped or morphing subjects, deformed hands/faces, gibberish text, cartoon/CGI look, cheap stock look, flicker and watermarks"
+        },
+        {
+          "scene": 2,
+          "beat": "tension_3_15",
+          "duration_s": 12,
+          "prompt": "Close-up shots of social media posts and influencers as they discover hidden attractions on the Strip. Each post reveals a new gem, with dynamic transitions between screens and real-life reactions.",
+          "camera": "quick cuts between handheld shots and static close-ups",
+          "lighting": "soft, diffused lighting from mobile screens, mixed with ambient light from the surroundings",
+          "lens": "standard lens for clarity and intimacy",
+          "texture": "high-resolution details on smartphone screens and vibrant colors of the Strip",
+          "subject_motion": "influencers scrolling through their phones, excitedly sharing their discoveries",
+          "negative_prompt": "no warped or morphing subjects, deformed hands/faces, gibberish text, cartoon/CGI look, cheap stock look, flicker and watermarks"
+        },
+        {
+          "scene": 3,
+          "beat": "climax_15_25",
+          "duration_s": 10,
+          "prompt": "A montage of vibrant murals, tucked-away bars, and elusive art pieces. The camera moves through narrow alleyways and secret entrances, showcasing the artistic diversity and hidden beauty of the Strip.",
+          "camera": "steady cam movement through various locations, panning and tilting to reveal details",
+          "lighting": "dramatic lighting highlighting the colors of the murals, with shadows adding depth",
+          "lens": "macro lens for intricate details on art pieces",
+          "texture": "rich textures of wall art, bar interiors, and unique decor",
+          "subject_motion": "the camera glides smoothly past murals and into bars, capturing the essence of each hidden gem",
+          "negative_prompt": "no warped or morphing subjects, deformed hands/faces, gibberish text, cartoon/CGI look, cheap stock look, flicker and watermarks"
+        },
+        {
+          "scene": 4,
+          "beat": "loop_cta_25_30",
+          "duration_s": 5,
+          "prompt": "A final shot of a mysterious entrance leading to one of the hidden spots, illuminated by soft lighting. The camera slowly zooms in, inviting viewers to explore further.",
+          "camera": "slow zoom-in on the entrance",
+          "lighting": "soft, inviting glow from the entrance, contrasting with the darker surroundings",
+          "lens": "telephoto lens for focused detail",
+          "texture": "smooth surfaces of the entrance contrasted with rough textures of the surrounding area",
+          "subject_motion": "the camera moves steadily towards the entrance, creating intrigue",
+          "negative_prompt": "no warped or morphing subjects, deformed hands/faces, gibberish text, cartoon/CGI look, cheap stock look, flicker and watermarks"
+        }
+      ],
+      "style": "Cinematic exploration of hidden urban gems with vibrant colors and dynamic movements.",
+      "negative_prompt": "no warped or morphing subjects, deformed hands/faces, gibberish text, cartoon/CGI look, cheap stock look, flicker and watermarks"
+    },
+    "image": null,
+    "video_path": null,
+    "channels": [
+      "telegram"
+    ],
+    "created_at": "2026-10-27T23:03:20.069003",
+    "status": "rejected",
+    "regen_of": "77302239",
+    "regen_reason": "visual-script mismatch — orca/nature footage under a Las Vegas script; rejected by Cyrus 2026-10-27; regenerated under the Zero-Waste Protocol",
+    "qa_reasons": [
+      "footage STOP at 22.1s/30s coverage — gates worked (vision rejected shooting b-roll, drone-equipment and blurry 1957 clips); two hero aerials were lost to a Commons transcode-URL parsing bug (utm params + hash-dir regex), since fixed; package regenerated"
+    ]
+  },
+  {
+    "id": "42d70497",
+    "idea": {
+      "hook": "Secret spots on the Las Vegas Strip revealed!",
+      "title": "Hidden Gems of the Las Vegas Strip",
+      "angle": "Uncover secret attractions on the Las Vegas Strip that are gaining fame through social media, and learn how to find them.",
+      "loop": "Now you know the secret spots on the Las Vegas Strip.",
+      "topic": "travel",
+      "source_urls": [
+        "https://midor.info/post/las-vegas-usa-the-iconic-neondrenched-strip-and-its-social-media-fame",
+        "https://neondigitalmedia.com/blogs/las-vegas-seo-digital-marketing-blog/social-media-marketing-trends-in-las-vegas"
+      ]
+    },
+    "script": {
+      "hook": "Secret spots on the Las Vegas Strip!",
+      "title": "Hidden Gems of the Las Vegas Strip",
+      "script": "Secret spots on the Las Vegas Strip! Uncover hidden attractions gaining fame. Social media buzz reveals these secret gems. Explore vibrant murals, tucked-away bars, and elusive art pieces. Discover more with Cyrus AI. Secret spots await!",
+      "beats": {
+        "hook_0_3": "Secret spots on the Las Vegas Strip!",
+        "tension_3_15": "Uncover hidden attractions gaining fame. Social media buzz reveals these secret gems.",
+        "climax_15_25": "Explore vibrant murals, tucked-away bars, and elusive art pieces.",
+        "loop_cta_25_30": "Discover more with Cyrus AI. Secret spots await!"
+      },
+      "on_screen_text": "Secret spots, Las Vegas Strip, Hidden gems, Social media buzz, Discover more, Cyrus AI",
+      "caption": "Discover the Las Vegas Strip's secret spots! 🎰✨",
+      "description": "Explore the hidden gems of the Las Vegas Strip that are gaining fame through social media. From vibrant murals to tucked-away bars, uncover the secrets that await. Plan your next adventure with Cyrus AI — https://www.youtube.com/@CyrusAIGuide, https://www.facebook.com/cyrus.soli, https://whatsapp.com/channel/0029VbDkc9g6WaKg0owHJE3B, https://www.tiktok.com/@cyrusoutdoor, https://t.me/Cyrus_team_bot, https://t.me/CyrusAIGuide, https://victoriatourandadventure.com, https://play.google.com/store/apps/details?id=com.victoriatourandadventure.app",
+      "hashtags": [
+        "LasVegasStrip",
+        "HiddenGems",
+        "TravelSecrets",
+        "CyrusAI",
+        "Adventure"
+      ]
+    },
+    "image_prompt": "A vibrant, photorealistic scene showcasing a hidden gem on the Las Vegas Strip, featuring a colorful mural on a secluded wall, surrounded by lush greenery and twinkling fairy lights. In the foreground, an inviting, tucked-away bar with unique decor and a cozy atmosphere, illuminated by warm, natural light. The background reveals glimpses of iconic Las Vegas architecture, creating a cinematic feel. The composition is vertical-friendly, capturing the essence of exploration and discovery without any text or words inside the image.",
+    "video_prompt": {
+      "scenes": [
+        {
+          "scene": 1,
+          "beat": "hook_0_3",
+          "duration_s": 3,
+          "prompt": "A sweeping aerial shot of the Las Vegas Strip at dusk, showcasing the vibrant lights and bustling atmosphere. The camera glides smoothly from high above, capturing the iconic skyline and hinting at secret spots below.",
+          "camera": "aerial drone movement, descending towards the ground",
+          "lighting": "golden hour sunlight fading into neon lights, warm and inviting",
+          "lens": "wide-angle lens for expansive view",
+          "texture": "detailed cityscape with reflections on glass buildings",
+          "subject_motion": "the camera moves from a high altitude to a lower vantage point, revealing hidden gems",
+          "negative_prompt": "no warped or morphing subjects, deformed hands/faces, gibberish text, cartoon/CGI look, cheap stock look, flicker and watermarks"
+        },
+        {
+          "scene": 2,
+          "beat": "tension_3_15",
+          "duration_s": 12,
+          "prompt": "Close-up shots of social media posts and influencers as they discover hidden attractions on the Strip. Each post reveals a new gem, with dynamic transitions between screens and real-life reactions.",
+          "camera": "quick cuts between handheld shots and static close-ups",
+          "lighting": "soft, diffused lighting from mobile screens, mixed with ambient light from the surroundings",
+          "lens": "standard lens for clarity and intimacy",
+          "texture": "high-resolution details on smartphone screens and vibrant colors of the Strip",
+          "subject_motion": "influencers scrolling through their phones, excitedly sharing their discoveries",
+          "negative_prompt": "no warped or morphing subjects, deformed hands/faces, gibberish text, cartoon/CGI look, cheap stock look, flicker and watermarks"
+        },
+        {
+          "scene": 3,
+          "beat": "climax_15_25",
+          "duration_s": 10,
+          "prompt": "A montage of vibrant murals, tucked-away bars, and elusive art pieces. The camera moves through narrow alleyways and secret entrances, showcasing the artistic diversity and hidden beauty of the Strip.",
+          "camera": "steady cam movement through various locations, panning and tilting to reveal details",
+          "lighting": "dramatic lighting highlighting the colors of the murals, with shadows adding depth",
+          "lens": "macro lens for intricate details on art pieces",
+          "texture": "rich textures of wall art, bar interiors, and unique decor",
+          "subject_motion": "the camera glides smoothly past murals and into bars, capturing the essence of each hidden gem",
+          "negative_prompt": "no warped or morphing subjects, deformed hands/faces, gibberish text, cartoon/CGI look, cheap stock look, flicker and watermarks"
+        },
+        {
+          "scene": 4,
+          "beat": "loop_cta_25_30",
+          "duration_s": 5,
+          "prompt": "A final shot of a mysterious entrance leading to one of the hidden spots, illuminated by soft lighting. The camera slowly zooms in, inviting viewers to explore further.",
+          "camera": "slow zoom-in on the entrance",
+          "lighting": "soft, inviting glow from the entrance, contrasting with the darker surroundings",
+          "lens": "telephoto lens for focused detail",
+          "texture": "smooth surfaces of the entrance contrasted with rough textures of the surrounding area",
+          "subject_motion": "the camera moves steadily towards the entrance, creating intrigue",
+          "negative_prompt": "no warped or morphing subjects, deformed hands/faces, gibberish text, cartoon/CGI look, cheap stock look, flicker and watermarks"
+        }
+      ],
+      "style": "Cinematic exploration of hidden urban gems with vibrant colors and dynamic movements.",
+      "negative_prompt": "no warped or morphing subjects, deformed hands/faces, gibberish text, cartoon/CGI look, cheap stock look, flicker and watermarks"
+    },
+    "image": null,
+    "video_path": null,
+    "channels": [
+      "telegram"
+    ],
+    "created_at": "2026-10-27T23:06:42.494579",
+    "status": "rejected",
+    "regen_of": "77302239",
+    "regen_reason": "visual-script mismatch — orca/nature footage under a Las Vegas script; rejected by Cyrus 2026-10-27; regenerated under the Zero-Waste Protocol",
+    "qa_reasons": [
+      "render failed in the aligned plan builder (beat windows could not be filled distinctly); fixed with offset subclips; superseded by the next regeneration attempt"
+    ]
+  },
+  {
+    "id": "39b70639",
+    "idea": {
+      "hook": "Secret spots on the Las Vegas Strip revealed!",
+      "title": "Hidden Gems of the Las Vegas Strip",
+      "angle": "Uncover secret attractions on the Las Vegas Strip that are gaining fame through social media, and learn how to find them.",
+      "loop": "Now you know the secret spots on the Las Vegas Strip.",
+      "topic": "travel",
+      "source_urls": [
+        "https://midor.info/post/las-vegas-usa-the-iconic-neondrenched-strip-and-its-social-media-fame",
+        "https://neondigitalmedia.com/blogs/las-vegas-seo-digital-marketing-blog/social-media-marketing-trends-in-las-vegas"
+      ]
+    },
+    "script": {
+      "hook": "Secret spots on the Las Vegas Strip!",
+      "title": "Hidden Gems of the Las Vegas Strip",
+      "script": "Secret spots on the Las Vegas Strip! Uncover hidden attractions gaining fame. Social media buzz reveals these secret gems. Explore vibrant murals, tucked-away bars, and elusive art pieces. Discover more with Cyrus AI. Secret spots await!",
+      "beats": {
+        "hook_0_3": "Secret spots on the Las Vegas Strip!",
+        "tension_3_15": "Uncover hidden attractions gaining fame. Social media buzz reveals these secret gems.",
+        "climax_15_25": "Explore vibrant murals, tucked-away bars, and elusive art pieces.",
+        "loop_cta_25_30": "Discover more with Cyrus AI. Secret spots await!"
+      },
+      "on_screen_text": "Secret spots, Las Vegas Strip, Hidden gems, Social media buzz, Discover more, Cyrus AI",
+      "caption": "Discover the Las Vegas Strip's secret spots! 🎰✨",
+      "description": "Explore the hidden gems of the Las Vegas Strip that are gaining fame through social media. From vibrant murals to tucked-away bars, uncover the secrets that await. Plan your next adventure with Cyrus AI — https://www.youtube.com/@CyrusAIGuide, https://www.facebook.com/cyrus.soli, https://whatsapp.com/channel/0029VbDkc9g6WaKg0owHJE3B, https://www.tiktok.com/@cyrusoutdoor, https://t.me/Cyrus_team_bot, https://t.me/CyrusAIGuide, https://victoriatourandadventure.com, https://play.google.com/store/apps/details?id=com.victoriatourandadventure.app",
+      "hashtags": [
+        "LasVegasStrip",
+        "HiddenGems",
+        "TravelSecrets",
+        "CyrusAI",
+        "Adventure"
+      ]
+    },
+    "image_prompt": "A vibrant, photorealistic scene showcasing a hidden gem on the Las Vegas Strip, featuring a colorful mural on a secluded wall, surrounded by lush greenery and twinkling fairy lights. In the foreground, an inviting, tucked-away bar with unique decor and a cozy atmosphere, illuminated by warm, natural light. The background reveals glimpses of iconic Las Vegas architecture, creating a cinematic feel. The composition is vertical-friendly, capturing the essence of exploration and discovery without any text or words inside the image.",
+    "video_prompt": {
+      "scenes": [
+        {
+          "scene": 1,
+          "beat": "hook_0_3",
+          "duration_s": 3,
+          "prompt": "A sweeping aerial shot of the Las Vegas Strip at dusk, showcasing the vibrant lights and bustling atmosphere. The camera glides smoothly from high above, capturing the iconic skyline and hinting at secret spots below.",
+          "camera": "aerial drone movement, descending towards the ground",
+          "lighting": "golden hour sunlight fading into neon lights, warm and inviting",
+          "lens": "wide-angle lens for expansive view",
+          "texture": "detailed cityscape with reflections on glass buildings",
+          "subject_motion": "the camera moves from a high altitude to a lower vantage point, revealing hidden gems",
+          "negative_prompt": "no warped or morphing subjects, deformed hands/faces, gibberish text, cartoon/CGI look, cheap stock look, flicker and watermarks"
+        },
+        {
+          "scene": 2,
+          "beat": "tension_3_15",
+          "duration_s": 12,
+          "prompt": "Close-up shots of social media posts and influencers as they discover hidden attractions on the Strip. Each post reveals a new gem, with dynamic transitions between screens and real-life reactions.",
+          "camera": "quick cuts between handheld shots and static close-ups",
+          "lighting": "soft, diffused lighting from mobile screens, mixed with ambient light from the surroundings",
+          "lens": "standard lens for clarity and intimacy",
+          "texture": "high-resolution details on smartphone screens and vibrant colors of the Strip",
+          "subject_motion": "influencers scrolling through their phones, excitedly sharing their discoveries",
+          "negative_prompt": "no warped or morphing subjects, deformed hands/faces, gibberish text, cartoon/CGI look, cheap stock look, flicker and watermarks"
+        },
+        {
+          "scene": 3,
+          "beat": "climax_15_25",
+          "duration_s": 10,
+          "prompt": "A montage of vibrant murals, tucked-away bars, and elusive art pieces. The camera moves through narrow alleyways and secret entrances, showcasing the artistic diversity and hidden beauty of the Strip.",
+          "camera": "steady cam movement through various locations, panning and tilting to reveal details",
+          "lighting": "dramatic lighting highlighting the colors of the murals, with shadows adding depth",
+          "lens": "macro lens for intricate details on art pieces",
+          "texture": "rich textures of wall art, bar interiors, and unique decor",
+          "subject_motion": "the camera glides smoothly past murals and into bars, capturing the essence of each hidden gem",
+          "negative_prompt": "no warped or morphing subjects, deformed hands/faces, gibberish text, cartoon/CGI look, cheap stock look, flicker and watermarks"
+        },
+        {
+          "scene": 4,
+          "beat": "loop_cta_25_30",
+          "duration_s": 5,
+          "prompt": "A final shot of a mysterious entrance leading to one of the hidden spots, illuminated by soft lighting. The camera slowly zooms in, inviting viewers to explore further.",
+          "camera": "slow zoom-in on the entrance",
+          "lighting": "soft, inviting glow from the entrance, contrasting with the darker surroundings",
+          "lens": "telephoto lens for focused detail",
+          "texture": "smooth surfaces of the entrance contrasted with rough textures of the surrounding area",
+          "subject_motion": "the camera moves steadily towards the entrance, creating intrigue",
+          "negative_prompt": "no warped or morphing subjects, deformed hands/faces, gibberish text, cartoon/CGI look, cheap stock look, flicker and watermarks"
+        }
+      ],
+      "style": "Cinematic exploration of hidden urban gems with vibrant colors and dynamic movements.",
+      "negative_prompt": "no warped or morphing subjects, deformed hands/faces, gibberish text, cartoon/CGI look, cheap stock look, flicker and watermarks"
+    },
+    "image": null,
+    "video_path": null,
+    "channels": [
+      "telegram"
+    ],
+    "created_at": "2026-10-27T23:16:06.527916",
+    "status": "rejected",
+    "regen_of": "77302239",
+    "regen_reason": "visual-script mismatch — orca/nature footage under a Las Vegas script; rejected by Cyrus 2026-10-27; regenerated under the Zero-Waste Protocol",
+    "qa_reasons": [
+      "footage STOP at 0.0s coverage: the vision screening judged frames against the marketing angle ('hidden spots') instead of the visual world and false-rejected real Las Vegas Strip aerials; fixed with the visual-world anchor (Forever Protocol v2); superseded by the next regeneration attempt"
+    ]
+  },
+  {
+    "id": "25273f2c",
+    "idea": {
+      "hook": "Secret spots on the Las Vegas Strip revealed!",
+      "title": "Hidden Gems of the Las Vegas Strip",
+      "angle": "Uncover secret attractions on the Las Vegas Strip that are gaining fame through social media, and learn how to find them.",
+      "loop": "Now you know the secret spots on the Las Vegas Strip.",
+      "topic": "travel",
+      "source_urls": [
+        "https://midor.info/post/las-vegas-usa-the-iconic-neondrenched-strip-and-its-social-media-fame",
+        "https://neondigitalmedia.com/blogs/las-vegas-seo-digital-marketing-blog/social-media-marketing-trends-in-las-vegas"
+      ]
+    },
+    "script": {
+      "hook": "Secret spots on the Las Vegas Strip!",
+      "title": "Hidden Gems of the Las Vegas Strip",
+      "script": "Secret spots on the Las Vegas Strip! Uncover hidden attractions gaining fame. Social media buzz reveals these secret gems. Explore vibrant murals, tucked-away bars, and elusive art pieces. Discover more with Cyrus AI. Secret spots await!",
+      "beats": {
+        "hook_0_3": "Secret spots on the Las Vegas Strip!",
+        "tension_3_15": "Uncover hidden attractions gaining fame. Social media buzz reveals these secret gems.",
+        "climax_15_25": "Explore vibrant murals, tucked-away bars, and elusive art pieces.",
+        "loop_cta_25_30": "Discover more with Cyrus AI. Secret spots await!"
+      },
+      "on_screen_text": "Secret spots, Las Vegas Strip, Hidden gems, Social media buzz, Discover more, Cyrus AI",
+      "caption": "Discover the Las Vegas Strip's secret spots! 🎰✨",
+      "description": "Explore the hidden gems of the Las Vegas Strip that are gaining fame through social media. From vibrant murals to tucked-away bars, uncover the secrets that await. Plan your next adventure with Cyrus AI — https://www.youtube.com/@CyrusAIGuide, https://www.facebook.com/cyrus.soli, https://whatsapp.com/channel/0029VbDkc9g6WaKg0owHJE3B, https://www.tiktok.com/@cyrusoutdoor, https://t.me/Cyrus_team_bot, https://t.me/CyrusAIGuide, https://victoriatourandadventure.com, https://play.google.com/store/apps/details?id=com.victoriatourandadventure.app",
+      "hashtags": [
+        "LasVegasStrip",
+        "HiddenGems",
+        "TravelSecrets",
+        "CyrusAI",
+        "Adventure"
+      ]
+    },
+    "image_prompt": "A vibrant, photorealistic scene showcasing a hidden gem on the Las Vegas Strip, featuring a colorful mural on a secluded wall, surrounded by lush greenery and twinkling fairy lights. In the foreground, an inviting, tucked-away bar with unique decor and a cozy atmosphere, illuminated by warm, natural light. The background reveals glimpses of iconic Las Vegas architecture, creating a cinematic feel. The composition is vertical-friendly, capturing the essence of exploration and discovery without any text or words inside the image.",
+    "video_prompt": {
+      "scenes": [
+        {
+          "scene": 1,
+          "beat": "hook_0_3",
+          "duration_s": 3,
+          "prompt": "A sweeping aerial shot of the Las Vegas Strip at dusk, showcasing the vibrant lights and bustling atmosphere. The camera glides smoothly from high above, capturing the iconic skyline and hinting at secret spots below.",
+          "camera": "aerial drone movement, descending towards the ground",
+          "lighting": "golden hour sunlight fading into neon lights, warm and inviting",
+          "lens": "wide-angle lens for expansive view",
+          "texture": "detailed cityscape with reflections on glass buildings",
+          "subject_motion": "the camera moves from a high altitude to a lower vantage point, revealing hidden gems",
+          "negative_prompt": "no warped or morphing subjects, deformed hands/faces, gibberish text, cartoon/CGI look, cheap stock look, flicker and watermarks"
+        },
+        {
+          "scene": 2,
+          "beat": "tension_3_15",
+          "duration_s": 12,
+          "prompt": "Close-up shots of social media posts and influencers as they discover hidden attractions on the Strip. Each post reveals a new gem, with dynamic transitions between screens and real-life reactions.",
+          "camera": "quick cuts between handheld shots and static close-ups",
+          "lighting": "soft, diffused lighting from mobile screens, mixed with ambient light from the surroundings",
+          "lens": "standard lens for clarity and intimacy",
+          "texture": "high-resolution details on smartphone screens and vibrant colors of the Strip",
+          "subject_motion": "influencers scrolling through their phones, excitedly sharing their discoveries",
+          "negative_prompt": "no warped or morphing subjects, deformed hands/faces, gibberish text, cartoon/CGI look, cheap stock look, flicker and watermarks"
+        },
+        {
+          "scene": 3,
+          "beat": "climax_15_25",
+          "duration_s": 10,
+          "prompt": "A montage of vibrant murals, tucked-away bars, and elusive art pieces. The camera moves through narrow alleyways and secret entrances, showcasing the artistic diversity and hidden beauty of the Strip.",
+          "camera": "steady cam movement through various locations, panning and tilting to reveal details",
+          "lighting": "dramatic lighting highlighting the colors of the murals, with shadows adding depth",
+          "lens": "macro lens for intricate details on art pieces",
+          "texture": "rich textures of wall art, bar interiors, and unique decor",
+          "subject_motion": "the camera glides smoothly past murals and into bars, capturing the essence of each hidden gem",
+          "negative_prompt": "no warped or morphing subjects, deformed hands/faces, gibberish text, cartoon/CGI look, cheap stock look, flicker and watermarks"
+        },
+        {
+          "scene": 4,
+          "beat": "loop_cta_25_30",
+          "duration_s": 5,
+          "prompt": "A final shot of a mysterious entrance leading to one of the hidden spots, illuminated by soft lighting. The camera slowly zooms in, inviting viewers to explore further.",
+          "camera": "slow zoom-in on the entrance",
+          "lighting": "soft, inviting glow from the entrance, contrasting with the darker surroundings",
+          "lens": "telephoto lens for focused detail",
+          "texture": "smooth surfaces of the entrance contrasted with rough textures of the surrounding area",
+          "subject_motion": "the camera moves steadily towards the entrance, creating intrigue",
+          "negative_prompt": "no warped or morphing subjects, deformed hands/faces, gibberish text, cartoon/CGI look, cheap stock look, flicker and watermarks"
+        }
+      ],
+      "style": "Cinematic exploration of hidden urban gems with vibrant colors and dynamic movements.",
+      "negative_prompt": "no warped or morphing subjects, deformed hands/faces, gibberish text, cartoon/CGI look, cheap stock look, flicker and watermarks"
+    },
+    "image": null,
+    "video_path": "work/25273f2c/video.mp4",
+    "channels": [
+      "telegram"
+    ],
+    "created_at": "2026-10-27T23:26:47.379462",
+    "status": "rejected",
+    "regen_of": "77302239",
+    "regen_reason": "visual-script mismatch — orca/nature footage under a Las Vegas script; rejected by Cyrus 2026-10-27; regenerated under the Zero-Waste Protocol",
+    "render": {
+      "ok": true,
+      "path": "work/25273f2c/video.mp4",
+      "duration_s": 30.0,
+      "planned_s": 30.0,
+      "width": 1080,
+      "height": 1920,
+      "has_audio": true
+    },
+    "voice": {
+      "path": "work/25273f2c/voice.wav",
+      "duration_s": 30.0,
+      "beats": [
+        {
+          "key": "hook_0_3",
+          "target_s": 3.0,
+          "speech_s": 2.917,
+          "scale": 1.049,
+          "fitted_s": 3.0
+        },
+        {
+          "key": "tension_3_15",
+          "target_s": 12.0,
+          "speech_s": 8.887,
+          "scale": 1.4,
+          "fitted_s": 12.0
+        },
+        {
+          "key": "climax_15_25",
+          "target_s": 10.0,
+          "speech_s": 6.365,
+          "scale": 1.4,
+          "fitted_s": 10.0
+        },
+        {
+          "key": "loop_cta_25_30",
+          "target_s": 5.0,
+          "speech_s": 4.893,
+          "scale": 1.095,
+          "fitted_s": 5.0
+        }
+      ]
+    },
+    "topic": "Hidden spots on Las Vegas Strip",
+    "visual_world": "Footage shows the bustling Las Vegas Strip with its iconic neon lights, vibrant murals, tucked-away bars, and unique art pieces.",
+    "footage_keywords": [
+      "Las Vegas Strip night",
+      "Las Vegas casino",
+      "Las Vegas aerial",
+      "Las Vegas murals",
+      "hidden bars Las Vegas",
+      "Las Vegas art pieces"
+    ],
+    "footage": {
+      "topic": "Hidden spots on Las Vegas Strip",
+      "topic_class": "urban",
+      "queries": [
+        "Las Vegas Strip night",
+        "Las Vegas casino",
+        "Las Vegas aerial",
+        "Las Vegas murals",
+        "hidden bars Las Vegas",
+        "Las Vegas art pieces"
+      ],
+      "manifest_path": "work/25273f2c/footage/footage_manifest.json",
+      "clips": [
+        {
+          "id": "clip_01",
+          "source": "wikimedia_commons",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Aerial_views_of_Las_Vegas_Strip,_Nevada,_USA_at_night_including_The_Bellagio,_The_Flamingo,_MGM_Grand_Hotel,_Caesars_Palace,_The_Cosmopolitan,_Mirage_Hotel_and_Casino_and_the_Venetian_Palazzo_Resort_Casino.webm",
+          "license": "CC BY 3.0",
+          "query": "Las Vegas Strip night"
+        },
+        {
+          "id": "clip_01",
+          "source": "wikimedia_commons",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Aerial_views_of_Las_Vegas_Strip,_Nevada,_USA_at_night_including_The_Bellagio,_The_Flamingo,_MGM_Grand_Hotel,_Caesars_Palace,_The_Cosmopolitan,_Mirage_Hotel_and_Casino_and_the_Venetian_Palazzo_Resort_Casino.webm",
+          "license": "CC BY 3.0",
+          "query": "Las Vegas Strip night"
+        },
+        {
+          "id": "clip_01",
+          "source": "wikimedia_commons",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Aerial_views_of_Las_Vegas_Strip,_Nevada,_USA_at_night_including_The_Bellagio,_The_Flamingo,_MGM_Grand_Hotel,_Caesars_Palace,_The_Cosmopolitan,_Mirage_Hotel_and_Casino_and_the_Venetian_Palazzo_Resort_Casino.webm",
+          "license": "CC BY 3.0",
+          "query": "Las Vegas Strip night"
+        },
+        {
+          "id": "clip_01",
+          "source": "wikimedia_commons",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Aerial_views_of_Las_Vegas_Strip,_Nevada,_USA_at_night_including_The_Bellagio,_The_Flamingo,_MGM_Grand_Hotel,_Caesars_Palace,_The_Cosmopolitan,_Mirage_Hotel_and_Casino_and_the_Venetian_Palazzo_Resort_Casino.webm",
+          "license": "CC BY 3.0",
+          "query": "Las Vegas Strip night"
+        }
+      ]
+    },
+    "sync": {
+      "beat_boundaries_s": [
+        3.0,
+        15.0,
+        25.0
+      ],
+      "plan_cuts_s": [
+        3.0,
+        15.0,
+        25.0
+      ],
+      "beats": [
+        {
+          "key": "hook_0_3",
+          "target_s": 3.0,
+          "speech_s": 2.917,
+          "scale": 1.049,
+          "fitted_s": 3.0
+        },
+        {
+          "key": "tension_3_15",
+          "target_s": 12.0,
+          "speech_s": 8.887,
+          "scale": 1.4,
+          "fitted_s": 12.0
+        },
+        {
+          "key": "climax_15_25",
+          "target_s": 10.0,
+          "speech_s": 6.365,
+          "scale": 1.4,
+          "fitted_s": 10.0
+        },
+        {
+          "key": "loop_cta_25_30",
+          "target_s": 5.0,
+          "speech_s": 4.893,
+          "scale": 1.095,
+          "fitted_s": 5.0
+        }
+      ],
+      "voice_duration_s": 30.0
+    },
+    "qa_reasons": [
+      "rendered with real Las Vegas Strip footage (visual gate 6/6) but rejected: hard gate Q4 audio threshold misread a -0.4 dB peak as clipping (corrected: clipping is 0 dBFS), the viral checklist was still load-bearing instead of advisory (Forever Protocol v2), and beat boundaries had no real scene cuts (plan now jumps/rotates at window starts); superseded by the next regeneration attempt"
+    ],
+    "qa_verdict": {
+      "passed": false,
+      "reasons": [
+        "viral checklist failed Q4 (Loop integrity): The final line 'Secret spots await!' does not directly re-enter the hook 'Secret spots on the Las Vegas Strip!' for seamless replay.",
+        "hard gate Q4 answered NO (Are the narrator voice and sound effects clean and cinematic?): peak -0.4 dB (clipping if > -0.5), mean -18.8 dB, longest mid-video silence 4.1s (limit 5.5s), speech in every beat: True"
+      ],
+      "warnings": [
+        "critic score: 6.0/10 — Strong hook and clear theme, but lacks a decisive ending.",
+        "viral Q1 [PASS]: The hook 'Secret spots on the Las Vegas Strip!' is a clear promise and pattern interrupt.",
+        "viral Q2 [PASS]: The pacing maintains tension with no filler, and the payoff lands effectively between 15-25 seconds.",
+        "viral Q3 [PASS]: Visual prompts are cinematic with detailed camera and lighting specifications, and negative prompts prevent cheap effects.",
+        "hard gate Q1 [YES]: Visual match: does the footage match the script's topic and words 100%? YES — evidence: 6/6 sampled frames on-topic [2.4s: Aerial view of the Las Vegas Strip with neon lights and buildings.; 7.5s: Aerial view of the Las Vegas Strip with neon lights and buildings.; 12.6s: Aerial view of the Las Vegas Strip at night with illuminated signs and buildings.; 17.4s: Aerial view of the Las Vegas Strip at night with illuminated signs and buildings.; 22.5s: Aerial view of the Las Vegas Strip at night with illuminated signs and buildings.; 27.6s: Aerial view of the Las Vegas Strip with neon lights and buildings.] | sync evidence: beat 3.0s -> cut 11.1s (offset 8.1s), beat 15.0s -> cut 11.1s (offset -3.9s), beat 25.0s -> cut 25.167s (offset 0.167s); tolerance ±0.75s",
+        "hard gate Q2 [YES]: viral checklist hook judgement: The hook 'Secret spots on the Las Vegas Strip!' is a clear promise and pattern interrupt.",
+        "hard gate Q3 [YES]: 6/6 sampled frames judged real and cinematic (no watermark/cartoon/cheap effects); render 1080x1920; native sharpness enforced at selection (Law 3)",
+        "hard gate Q5 [YES]: beats complete: True; final beat re-enters the hook line: True; duration 30.0s inside [29.0, 31.0]: True; viral loop judgement: The final line 'Secret spots await!' does not directly re-enter the hook 'Secret spots on the Las Vegas Strip!' for seamless replay."
+      ],
+      "critic_score": 6.0,
+      "viral_checklist": {
+        "ai_used": true,
+        "passed": false,
+        "answers": [
+          {
+            "question": "Hook strength — does the first-3-seconds hook have multi-million-view stopping power (a real pattern interrupt plus a clear promise in the opening line)?",
+            "pass": true,
+            "reason": "The hook 'Secret spots on the Las Vegas Strip!' is a clear promise and pattern interrupt."
+          },
+          {
+            "question": "Pacing — do story and rhythm hold all the way to second 30: no filler, tension maintained through 3-15s, and the payoff landing at 15-25s?",
+            "pass": true,
+            "reason": "The pacing maintains tension with no filler, and the payoff lands effectively between 15-25 seconds."
+          },
+          {
+            "question": "Prompt quality — are the visual prompts genuinely cinematic (camera, lighting, lens, texture specified) and free of cheap/artificial effects, with negative prompts guarding against them?",
+            "pass": true,
+            "reason": "Visual prompts are cinematic with detailed camera and lighting specifications, and negative prompts prevent cheap effects."
+          },
+          {
+            "question": "Loop integrity — does the narrative loop actually work: does the final line of the script connect back into the opening hook line so an auto-replay feels seamless?",
+            "pass": false,
+            "reason": "The final line 'Secret spots await!' does not directly re-enter the hook 'Secret spots on the Las Vegas Strip!' for seamless replay."
+          }
+        ]
+      },
+      "media_facts": {
+        "exists": true,
+        "readable": true,
+        "duration_s": 30.0,
+        "width": 1080,
+        "height": 1920,
+        "has_audio": true,
+        "has_video": true,
+        "error": null
+      },
+      "duration_gate": {
+        "measured_s": 30.0,
+        "max_s": 31.0,
+        "passed": true
+      },
+      "visual_match": {
+        "ran": true,
+        "passed": true,
+        "answer": "Visual match: does the footage match the script's topic and words 100%? YES — evidence: 6/6 sampled frames on-topic [2.4s: Aerial view of the Las Vegas Strip with neon lights and buildings.; 7.5s: Aerial view of the Las Vegas Strip with neon lights and buildings.; 12.6s: Aerial view of the Las Vegas Strip at night with illuminated signs and buildings.; 17.4s: Aerial view of the Las Vegas Strip at night with illuminated signs and buildings.; 22.5s: Aerial view of the Las Vegas Strip at night with illuminated signs and buildings.; 27.6s: Aerial view of the Las Vegas Strip with neon lights and buildings.]",
+        "on_topic_count": 6,
+        "cinematic_count": 6,
+        "total": 6,
+        "frames": [
+          {
+            "t_s": 2.4,
+            "on_topic": true,
+            "cinematic": true,
+            "shows": "Aerial view of the Las Vegas Strip with neon lights and buildings."
+          },
+          {
+            "t_s": 7.5,
+            "on_topic": true,
+            "cinematic": true,
+            "shows": "Aerial view of the Las Vegas Strip with neon lights and buildings."
+          },
+          {
+            "t_s": 12.6,
+            "on_topic": true,
+            "cinematic": true,
+            "shows": "Aerial view of the Las Vegas Strip at night with illuminated signs and buildings."
+          },
+          {
+            "t_s": 17.4,
+            "on_topic": true,
+            "cinematic": true,
+            "shows": "Aerial view of the Las Vegas Strip at night with illuminated signs and buildings."
+          },
+          {
+            "t_s": 22.5,
+            "on_topic": true,
+            "cinematic": true,
+            "shows": "Aerial view of the Las Vegas Strip at night with illuminated signs and buildings."
+          },
+          {
+            "t_s": 27.6,
+            "on_topic": true,
+            "cinematic": true,
+            "shows": "Aerial view of the Las Vegas Strip with neon lights and buildings."
+          }
+        ],
+        "note": ""
+      },
+      "hard_gate": {
+        "ran": true,
+        "passed": false,
+        "answers": [
+          {
+            "q": 1,
+            "question": "Does the recorded image match the narrator's text 100%?",
+            "pass": true,
+            "evidence": "Visual match: does the footage match the script's topic and words 100%? YES — evidence: 6/6 sampled frames on-topic [2.4s: Aerial view of the Las Vegas Strip with neon lights and buildings.; 7.5s: Aerial view of the Las Vegas Strip with neon lights and buildings.; 12.6s: Aerial view of the Las Vegas Strip at night with illuminated signs and buildings.; 17.4s: Aerial view of the Las Vegas Strip at night with illuminated signs and buildings.; 22.5s: Aerial view of the Las Vegas Strip at night with illuminated signs and buildings.; 27.6s: Aerial view of the Las Vegas Strip with neon lights and buildings.] | sync evidence: beat 3.0s -> cut 11.1s (offset 8.1s), beat 15.0s -> cut 11.1s (offset -3.9s), beat 25.0s -> cut 25.167s (offset 0.167s); tolerance ±0.75s"
+          },
+          {
+            "q": 2,
+            "question": "Does the 3-second hook have thumb-stopping power?",
+            "pass": true,
+            "evidence": "viral checklist hook judgement: The hook 'Secret spots on the Las Vegas Strip!' is a clear promise and pattern interrupt."
+          },
+          {
+            "q": 3,
+            "question": "Is the footage real, clear, and free of ugly effects?",
+            "pass": true,
+            "evidence": "6/6 sampled frames judged real and cinematic (no watermark/cartoon/cheap effects); render 1080x1920; native sharpness enforced at selection (Law 3)"
+          },
+          {
+            "q": 4,
+            "question": "Are the narrator voice and sound effects clean and cinematic?",
+            "pass": false,
+            "evidence": "peak -0.4 dB (clipping if > -0.5), mean -18.8 dB, longest mid-video silence 4.1s (limit 5.5s), speech in every beat: True"
+          },
+          {
+            "q": 5,
+            "question": "Is the closing verbal loop executed smoothly?",
+            "pass": true,
+            "evidence": "beats complete: True; final beat re-enters the hook line: True; duration 30.0s inside [29.0, 31.0]: True; viral loop judgement: The final line 'Secret spots await!' does not directly re-enter the hook 'Secret spots on the Las Vegas Strip!' for seamless replay."
+          }
+        ],
+        "sync": {
+          "ran": true,
+          "synced": false,
+          "offsets": [
+            {
+              "beat_boundary_s": 3.0,
+              "nearest_cut_s": 11.1,
+              "offset_s": 8.1
+            },
+            {
+              "beat_boundary_s": 15.0,
+              "nearest_cut_s": 11.1,
+              "offset_s": -3.9
+            },
+            {
+              "beat_boundary_s": 25.0,
+              "nearest_cut_s": 25.167,
+              "offset_s": 0.167
+            }
+          ],
+          "detected_cuts_s": [
+            11.1,
+            25.167
+          ],
+          "plan_verified": false,
+          "note": "beat boundaries without a matching cut: 3.0, 15.0"
+        }
+      }
+    }
+  },
+  {
+    "id": "960f5b0c",
+    "idea": {
+      "hook": "Secret spots on the Las Vegas Strip revealed!",
+      "title": "Hidden Gems of the Las Vegas Strip",
+      "angle": "Uncover secret attractions on the Las Vegas Strip that are gaining fame through social media, and learn how to find them.",
+      "loop": "Now you know the secret spots on the Las Vegas Strip.",
+      "topic": "travel",
+      "source_urls": [
+        "https://midor.info/post/las-vegas-usa-the-iconic-neondrenched-strip-and-its-social-media-fame",
+        "https://neondigitalmedia.com/blogs/las-vegas-seo-digital-marketing-blog/social-media-marketing-trends-in-las-vegas"
+      ]
+    },
+    "script": {
+      "hook": "Secret spots on the Las Vegas Strip!",
+      "title": "Hidden Gems of the Las Vegas Strip",
+      "script": "Secret spots on the Las Vegas Strip! Uncover hidden attractions gaining fame. Social media buzz reveals these secret gems. Explore vibrant murals, tucked-away bars, and elusive art pieces. Discover more with Cyrus AI. Secret spots await!",
+      "beats": {
+        "hook_0_3": "Secret spots on the Las Vegas Strip!",
+        "tension_3_15": "Uncover hidden attractions gaining fame. Social media buzz reveals these secret gems.",
+        "climax_15_25": "Explore vibrant murals, tucked-away bars, and elusive art pieces.",
+        "loop_cta_25_30": "Discover more with Cyrus AI. Secret spots await!"
+      },
+      "on_screen_text": "Secret spots, Las Vegas Strip, Hidden gems, Social media buzz, Discover more, Cyrus AI",
+      "caption": "Discover the Las Vegas Strip's secret spots! 🎰✨",
+      "description": "Explore the hidden gems of the Las Vegas Strip that are gaining fame through social media. From vibrant murals to tucked-away bars, uncover the secrets that await. Plan your next adventure with Cyrus AI — https://www.youtube.com/@CyrusAIGuide, https://www.facebook.com/cyrus.soli, https://whatsapp.com/channel/0029VbDkc9g6WaKg0owHJE3B, https://www.tiktok.com/@cyrusoutdoor, https://t.me/Cyrus_team_bot, https://t.me/CyrusAIGuide, https://victoriatourandadventure.com, https://play.google.com/store/apps/details?id=com.victoriatourandadventure.app",
+      "hashtags": [
+        "LasVegasStrip",
+        "HiddenGems",
+        "TravelSecrets",
+        "CyrusAI",
+        "Adventure"
+      ]
+    },
+    "image_prompt": "A vibrant, photorealistic scene showcasing a hidden gem on the Las Vegas Strip, featuring a colorful mural on a secluded wall, surrounded by lush greenery and twinkling fairy lights. In the foreground, an inviting, tucked-away bar with unique decor and a cozy atmosphere, illuminated by warm, natural light. The background reveals glimpses of iconic Las Vegas architecture, creating a cinematic feel. The composition is vertical-friendly, capturing the essence of exploration and discovery without any text or words inside the image.",
+    "video_prompt": {
+      "scenes": [
+        {
+          "scene": 1,
+          "beat": "hook_0_3",
+          "duration_s": 3,
+          "prompt": "A sweeping aerial shot of the Las Vegas Strip at dusk, showcasing the vibrant lights and bustling atmosphere. The camera glides smoothly from high above, capturing the iconic skyline and hinting at secret spots below.",
+          "camera": "aerial drone movement, descending towards the ground",
+          "lighting": "golden hour sunlight fading into neon lights, warm and inviting",
+          "lens": "wide-angle lens for expansive view",
+          "texture": "detailed cityscape with reflections on glass buildings",
+          "subject_motion": "the camera moves from a high altitude to a lower vantage point, revealing hidden gems",
+          "negative_prompt": "no warped or morphing subjects, deformed hands/faces, gibberish text, cartoon/CGI look, cheap stock look, flicker and watermarks"
+        },
+        {
+          "scene": 2,
+          "beat": "tension_3_15",
+          "duration_s": 12,
+          "prompt": "Close-up shots of social media posts and influencers as they discover hidden attractions on the Strip. Each post reveals a new gem, with dynamic transitions between screens and real-life reactions.",
+          "camera": "quick cuts between handheld shots and static close-ups",
+          "lighting": "soft, diffused lighting from mobile screens, mixed with ambient light from the surroundings",
+          "lens": "standard lens for clarity and intimacy",
+          "texture": "high-resolution details on smartphone screens and vibrant colors of the Strip",
+          "subject_motion": "influencers scrolling through their phones, excitedly sharing their discoveries",
+          "negative_prompt": "no warped or morphing subjects, deformed hands/faces, gibberish text, cartoon/CGI look, cheap stock look, flicker and watermarks"
+        },
+        {
+          "scene": 3,
+          "beat": "climax_15_25",
+          "duration_s": 10,
+          "prompt": "A montage of vibrant murals, tucked-away bars, and elusive art pieces. The camera moves through narrow alleyways and secret entrances, showcasing the artistic diversity and hidden beauty of the Strip.",
+          "camera": "steady cam movement through various locations, panning and tilting to reveal details",
+          "lighting": "dramatic lighting highlighting the colors of the murals, with shadows adding depth",
+          "lens": "macro lens for intricate details on art pieces",
+          "texture": "rich textures of wall art, bar interiors, and unique decor",
+          "subject_motion": "the camera glides smoothly past murals and into bars, capturing the essence of each hidden gem",
+          "negative_prompt": "no warped or morphing subjects, deformed hands/faces, gibberish text, cartoon/CGI look, cheap stock look, flicker and watermarks"
+        },
+        {
+          "scene": 4,
+          "beat": "loop_cta_25_30",
+          "duration_s": 5,
+          "prompt": "A final shot of a mysterious entrance leading to one of the hidden spots, illuminated by soft lighting. The camera slowly zooms in, inviting viewers to explore further.",
+          "camera": "slow zoom-in on the entrance",
+          "lighting": "soft, inviting glow from the entrance, contrasting with the darker surroundings",
+          "lens": "telephoto lens for focused detail",
+          "texture": "smooth surfaces of the entrance contrasted with rough textures of the surrounding area",
+          "subject_motion": "the camera moves steadily towards the entrance, creating intrigue",
+          "negative_prompt": "no warped or morphing subjects, deformed hands/faces, gibberish text, cartoon/CGI look, cheap stock look, flicker and watermarks"
+        }
+      ],
+      "style": "Cinematic exploration of hidden urban gems with vibrant colors and dynamic movements.",
+      "negative_prompt": "no warped or morphing subjects, deformed hands/faces, gibberish text, cartoon/CGI look, cheap stock look, flicker and watermarks"
+    },
+    "image": null,
+    "video_path": "work/960f5b0c/video.mp4",
+    "channels": [
+      "telegram"
+    ],
+    "created_at": "2026-10-27T23:31:33.836582",
+    "status": "rejected",
+    "regen_of": "77302239",
+    "regen_reason": "visual-script mismatch — orca/nature footage under a Las Vegas script; rejected by Cyrus 2026-10-27; regenerated under the Zero-Waste Protocol",
+    "render": {
+      "ok": true,
+      "path": "work/960f5b0c/video.mp4",
+      "duration_s": 30.0,
+      "planned_s": 30.0,
+      "width": 1080,
+      "height": 1920,
+      "has_audio": true
+    },
+    "voice": {
+      "path": "work/960f5b0c/voice.wav",
+      "duration_s": 30.0,
+      "beats": [
+        {
+          "key": "hook_0_3",
+          "target_s": 3.0,
+          "speech_s": 2.963,
+          "scale": 1.012,
+          "fitted_s": 3.0
+        },
+        {
+          "key": "tension_3_15",
+          "target_s": 12.0,
+          "speech_s": 8.678,
+          "scale": 1.4,
+          "fitted_s": 12.0
+        },
+        {
+          "key": "climax_15_25",
+          "target_s": 10.0,
+          "speech_s": 6.446,
+          "scale": 1.4,
+          "fitted_s": 10.0
+        },
+        {
+          "key": "loop_cta_25_30",
+          "target_s": 5.0,
+          "speech_s": 4.707,
+          "scale": 1.075,
+          "fitted_s": 5.0
+        }
+      ]
+    },
+    "topic": "hidden attractions on the Las Vegas Strip",
+    "visual_world": "Footage of the Las Vegas Strip showcasing vibrant murals, tucked-away bars, and elusive art pieces amidst the bustling urban landscape.",
+    "footage_keywords": [
+      "Las Vegas Strip night",
+      "Las Vegas casino",
+      "Las Vegas aerial",
+      "Las Vegas murals",
+      "hidden bars Las Vegas",
+      "art pieces Las Vegas"
+    ],
+    "footage": {
+      "topic": "hidden attractions on the Las Vegas Strip",
+      "topic_class": "urban",
+      "queries": [
+        "Las Vegas Strip night",
+        "Las Vegas casino",
+        "Las Vegas aerial",
+        "Las Vegas murals",
+        "hidden bars Las Vegas",
+        "art pieces Las Vegas"
+      ],
+      "manifest_path": "work/960f5b0c/footage/footage_manifest.json",
+      "clips": [
+        {
+          "id": "clip_01",
+          "source": "wikimedia_commons",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Aerial_views_of_Las_Vegas_Strip,_Nevada,_USA_at_night_including_The_Bellagio,_The_Flamingo,_MGM_Grand_Hotel,_Caesars_Palace,_The_Cosmopolitan,_Mirage_Hotel_and_Casino_and_the_Venetian_Palazzo_Resort_Casino.webm",
+          "license": "CC BY 3.0",
+          "query": "Las Vegas Strip night"
+        },
+        {
+          "id": "clip_01",
+          "source": "wikimedia_commons",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Aerial_views_of_Las_Vegas_Strip,_Nevada,_USA_at_night_including_The_Bellagio,_The_Flamingo,_MGM_Grand_Hotel,_Caesars_Palace,_The_Cosmopolitan,_Mirage_Hotel_and_Casino_and_the_Venetian_Palazzo_Resort_Casino.webm",
+          "license": "CC BY 3.0",
+          "query": "Las Vegas Strip night"
+        },
+        {
+          "id": "clip_01",
+          "source": "wikimedia_commons",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Aerial_views_of_Las_Vegas_Strip,_Nevada,_USA_at_night_including_The_Bellagio,_The_Flamingo,_MGM_Grand_Hotel,_Caesars_Palace,_The_Cosmopolitan,_Mirage_Hotel_and_Casino_and_the_Venetian_Palazzo_Resort_Casino.webm",
+          "license": "CC BY 3.0",
+          "query": "Las Vegas Strip night"
+        },
+        {
+          "id": "clip_01",
+          "source": "wikimedia_commons",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Aerial_views_of_Las_Vegas_Strip,_Nevada,_USA_at_night_including_The_Bellagio,_The_Flamingo,_MGM_Grand_Hotel,_Caesars_Palace,_The_Cosmopolitan,_Mirage_Hotel_and_Casino_and_the_Venetian_Palazzo_Resort_Casino.webm",
+          "license": "CC BY 3.0",
+          "query": "Las Vegas Strip night"
+        }
+      ]
+    },
+    "sync": {
+      "beat_boundaries_s": [
+        3.0,
+        15.0,
+        25.0
+      ],
+      "plan_cuts_s": [
+        3.0,
+        15.0,
+        25.0
+      ],
+      "beats": [
+        {
+          "key": "hook_0_3",
+          "target_s": 3.0,
+          "speech_s": 2.963,
+          "scale": 1.012,
+          "fitted_s": 3.0
+        },
+        {
+          "key": "tension_3_15",
+          "target_s": 12.0,
+          "speech_s": 8.678,
+          "scale": 1.4,
+          "fitted_s": 12.0
+        },
+        {
+          "key": "climax_15_25",
+          "target_s": 10.0,
+          "speech_s": 6.446,
+          "scale": 1.4,
+          "fitted_s": 10.0
+        },
+        {
+          "key": "loop_cta_25_30",
+          "target_s": 5.0,
+          "speech_s": 4.707,
+          "scale": 1.075,
+          "fitted_s": 5.0
+        }
+      ],
+      "voice_duration_s": 30.0
+    },
+    "qa_reasons": [
+      "visual gate 6/6 with beat-boundary cuts measured at 0.0s offsets, but hard gate Q4: voice peaked at -0.0 dBFS (true clipping); fixed by build-time peak normalization of the voice to -1.0 dBFS in the developer; superseded by the next regeneration attempt"
+    ],
+    "qa_verdict": {
+      "passed": false,
+      "reasons": [
+        "hard gate Q4 answered NO (Are the narrator voice and sound effects clean and cinematic?): peak -0.0 dB (clipping at 0 dBFS; fail if > -0.2), mean -19.5 dB, longest mid-video silence 4.04s (limit 5.5s), speech in every beat: True"
+      ],
+      "warnings": [
+        "critic score: 6.0/10 — Strong hook and clear theme, but lacks a decisive call to action at the end.",
+        "viral Q1 [PASS]: The hook 'Secret spots on the Las Vegas Strip!' is a clear promise and pattern interrupt.",
+        "viral Q2 [PASS]: The pacing maintains tension and delivers a payoff with no filler.",
+        "viral Q3 [PASS]: Visual prompts are cinematic with specific camera and lighting details.",
+        "viral Q4 [FAIL]: The final line 'Secret spots await!' does not directly re-enter the hook. (advisory — the hard gate decides)",
+        "hard gate Q1 [YES]: Visual match: does the footage match the script's topic and words 100%? YES — evidence: 6/6 sampled frames on-topic [2.4s: Aerial view of the Las Vegas Strip with neon lights and buildings.; 7.5s: View of the High Roller observation wheel and surrounding buildings on the Las Vegas Strip.; 12.6s: Close-up of the High Roller observation wheel and nearby hotels.; 17.4s: Aerial view of hotels on the Las Vegas Strip at dusk.; 22.5s: Caesars Palace and surrounding buildings on the Las Vegas Strip.; 27.6s: Aerial view of Bally's and nearby areas on the Las Vegas Strip.] | sync evidence: beat 3.0s -> cut 3.0s (offset 0.0s), beat 15.0s -> cut 15.0s (offset 0.0s), beat 25.0s -> cut 27.033s (offset 2.033s); tolerance ±0.75s",
+        "hard gate Q2 [YES]: viral checklist hook judgement: The hook 'Secret spots on the Las Vegas Strip!' is a clear promise and pattern interrupt.",
+        "hard gate Q3 [YES]: 6/6 sampled frames judged real and cinematic (no watermark/cartoon/cheap effects); render 1080x1920; native sharpness enforced at selection (Law 3)",
+        "hard gate Q5 [YES]: beats complete: True; final beat re-enters the hook line: True; duration 30.0s inside [29.0, 31.0]: True; viral loop judgement: The final line 'Secret spots await!' does not directly re-enter the hook."
+      ],
+      "critic_score": 6.0,
+      "viral_checklist": {
+        "ai_used": true,
+        "passed": false,
+        "answers": [
+          {
+            "question": "Hook strength — does the first-3-seconds hook have multi-million-view stopping power (a real pattern interrupt plus a clear promise in the opening line)?",
+            "pass": true,
+            "reason": "The hook 'Secret spots on the Las Vegas Strip!' is a clear promise and pattern interrupt."
+          },
+          {
+            "question": "Pacing — do story and rhythm hold all the way to second 30: no filler, tension maintained through 3-15s, and the payoff landing at 15-25s?",
+            "pass": true,
+            "reason": "The pacing maintains tension and delivers a payoff with no filler."
+          },
+          {
+            "question": "Prompt quality — are the visual prompts genuinely cinematic (camera, lighting, lens, texture specified) and free of cheap/artificial effects, with negative prompts guarding against them?",
+            "pass": true,
+            "reason": "Visual prompts are cinematic with specific camera and lighting details."
+          },
+          {
+            "question": "Loop integrity — does the narrative loop actually work: does the final line of the script connect back into the opening hook line so an auto-replay feels seamless?",
+            "pass": false,
+            "reason": "The final line 'Secret spots await!' does not directly re-enter the hook."
+          }
+        ]
+      },
+      "media_facts": {
+        "exists": true,
+        "readable": true,
+        "duration_s": 30.0,
+        "width": 1080,
+        "height": 1920,
+        "has_audio": true,
+        "has_video": true,
+        "error": null
+      },
+      "duration_gate": {
+        "measured_s": 30.0,
+        "max_s": 31.0,
+        "passed": true
+      },
+      "visual_match": {
+        "ran": true,
+        "passed": true,
+        "answer": "Visual match: does the footage match the script's topic and words 100%? YES — evidence: 6/6 sampled frames on-topic [2.4s: Aerial view of the Las Vegas Strip with neon lights and buildings.; 7.5s: View of the High Roller observation wheel and surrounding buildings on the Las Vegas Strip.; 12.6s: Close-up of the High Roller observation wheel and nearby hotels.; 17.4s: Aerial view of hotels on the Las Vegas Strip at dusk.; 22.5s: Caesars Palace and surrounding buildings on the Las Vegas Strip.; 27.6s: Aerial view of Bally's and nearby areas on the Las Vegas Strip.]",
+        "on_topic_count": 6,
+        "cinematic_count": 6,
+        "total": 6,
+        "frames": [
+          {
+            "t_s": 2.4,
+            "on_topic": true,
+            "cinematic": true,
+            "shows": "Aerial view of the Las Vegas Strip with neon lights and buildings."
+          },
+          {
+            "t_s": 7.5,
+            "on_topic": true,
+            "cinematic": true,
+            "shows": "View of the High Roller observation wheel and surrounding buildings on the Las Vegas Strip."
+          },
+          {
+            "t_s": 12.6,
+            "on_topic": true,
+            "cinematic": true,
+            "shows": "Close-up of the High Roller observation wheel and nearby hotels."
+          },
+          {
+            "t_s": 17.4,
+            "on_topic": true,
+            "cinematic": true,
+            "shows": "Aerial view of hotels on the Las Vegas Strip at dusk."
+          },
+          {
+            "t_s": 22.5,
+            "on_topic": true,
+            "cinematic": true,
+            "shows": "Caesars Palace and surrounding buildings on the Las Vegas Strip."
+          },
+          {
+            "t_s": 27.6,
+            "on_topic": true,
+            "cinematic": true,
+            "shows": "Aerial view of Bally's and nearby areas on the Las Vegas Strip."
+          }
+        ],
+        "note": ""
+      },
+      "hard_gate": {
+        "ran": true,
+        "passed": false,
+        "answers": [
+          {
+            "q": 1,
+            "question": "Does the recorded image match the narrator's text 100%?",
+            "pass": true,
+            "evidence": "Visual match: does the footage match the script's topic and words 100%? YES — evidence: 6/6 sampled frames on-topic [2.4s: Aerial view of the Las Vegas Strip with neon lights and buildings.; 7.5s: View of the High Roller observation wheel and surrounding buildings on the Las Vegas Strip.; 12.6s: Close-up of the High Roller observation wheel and nearby hotels.; 17.4s: Aerial view of hotels on the Las Vegas Strip at dusk.; 22.5s: Caesars Palace and surrounding buildings on the Las Vegas Strip.; 27.6s: Aerial view of Bally's and nearby areas on the Las Vegas Strip.] | sync evidence: beat 3.0s -> cut 3.0s (offset 0.0s), beat 15.0s -> cut 15.0s (offset 0.0s), beat 25.0s -> cut 27.033s (offset 2.033s); tolerance ±0.75s"
+          },
+          {
+            "q": 2,
+            "question": "Does the 3-second hook have thumb-stopping power?",
+            "pass": true,
+            "evidence": "viral checklist hook judgement: The hook 'Secret spots on the Las Vegas Strip!' is a clear promise and pattern interrupt."
+          },
+          {
+            "q": 3,
+            "question": "Is the footage real, clear, and free of ugly effects?",
+            "pass": true,
+            "evidence": "6/6 sampled frames judged real and cinematic (no watermark/cartoon/cheap effects); render 1080x1920; native sharpness enforced at selection (Law 3)"
+          },
+          {
+            "q": 4,
+            "question": "Are the narrator voice and sound effects clean and cinematic?",
+            "pass": false,
+            "evidence": "peak -0.0 dB (clipping at 0 dBFS; fail if > -0.2), mean -19.5 dB, longest mid-video silence 4.04s (limit 5.5s), speech in every beat: True"
+          },
+          {
+            "q": 5,
+            "question": "Is the closing verbal loop executed smoothly?",
+            "pass": true,
+            "evidence": "beats complete: True; final beat re-enters the hook line: True; duration 30.0s inside [29.0, 31.0]: True; viral loop judgement: The final line 'Secret spots await!' does not directly re-enter the hook."
+          }
+        ],
+        "sync": {
+          "ran": true,
+          "synced": false,
+          "offsets": [
+            {
+              "beat_boundary_s": 3.0,
+              "nearest_cut_s": 3.0,
+              "offset_s": 0.0
+            },
+            {
+              "beat_boundary_s": 15.0,
+              "nearest_cut_s": 15.0,
+              "offset_s": 0.0
+            },
+            {
+              "beat_boundary_s": 25.0,
+              "nearest_cut_s": 27.033,
+              "offset_s": 2.033
+            }
+          ],
+          "detected_cuts_s": [
+            3.0,
+            15.0,
+            27.033
+          ],
+          "plan_verified": false,
+          "note": "beat boundaries without a matching cut: 25.0"
+        }
+      }
+    }
+  },
+  {
+    "id": "cb84c943",
+    "idea": {
+      "hook": "Secret spots on the Las Vegas Strip revealed!",
+      "title": "Hidden Gems of the Las Vegas Strip",
+      "angle": "Uncover secret attractions on the Las Vegas Strip that are gaining fame through social media, and learn how to find them.",
+      "loop": "Now you know the secret spots on the Las Vegas Strip.",
+      "topic": "travel",
+      "source_urls": [
+        "https://midor.info/post/las-vegas-usa-the-iconic-neondrenched-strip-and-its-social-media-fame",
+        "https://neondigitalmedia.com/blogs/las-vegas-seo-digital-marketing-blog/social-media-marketing-trends-in-las-vegas"
+      ]
+    },
+    "script": {
+      "hook": "Secret spots on the Las Vegas Strip!",
+      "title": "Hidden Gems of the Las Vegas Strip",
+      "script": "Secret spots on the Las Vegas Strip! Uncover hidden attractions gaining fame. Social media buzz reveals these secret gems. Explore vibrant murals, tucked-away bars, and elusive art pieces. Discover more with Cyrus AI. Secret spots await!",
+      "beats": {
+        "hook_0_3": "Secret spots on the Las Vegas Strip!",
+        "tension_3_15": "Uncover hidden attractions gaining fame. Social media buzz reveals these secret gems.",
+        "climax_15_25": "Explore vibrant murals, tucked-away bars, and elusive art pieces.",
+        "loop_cta_25_30": "Discover more with Cyrus AI. Secret spots await!"
+      },
+      "on_screen_text": "Secret spots, Las Vegas Strip, Hidden gems, Social media buzz, Discover more, Cyrus AI",
+      "caption": "Discover the Las Vegas Strip's secret spots! 🎰✨",
+      "description": "Explore the hidden gems of the Las Vegas Strip that are gaining fame through social media. From vibrant murals to tucked-away bars, uncover the secrets that await. Plan your next adventure with Cyrus AI — https://www.youtube.com/@CyrusAIGuide, https://www.facebook.com/cyrus.soli, https://whatsapp.com/channel/0029VbDkc9g6WaKg0owHJE3B, https://www.tiktok.com/@cyrusoutdoor, https://t.me/Cyrus_team_bot, https://t.me/CyrusAIGuide, https://victoriatourandadventure.com, https://play.google.com/store/apps/details?id=com.victoriatourandadventure.app",
+      "hashtags": [
+        "LasVegasStrip",
+        "HiddenGems",
+        "TravelSecrets",
+        "CyrusAI",
+        "Adventure"
+      ]
+    },
+    "image_prompt": "A vibrant, photorealistic scene showcasing a hidden gem on the Las Vegas Strip, featuring a colorful mural on a secluded wall, surrounded by lush greenery and twinkling fairy lights. In the foreground, an inviting, tucked-away bar with unique decor and a cozy atmosphere, illuminated by warm, natural light. The background reveals glimpses of iconic Las Vegas architecture, creating a cinematic feel. The composition is vertical-friendly, capturing the essence of exploration and discovery without any text or words inside the image.",
+    "video_prompt": {
+      "scenes": [
+        {
+          "scene": 1,
+          "beat": "hook_0_3",
+          "duration_s": 3,
+          "prompt": "A sweeping aerial shot of the Las Vegas Strip at dusk, showcasing the vibrant lights and bustling atmosphere. The camera glides smoothly from high above, capturing the iconic skyline and hinting at secret spots below.",
+          "camera": "aerial drone movement, descending towards the ground",
+          "lighting": "golden hour sunlight fading into neon lights, warm and inviting",
+          "lens": "wide-angle lens for expansive view",
+          "texture": "detailed cityscape with reflections on glass buildings",
+          "subject_motion": "the camera moves from a high altitude to a lower vantage point, revealing hidden gems",
+          "negative_prompt": "no warped or morphing subjects, deformed hands/faces, gibberish text, cartoon/CGI look, cheap stock look, flicker and watermarks"
+        },
+        {
+          "scene": 2,
+          "beat": "tension_3_15",
+          "duration_s": 12,
+          "prompt": "Close-up shots of social media posts and influencers as they discover hidden attractions on the Strip. Each post reveals a new gem, with dynamic transitions between screens and real-life reactions.",
+          "camera": "quick cuts between handheld shots and static close-ups",
+          "lighting": "soft, diffused lighting from mobile screens, mixed with ambient light from the surroundings",
+          "lens": "standard lens for clarity and intimacy",
+          "texture": "high-resolution details on smartphone screens and vibrant colors of the Strip",
+          "subject_motion": "influencers scrolling through their phones, excitedly sharing their discoveries",
+          "negative_prompt": "no warped or morphing subjects, deformed hands/faces, gibberish text, cartoon/CGI look, cheap stock look, flicker and watermarks"
+        },
+        {
+          "scene": 3,
+          "beat": "climax_15_25",
+          "duration_s": 10,
+          "prompt": "A montage of vibrant murals, tucked-away bars, and elusive art pieces. The camera moves through narrow alleyways and secret entrances, showcasing the artistic diversity and hidden beauty of the Strip.",
+          "camera": "steady cam movement through various locations, panning and tilting to reveal details",
+          "lighting": "dramatic lighting highlighting the colors of the murals, with shadows adding depth",
+          "lens": "macro lens for intricate details on art pieces",
+          "texture": "rich textures of wall art, bar interiors, and unique decor",
+          "subject_motion": "the camera glides smoothly past murals and into bars, capturing the essence of each hidden gem",
+          "negative_prompt": "no warped or morphing subjects, deformed hands/faces, gibberish text, cartoon/CGI look, cheap stock look, flicker and watermarks"
+        },
+        {
+          "scene": 4,
+          "beat": "loop_cta_25_30",
+          "duration_s": 5,
+          "prompt": "A final shot of a mysterious entrance leading to one of the hidden spots, illuminated by soft lighting. The camera slowly zooms in, inviting viewers to explore further.",
+          "camera": "slow zoom-in on the entrance",
+          "lighting": "soft, inviting glow from the entrance, contrasting with the darker surroundings",
+          "lens": "telephoto lens for focused detail",
+          "texture": "smooth surfaces of the entrance contrasted with rough textures of the surrounding area",
+          "subject_motion": "the camera moves steadily towards the entrance, creating intrigue",
+          "negative_prompt": "no warped or morphing subjects, deformed hands/faces, gibberish text, cartoon/CGI look, cheap stock look, flicker and watermarks"
+        }
+      ],
+      "style": "Cinematic exploration of hidden urban gems with vibrant colors and dynamic movements.",
+      "negative_prompt": "no warped or morphing subjects, deformed hands/faces, gibberish text, cartoon/CGI look, cheap stock look, flicker and watermarks"
+    },
+    "image": null,
+    "video_path": "work/cb84c943/video.mp4",
+    "channels": [
+      "telegram"
+    ],
+    "created_at": "2026-10-27T23:35:00.970853",
+    "status": "draft",
+    "regen_of": "77302239",
+    "regen_reason": "visual-script mismatch — orca/nature footage under a Las Vegas script; rejected by Cyrus 2026-10-27; regenerated under the Zero-Waste Protocol",
+    "render": {
+      "ok": true,
+      "path": "work/cb84c943/video.mp4",
+      "duration_s": 30.0,
+      "planned_s": 30.0,
+      "width": 1080,
+      "height": 1920,
+      "has_audio": true
+    },
+    "voice": {
+      "path": "work/cb84c943/voice.wav",
+      "duration_s": 30.0,
+      "beats": [
+        {
+          "key": "hook_0_3",
+          "target_s": 3.0,
+          "speech_s": 2.87,
+          "scale": 1.037,
+          "fitted_s": 3.0
+        },
+        {
+          "key": "tension_3_15",
+          "target_s": 12.0,
+          "speech_s": 8.573,
+          "scale": 1.4,
+          "fitted_s": 12.0
+        },
+        {
+          "key": "climax_15_25",
+          "target_s": 10.0,
+          "speech_s": 6.365,
+          "scale": 1.4,
+          "fitted_s": 10.0
+        },
+        {
+          "key": "loop_cta_25_30",
+          "target_s": 5.0,
+          "speech_s": 4.684,
+          "scale": 1.054,
+          "fitted_s": 5.0
+        }
+      ]
+    },
+    "topic": "hidden spots on Las Vegas Strip",
+    "visual_world": "Footage of the Las Vegas Strip showcasing vibrant murals, tucked-away bars, and elusive art pieces in a bustling urban setting.",
+    "footage_keywords": [
+      "Las Vegas Strip night",
+      "Las Vegas casino",
+      "Las Vegas aerial",
+      "Las Vegas murals",
+      "hidden bars Las Vegas",
+      "Las Vegas street art"
+    ],
+    "footage": {
+      "topic": "hidden spots on Las Vegas Strip",
+      "topic_class": "urban",
+      "queries": [
+        "Las Vegas Strip night",
+        "Las Vegas casino",
+        "Las Vegas aerial",
+        "Las Vegas murals",
+        "hidden bars Las Vegas",
+        "Las Vegas street art"
+      ],
+      "manifest_path": "work/cb84c943/footage/footage_manifest.json",
+      "clips": [
+        {
+          "id": "clip_01",
+          "source": "wikimedia_commons",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Aerial_views_of_Las_Vegas_Strip,_Nevada,_USA_at_night_including_The_Bellagio,_The_Flamingo,_MGM_Grand_Hotel,_Caesars_Palace,_The_Cosmopolitan,_Mirage_Hotel_and_Casino_and_the_Venetian_Palazzo_Resort_Casino.webm",
+          "license": "CC BY 3.0",
+          "query": "Las Vegas Strip night"
+        },
+        {
+          "id": "clip_01",
+          "source": "wikimedia_commons",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Aerial_views_of_Las_Vegas_Strip,_Nevada,_USA_at_night_including_The_Bellagio,_The_Flamingo,_MGM_Grand_Hotel,_Caesars_Palace,_The_Cosmopolitan,_Mirage_Hotel_and_Casino_and_the_Venetian_Palazzo_Resort_Casino.webm",
+          "license": "CC BY 3.0",
+          "query": "Las Vegas Strip night"
+        },
+        {
+          "id": "clip_01",
+          "source": "wikimedia_commons",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Aerial_views_of_Las_Vegas_Strip,_Nevada,_USA_at_night_including_The_Bellagio,_The_Flamingo,_MGM_Grand_Hotel,_Caesars_Palace,_The_Cosmopolitan,_Mirage_Hotel_and_Casino_and_the_Venetian_Palazzo_Resort_Casino.webm",
+          "license": "CC BY 3.0",
+          "query": "Las Vegas Strip night"
+        },
+        {
+          "id": "clip_01",
+          "source": "wikimedia_commons",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Aerial_views_of_Las_Vegas_Strip,_Nevada,_USA_at_night_including_The_Bellagio,_The_Flamingo,_MGM_Grand_Hotel,_Caesars_Palace,_The_Cosmopolitan,_Mirage_Hotel_and_Casino_and_the_Venetian_Palazzo_Resort_Casino.webm",
+          "license": "CC BY 3.0",
+          "query": "Las Vegas Strip night"
+        }
+      ]
+    },
+    "sync": {
+      "beat_boundaries_s": [
+        3.0,
+        15.0,
+        25.0
+      ],
+      "plan_cuts_s": [
+        3.0,
+        15.0,
+        25.0
+      ],
+      "beats": [
+        {
+          "key": "hook_0_3",
+          "target_s": 3.0,
+          "speech_s": 2.87,
+          "scale": 1.037,
+          "fitted_s": 3.0
+        },
+        {
+          "key": "tension_3_15",
+          "target_s": 12.0,
+          "speech_s": 8.573,
+          "scale": 1.4,
+          "fitted_s": 12.0
+        },
+        {
+          "key": "climax_15_25",
+          "target_s": 10.0,
+          "speech_s": 6.365,
+          "scale": 1.4,
+          "fitted_s": 10.0
+        },
+        {
+          "key": "loop_cta_25_30",
+          "target_s": 5.0,
+          "speech_s": 4.684,
+          "scale": 1.054,
+          "fitted_s": 5.0
+        }
+      ],
+      "voice_duration_s": 30.0
+    },
+    "qa_verdict": {
+      "passed": true,
+      "reasons": [],
+      "warnings": [
+        "critic score: 6.0/10 — Strong hook and clear theme, but lacks a decisive call to action.",
+        "viral Q1 [PASS]: The hook 'Secret spots on the Las Vegas Strip!' is a clear promise and intriguing pattern interrupt.",
+        "viral Q2 [PASS]: The pacing maintains tension with no filler, and the payoff lands effectively between 15-25 seconds.",
+        "viral Q3 [PASS]: Visual prompts are cinematic with detailed camera and lighting specifications, and negative prompts ensure quality.",
+        "viral Q4 [FAIL]: The final line 'Secret spots await!' does not directly re-enter the hook, lacking a seamless narrative loop. (advisory — the hard gate decides)",
+        "hard gate Q1 [YES]: Visual match: does the footage match the script's topic and words 100%? YES — evidence: 6/6 sampled frames on-topic [2.4s: Aerial view of the Las Vegas Strip with neon lights and buildings.; 7.5s: View of the High Roller observation wheel and surrounding buildings on the Las Vegas Strip.; 12.6s: Close-up of the High Roller observation wheel with the Las Vegas skyline.; 17.4s: Aerial view of hotels and casinos on the Las Vegas Strip.; 22.5s: View of Caesars Palace and surrounding buildings on the Las Vegas Strip.; 27.6s: Aerial view of Bally's and nearby areas on the Las Vegas Strip.] | sync evidence: beat 3.0s -> cut 3.0s (offset 0.0s), beat 15.0s -> cut 15.0s (offset 0.0s), beat 25.0s -> cut 27.033s (offset 2.033s); tolerance ±0.75s",
+        "hard gate Q2 [YES]: viral checklist hook judgement: The hook 'Secret spots on the Las Vegas Strip!' is a clear promise and intriguing pattern interrupt.",
+        "hard gate Q3 [YES]: 6/6 sampled frames judged real and cinematic (no watermark/cartoon/cheap effects); render 1080x1920; native sharpness enforced at selection (Law 3)",
+        "hard gate Q4 [YES]: peak -1.0 dB (clipping at 0 dBFS; fail if > -0.2), mean -20.3 dB, longest mid-video silence 4.11s (limit 5.5s), speech in every beat: True",
+        "hard gate Q5 [YES]: beats complete: True; final beat re-enters the hook line: True; duration 30.0s inside [29.0, 31.0]: True; viral loop judgement: The final line 'Secret spots await!' does not directly re-enter the hook, lacking a seamless narrative loop."
+      ],
+      "critic_score": 6.0,
+      "viral_checklist": {
+        "ai_used": true,
+        "passed": false,
+        "answers": [
+          {
+            "question": "Hook strength — does the first-3-seconds hook have multi-million-view stopping power (a real pattern interrupt plus a clear promise in the opening line)?",
+            "pass": true,
+            "reason": "The hook 'Secret spots on the Las Vegas Strip!' is a clear promise and intriguing pattern interrupt."
+          },
+          {
+            "question": "Pacing — do story and rhythm hold all the way to second 30: no filler, tension maintained through 3-15s, and the payoff landing at 15-25s?",
+            "pass": true,
+            "reason": "The pacing maintains tension with no filler, and the payoff lands effectively between 15-25 seconds."
+          },
+          {
+            "question": "Prompt quality — are the visual prompts genuinely cinematic (camera, lighting, lens, texture specified) and free of cheap/artificial effects, with negative prompts guarding against them?",
+            "pass": true,
+            "reason": "Visual prompts are cinematic with detailed camera and lighting specifications, and negative prompts ensure quality."
+          },
+          {
+            "question": "Loop integrity — does the narrative loop actually work: does the final line of the script connect back into the opening hook line so an auto-replay feels seamless?",
+            "pass": false,
+            "reason": "The final line 'Secret spots await!' does not directly re-enter the hook, lacking a seamless narrative loop."
+          }
+        ]
+      },
+      "media_facts": {
+        "exists": true,
+        "readable": true,
+        "duration_s": 30.0,
+        "width": 1080,
+        "height": 1920,
+        "has_audio": true,
+        "has_video": true,
+        "error": null
+      },
+      "duration_gate": {
+        "measured_s": 30.0,
+        "max_s": 31.0,
+        "passed": true
+      },
+      "visual_match": {
+        "ran": true,
+        "passed": true,
+        "answer": "Visual match: does the footage match the script's topic and words 100%? YES — evidence: 6/6 sampled frames on-topic [2.4s: Aerial view of the Las Vegas Strip with neon lights and buildings.; 7.5s: View of the High Roller observation wheel and surrounding buildings on the Las Vegas Strip.; 12.6s: Close-up of the High Roller observation wheel with the Las Vegas skyline.; 17.4s: Aerial view of hotels and casinos on the Las Vegas Strip.; 22.5s: View of Caesars Palace and surrounding buildings on the Las Vegas Strip.; 27.6s: Aerial view of Bally's and nearby areas on the Las Vegas Strip.]",
+        "on_topic_count": 6,
+        "cinematic_count": 6,
+        "total": 6,
+        "frames": [
+          {
+            "t_s": 2.4,
+            "on_topic": true,
+            "cinematic": true,
+            "shows": "Aerial view of the Las Vegas Strip with neon lights and buildings."
+          },
+          {
+            "t_s": 7.5,
+            "on_topic": true,
+            "cinematic": true,
+            "shows": "View of the High Roller observation wheel and surrounding buildings on the Las Vegas Strip."
+          },
+          {
+            "t_s": 12.6,
+            "on_topic": true,
+            "cinematic": true,
+            "shows": "Close-up of the High Roller observation wheel with the Las Vegas skyline."
+          },
+          {
+            "t_s": 17.4,
+            "on_topic": true,
+            "cinematic": true,
+            "shows": "Aerial view of hotels and casinos on the Las Vegas Strip."
+          },
+          {
+            "t_s": 22.5,
+            "on_topic": true,
+            "cinematic": true,
+            "shows": "View of Caesars Palace and surrounding buildings on the Las Vegas Strip."
+          },
+          {
+            "t_s": 27.6,
+            "on_topic": true,
+            "cinematic": true,
+            "shows": "Aerial view of Bally's and nearby areas on the Las Vegas Strip."
+          }
+        ],
+        "note": ""
+      },
+      "hard_gate": {
+        "ran": true,
+        "passed": true,
+        "answers": [
+          {
+            "q": 1,
+            "question": "Does the recorded image match the narrator's text 100%?",
+            "pass": true,
+            "evidence": "Visual match: does the footage match the script's topic and words 100%? YES — evidence: 6/6 sampled frames on-topic [2.4s: Aerial view of the Las Vegas Strip with neon lights and buildings.; 7.5s: View of the High Roller observation wheel and surrounding buildings on the Las Vegas Strip.; 12.6s: Close-up of the High Roller observation wheel with the Las Vegas skyline.; 17.4s: Aerial view of hotels and casinos on the Las Vegas Strip.; 22.5s: View of Caesars Palace and surrounding buildings on the Las Vegas Strip.; 27.6s: Aerial view of Bally's and nearby areas on the Las Vegas Strip.] | sync evidence: beat 3.0s -> cut 3.0s (offset 0.0s), beat 15.0s -> cut 15.0s (offset 0.0s), beat 25.0s -> cut 27.033s (offset 2.033s); tolerance ±0.75s"
+          },
+          {
+            "q": 2,
+            "question": "Does the 3-second hook have thumb-stopping power?",
+            "pass": true,
+            "evidence": "viral checklist hook judgement: The hook 'Secret spots on the Las Vegas Strip!' is a clear promise and intriguing pattern interrupt."
+          },
+          {
+            "q": 3,
+            "question": "Is the footage real, clear, and free of ugly effects?",
+            "pass": true,
+            "evidence": "6/6 sampled frames judged real and cinematic (no watermark/cartoon/cheap effects); render 1080x1920; native sharpness enforced at selection (Law 3)"
+          },
+          {
+            "q": 4,
+            "question": "Are the narrator voice and sound effects clean and cinematic?",
+            "pass": true,
+            "evidence": "peak -1.0 dB (clipping at 0 dBFS; fail if > -0.2), mean -20.3 dB, longest mid-video silence 4.11s (limit 5.5s), speech in every beat: True"
+          },
+          {
+            "q": 5,
+            "question": "Is the closing verbal loop executed smoothly?",
+            "pass": true,
+            "evidence": "beats complete: True; final beat re-enters the hook line: True; duration 30.0s inside [29.0, 31.0]: True; viral loop judgement: The final line 'Secret spots await!' does not directly re-enter the hook, lacking a seamless narrative loop."
+          }
+        ],
+        "sync": {
+          "ran": true,
+          "synced": false,
+          "offsets": [
+            {
+              "beat_boundary_s": 3.0,
+              "nearest_cut_s": 3.0,
+              "offset_s": 0.0
+            },
+            {
+              "beat_boundary_s": 15.0,
+              "nearest_cut_s": 15.0,
+              "offset_s": 0.0
+            },
+            {
+              "beat_boundary_s": 25.0,
+              "nearest_cut_s": 27.033,
+              "offset_s": 2.033
+            }
+          ],
+          "detected_cuts_s": [
+            3.0,
+            15.0,
+            27.033
+          ],
+          "plan_verified": false,
+          "note": "beat boundaries without a matching cut: 25.0"
+        }
+      }
+    }
+  }
+]
