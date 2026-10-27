@@ -12,7 +12,12 @@ Capabilities (all real, all in this file):
    (merged/upgraded from the old factory's hook_master +
    scriptwriter + storyboarder + title/caption/hashtag robots,
    which ran on a mini model and never enforced their output).
-   A result missing hook/title/script is REJECTED here.
+   A result missing hook/title/script is REJECTED here. The
+   30s formula is enforced as a HARD beat word budget,
+   calibrated to Piper's measured speaking rate (see §1b): an
+   over-budget script is REJECTED before anything is rendered —
+   the formula is a standard, not a target (fix order
+   2026-10-27, after draft a4f904cd rendered 34.5s).
 2. PROMPTS — one precise image prompt + a scene-by-scene video
    production prompt (for external tools; this agent writes
    prompts, it does not pretend they are media).
@@ -39,6 +44,7 @@ import argparse
 import glob
 import json
 import os
+import re
 import subprocess
 import sys
 import wave
@@ -71,6 +77,14 @@ _SCRIPT_SYSTEM = (
     "back into the hook line — when the video auto-replays, "
     "the sentence continues seamlessly (narrative loop; this "
     "is a words-only device, footage is never looped). "
+    "HARD WORD BUDGET — the 30 seconds is a hard standard, "
+    "not a target: the voice speaks a measured 2.37 words per "
+    "second, so hook_0_3 is at most 7 words, tension_3_15 at "
+    "most 28 words, climax_15_25 at most 23 words, "
+    "loop_cta_25_30 at most 11 words, and the full script at "
+    "most 69 words. Count the words in every beat as you "
+    "write; an over-budget script is rejected before "
+    "rendering. "
     "Scripts are spoken by a calm, confident host voice; keep "
     "sentences short and visual. " + APPROVED_FACTS + " "
     "End every description with one clear decision or call to "
@@ -81,15 +95,72 @@ _SCRIPT_SYSTEM = (
 BEAT_KEYS = ("hook_0_3", "tension_3_15", "climax_15_25",
              "loop_cta_25_30")
 
+# ==================================================================
+# 1b. BEAT WORD BUDGET — the 30s formula is HARD, not a target
+#
+# Calibrated 2026-10-27 from a real render (draft a4f904cd,
+# Piper voice en_US-amy-medium): an 82-word script produced
+# 34.54s of speech = 2.374 words/second. The caps below are each
+# beat's window (3s / 12s / 10s / 5s) at that measured rate,
+# trimmed ~3% so a script AT the caps lands at ~29s of voice —
+# inside the protocol's 28-30s landing zone. write_script()
+# validates every script against this budget and REJECTS an
+# over-budget one before anything is rendered (Cyrus's fix
+# order, 2026-10-27: zero tolerance — the formula is hard).
+# ==================================================================
 
-def write_script(idea, target_seconds=30):
-    """Write a complete script package for one idea.
+PIPER_WORDS_PER_SECOND = 2.374  # measured 2026-10-27, draft a4f904cd
+
+BEAT_WORD_BUDGET = {
+    "hook_0_3": 7,         # 3s window  (7 words  ≈ 2.9s)
+    "tension_3_15": 28,    # 12s window (28 words ≈ 11.8s)
+    "climax_15_25": 23,    # 10s window (23 words ≈ 9.7s)
+    "loop_cta_25_30": 11,  # 5s window  (11 words ≈ 4.6s)
+}
+MAX_SCRIPT_WORDS = sum(BEAT_WORD_BUDGET.values())  # 69 ≈ 29.1s
+
+
+def count_words(text):
+    """Whitespace-token word count — the same measure the
+    calibration render (draft a4f904cd) was counted with."""
+    return len(re.findall(r"\S+", text or ""))
+
+
+def beat_budget_violations(script):
+    """Word-budget violations for a script package dict.
+
+    Returns a list of human-readable violations (empty list =
+    within budget). Every beat is checked against
+    BEAT_WORD_BUDGET and the assembled spoken script against
+    MAX_SCRIPT_WORDS.
+    """
+    script = script or {}
+    beats = script.get("beats") or {}
+    violations = []
+    for key in BEAT_KEYS:
+        words = count_words(beats.get(key, ""))
+        cap = BEAT_WORD_BUDGET[key]
+        if words > cap:
+            violations.append(
+                f"beat {key} is {words} words (budget {cap})")
+    total = count_words(script.get("script", ""))
+    if total > MAX_SCRIPT_WORDS:
+        violations.append(
+            f"full script is {total} words "
+            f"(budget {MAX_SCRIPT_WORDS})")
+    return violations
+
+
+def _write_script_once(idea, target_seconds=30, feedback=""):
+    """ONE attempt at a complete script package for one idea.
 
     `idea`: {"hook", "title", "angle", "topic", ...} (Mastermind
-    format). Returns {"ok": True, "script": {hook, title, script,
-    on_screen_text, caption, description, hashtags}} — or
-    {"ok": False, "error": ...} on honest failure (AI unavailable
-    or an incomplete package, which this agent rejects).
+    format). `feedback` is appended to the prompt (the retry in
+    write_script() passes the budget violations of the previous
+    attempt there). Returns {"ok": True, "script": {...}} — or
+    {"ok": False, "error": ...} on honest failure, with
+    "budget_violations" set when the script broke the hard beat
+    word budget (§1b).
     """
     idea = idea or {}
     seed_hook = str(idea.get("hook", "")).strip()
@@ -110,16 +181,21 @@ def write_script(idea, target_seconds=30):
         "seed hook, keep it explosive and honest)\n"
         '- "title": the video title\n'
         '- "beats": an object with the four golden-formula beats, '
-        "each the exact spoken text for that segment:\n"
-        '  "hook_0_3" (0-3s pattern interrupt — must open with '
-        "the hook line),\n"
-        '  "tension_3_15" (3-15s fast story, no filler),\n'
-        '  "climax_15_25" (15-25s payoff in specifics),\n'
-        '  "loop_cta_25_30" (25-30s: ONE decisive call to action, '
-        "then a final line that flows straight back into the hook "
-        "line so a replay feels seamless)\n"
+        "each the exact spoken text for that segment. STRICT "
+        "WORD CAPS per beat (the voice speaks a measured 2.37 "
+        "words/second and the 30s formula is a hard standard — "
+        "an over-cap beat is rejected before rendering):\n"
+        '  "hook_0_3" (0-3s pattern interrupt, MAX 7 words — '
+        "must open with the hook line),\n"
+        '  "tension_3_15" (3-15s fast story, no filler, '
+        'MAX 28 words),\n'
+        '  "climax_15_25" (15-25s payoff in specifics, '
+        'MAX 23 words),\n'
+        '  "loop_cta_25_30" (25-30s, MAX 11 words: ONE decisive '
+        "call to action, then a final line that flows straight "
+        "back into the hook line so a replay feels seamless)\n"
         '- "script": the full spoken script — the four beats joined '
-        "in order, timed to the target length\n"
+        "in order, MAX 69 words total\n"
         '- "on_screen_text": short text overlays in order, '
         "comma-separated\n"
         '- "caption": a short social caption\n'
@@ -127,7 +203,8 @@ def write_script(idea, target_seconds=30):
         "call to action and may reference our channels:\n"
         + channels_text() + "\n"
         '- "hashtags": a list of 5-10 relevant hashtags (no #)\n'
-        "Reply ONLY valid JSON."
+        "Count the words in every beat before replying. "
+        "Reply ONLY valid JSON." + feedback
     )
     data, ok = common.ask_json(prompt, _SCRIPT_SYSTEM,
                                role="thinking",
@@ -160,7 +237,54 @@ def write_script(idea, target_seconds=30):
                 "error": ("AI returned an incomplete package "
                           f"(missing: {', '.join(missing)}) — "
                           "rejected by the Content Director")}
+    violations = beat_budget_violations(script)
+    if violations:
+        return {"ok": False, "budget_violations": violations,
+                "error": ("script broke the hard beat word "
+                          "budget: " + "; ".join(violations))}
     return {"ok": True, "script": script}
+
+
+def write_script(idea, target_seconds=30):
+    """Write a complete script package for one idea.
+
+    `idea`: {"hook", "title", "angle", "topic", ...} (Mastermind
+    format). Returns {"ok": True, "script": {hook, title, script,
+    beats, on_screen_text, caption, description, hashtags}} — or
+    {"ok": False, "error": ...} on honest failure.
+
+    The HARD beat word budget (§1b) is enforced here: a first
+    draft that breaks it is retried ONCE with the violations fed
+    back to the writer; a script still over budget after the
+    retry is REJECTED — before rendering, always. The 30s
+    formula is a standard, not a target (VIRAL-PROTOCOL §2).
+    """
+    feedback = ""
+    last = None
+    for attempt in (1, 2):
+        result = _write_script_once(
+            idea, target_seconds=target_seconds, feedback=feedback)
+        if result.get("ok") or not result.get("budget_violations"):
+            return result
+        last = result
+        log.warning("script over word budget (attempt %d): %s",
+                    attempt, "; ".join(result["budget_violations"]))
+        feedback = (
+            "\n\nREWRITE — your previous draft was REJECTED for "
+            "breaking the hard word budget: "
+            + "; ".join(result["budget_violations"])
+            + ". Write the same package again with FEWER words: "
+              "keep the hook explosive, keep ONE decisive call "
+              "to action, keep the final line re-entering the "
+              "hook — but count every word and stay under every "
+              "cap.")
+    return {"ok": False,
+            "error": ("script exceeded the hard beat word budget "
+                      "after 2 attempts ("
+                      + "; ".join(last["budget_violations"])
+                      + ") — REJECTED by the Content Director "
+                        "before rendering (VIRAL-PROTOCOL §2: "
+                        "the 30s formula is hard, not a target)")}
 
 
 # ==================================================================
