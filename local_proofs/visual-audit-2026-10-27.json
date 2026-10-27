@@ -1,0 +1,366 @@
+[
+ {
+  "id": "77302239",
+  "label": "rejected Vegas draft (whale incident)",
+  "topic": "Hidden Gems of the Las Vegas Strip",
+  "queue_status": "draft",
+  "video_path": "/home/hatch/workspace/cyrus-team/work/77302239/video.mp4",
+  "video_exists": true,
+  "visual": {
+   "ran": true,
+   "passed": false,
+   "frames": [
+    {
+     "t_s": 2.4,
+     "on_topic": false,
+     "cinematic": true,
+     "shows": "A river with surrounding forest."
+    },
+    {
+     "t_s": 7.5,
+     "on_topic": false,
+     "cinematic": true,
+     "shows": "A river with forested hills in the background."
+    },
+    {
+     "t_s": 12.6,
+     "on_topic": false,
+     "cinematic": true,
+     "shows": "A river with dense forest on the banks."
+    },
+    {
+     "t_s": 17.4,
+     "on_topic": false,
+     "cinematic": true,
+     "shows": "A river flowing through a forested area."
+    },
+    {
+     "t_s": 22.5,
+     "on_topic": false,
+     "cinematic": true,
+     "shows": "A river with trees along the banks."
+    },
+    {
+     "t_s": 27.6,
+     "on_topic": false,
+     "cinematic": true,
+     "shows": "A river with rocky banks and forest."
+    }
+   ],
+   "on_topic_count": 0,
+   "cinematic_count": 6,
+   "total": 6,
+   "answer": "Visual match: does the footage match the script's topic and words 100%? NO — evidence: 0/6 sampled frames on-topic [2.4s: A river with surrounding forest.; 7.5s: A river with forested hills in the background.; 12.6s: A river with dense forest on the banks.; 17.4s: A river flowing through a forested area.; 22.5s: A river with trees along the banks.; 27.6s: A river with rocky banks and forest.]",
+   "note": ""
+  },
+  "q1_pass": false,
+  "frames": [
+   {
+    "t_s": 2.4,
+    "shows": "A river with surrounding forest.",
+    "on_topic": false,
+    "cinematic": true
+   },
+   {
+    "t_s": 7.5,
+    "shows": "A river with forested hills in the background.",
+    "on_topic": false,
+    "cinematic": true
+   },
+   {
+    "t_s": 12.6,
+    "shows": "A river with dense forest on the banks.",
+    "on_topic": false,
+    "cinematic": true
+   },
+   {
+    "t_s": 17.4,
+    "shows": "A river flowing through a forested area.",
+    "on_topic": false,
+    "cinematic": true
+   },
+   {
+    "t_s": 22.5,
+    "shows": "A river with trees along the banks.",
+    "on_topic": false,
+    "cinematic": true
+   },
+   {
+    "t_s": 27.6,
+    "shows": "A river with rocky banks and forest.",
+    "on_topic": false,
+    "cinematic": true
+   }
+  ],
+  "q1_question": "Does the recorded image match the narrator's text 100%? (Forever Protocol v2, hard gate Q1)",
+  "q1_answer": "NO",
+  "verdict": "MISMATCH"
+ },
+ {
+  "id": "78b5e59b",
+  "label": "draft — TikTok's Influence on Young Vegas Travelers",
+  "topic": "TikTok's Influence on Young Vegas Travelers",
+  "queue_status": "draft",
+  "video_path": "/home/hatch/workspace/cyrus-team/work/78b5e59b/video.mp4",
+  "video_exists": true,
+  "visual": {
+   "ran": true,
+   "passed": false,
+   "frames": [
+    {
+     "t_s": 3.42,
+     "on_topic": false,
+     "cinematic": true,
+     "shows": "A river with surrounding forest."
+    },
+    {
+     "t_s": 10.69,
+     "on_topic": false,
+     "cinematic": true,
+     "shows": "A river with surrounding forest."
+    },
+    {
+     "t_s": 17.96,
+     "on_topic": false,
+     "cinematic": true,
+     "shows": "A river with surrounding forest."
+    },
+    {
+     "t_s": 24.8,
+     "on_topic": false,
+     "cinematic": true,
+     "shows": "A river with surrounding forest."
+    }
+   ],
+   "on_topic_count": 0,
+   "cinematic_count": 4,
+   "total": 4,
+   "answer": "Visual match: does the footage match the script's topic and words 100%? NO — evidence: 0/4 sampled frames on-topic [3.42s: A river with surrounding forest.; 10.69s: A river with surrounding forest.; 17.96s: A river with surrounding forest.; 24.8s: A river with surrounding forest.]",
+   "note": ""
+  },
+  "q1_pass": false,
+  "frames": [
+   {
+    "t_s": 3.42,
+    "shows": "A river with surrounding forest.",
+    "on_topic": false,
+    "cinematic": true
+   },
+   {
+    "t_s": 10.69,
+    "shows": "A river with surrounding forest.",
+    "on_topic": false,
+    "cinematic": true
+   },
+   {
+    "t_s": 17.96,
+    "shows": "A river with surrounding forest.",
+    "on_topic": false,
+    "cinematic": true
+   },
+   {
+    "t_s": 24.8,
+    "shows": "A river with surrounding forest.",
+    "on_topic": false,
+    "cinematic": true
+   }
+  ],
+  "q1_question": "Does the recorded image match the narrator's text 100%? (Forever Protocol v2, hard gate Q1)",
+  "q1_answer": "NO",
+  "verdict": "MISMATCH"
+ },
+ {
+  "id": "2388058d",
+  "label": "PUBLISHED Grand Canyon — Telegram /12",
+  "topic": "Ultimate Grand Canyon Road Trip Guide",
+  "queue_status": "published",
+  "video_path": "/home/hatch/workspace/cyrus-team/work/2388058d/video.mp4",
+  "video_exists": true,
+  "visual": {
+   "ran": true,
+   "passed": false,
+   "frames": [
+    {
+     "t_s": 2.4,
+     "on_topic": false,
+     "cinematic": true,
+     "shows": "A river surrounded by dense forest."
+    },
+    {
+     "t_s": 7.5,
+     "on_topic": false,
+     "cinematic": true,
+     "shows": "A river with forested hills in the background."
+    },
+    {
+     "t_s": 12.6,
+     "on_topic": false,
+     "cinematic": true,
+     "shows": "A river with trees along the bank."
+    },
+    {
+     "t_s": 17.4,
+     "on_topic": false,
+     "cinematic": true,
+     "shows": "A river flowing past a rocky bank with trees."
+    },
+    {
+     "t_s": 22.5,
+     "on_topic": false,
+     "cinematic": true,
+     "shows": "A river with a forested area on the side."
+    },
+    {
+     "t_s": 27.6,
+     "on_topic": false,
+     "cinematic": true,
+     "shows": "A river with rocks and trees along the bank."
+    }
+   ],
+   "on_topic_count": 0,
+   "cinematic_count": 6,
+   "total": 6,
+   "answer": "Visual match: does the footage match the script's topic and words 100%? NO — evidence: 0/6 sampled frames on-topic [2.4s: A river surrounded by dense forest.; 7.5s: A river with forested hills in the background.; 12.6s: A river with trees along the bank.; 17.4s: A river flowing past a rocky bank with trees.; 22.5s: A river with a forested area on the side.; 27.6s: A river with rocks and trees along the bank.]",
+   "note": ""
+  },
+  "q1_pass": false,
+  "frames": [
+   {
+    "t_s": 2.4,
+    "shows": "A river surrounded by dense forest.",
+    "on_topic": false,
+    "cinematic": true
+   },
+   {
+    "t_s": 7.5,
+    "shows": "A river with forested hills in the background.",
+    "on_topic": false,
+    "cinematic": true
+   },
+   {
+    "t_s": 12.6,
+    "shows": "A river with trees along the bank.",
+    "on_topic": false,
+    "cinematic": true
+   },
+   {
+    "t_s": 17.4,
+    "shows": "A river flowing past a rocky bank with trees.",
+    "on_topic": false,
+    "cinematic": true
+   },
+   {
+    "t_s": 22.5,
+    "shows": "A river with a forested area on the side.",
+    "on_topic": false,
+    "cinematic": true
+   },
+   {
+    "t_s": 27.6,
+    "shows": "A river with rocks and trees along the bank.",
+    "on_topic": false,
+    "cinematic": true
+   }
+  ],
+  "q1_question": "Does the recorded image match the narrator's text 100%? (Forever Protocol v2, hard gate Q1)",
+  "q1_answer": "NO",
+  "verdict": "MISMATCH"
+ },
+ {
+  "id": "0a947b1d",
+  "label": "PUBLISHED Grand Canyon — Telegram /13",
+  "topic": "One Week Grand Canyon Road Trip Itinerary",
+  "queue_status": "published",
+  "video_path": "/home/hatch/workspace/cyrus-team/work/0a947b1d/video.mp4",
+  "video_exists": true,
+  "visual": {
+   "ran": true,
+   "passed": false,
+   "frames": [
+    {
+     "t_s": 2.4,
+     "on_topic": false,
+     "cinematic": true,
+     "shows": "River with forested banks."
+    },
+    {
+     "t_s": 7.5,
+     "on_topic": false,
+     "cinematic": true,
+     "shows": "River with forested banks and rocks."
+    },
+    {
+     "t_s": 12.6,
+     "on_topic": false,
+     "cinematic": true,
+     "shows": "River with forested banks."
+    },
+    {
+     "t_s": 17.4,
+     "on_topic": false,
+     "cinematic": true,
+     "shows": "River with forested banks."
+    },
+    {
+     "t_s": 22.5,
+     "on_topic": false,
+     "cinematic": true,
+     "shows": "River with forested banks."
+    },
+    {
+     "t_s": 27.6,
+     "on_topic": false,
+     "cinematic": true,
+     "shows": "River with forested banks."
+    }
+   ],
+   "on_topic_count": 0,
+   "cinematic_count": 6,
+   "total": 6,
+   "answer": "Visual match: does the footage match the script's topic and words 100%? NO — evidence: 0/6 sampled frames on-topic [2.4s: River with forested banks.; 7.5s: River with forested banks and rocks.; 12.6s: River with forested banks.; 17.4s: River with forested banks.; 22.5s: River with forested banks.; 27.6s: River with forested banks.]",
+   "note": ""
+  },
+  "q1_pass": false,
+  "frames": [
+   {
+    "t_s": 2.4,
+    "shows": "River with forested banks.",
+    "on_topic": false,
+    "cinematic": true
+   },
+   {
+    "t_s": 7.5,
+    "shows": "River with forested banks and rocks.",
+    "on_topic": false,
+    "cinematic": true
+   },
+   {
+    "t_s": 12.6,
+    "shows": "River with forested banks.",
+    "on_topic": false,
+    "cinematic": true
+   },
+   {
+    "t_s": 17.4,
+    "shows": "River with forested banks.",
+    "on_topic": false,
+    "cinematic": true
+   },
+   {
+    "t_s": 22.5,
+    "shows": "River with forested banks.",
+    "on_topic": false,
+    "cinematic": true
+   },
+   {
+    "t_s": 27.6,
+    "shows": "River with forested banks.",
+    "on_topic": false,
+    "cinematic": true
+   }
+  ],
+  "q1_question": "Does the recorded image match the narrator's text 100%? (Forever Protocol v2, hard gate Q1)",
+  "q1_answer": "NO",
+  "verdict": "MISMATCH"
+ }
+]
