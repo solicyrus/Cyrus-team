@@ -1,0 +1,54 @@
+{
+  "scenes": [
+    {
+      "scene": 1,
+      "beat": "hook_0_3",
+      "duration_s": 3,
+      "prompt": "A close-up shot of a hidden speakeasy door with intricate woodwork, slightly ajar, revealing a warm, inviting glow from within. The camera slowly dollies in towards the door, creating a sense of intrigue.",
+      "camera": "dolly in",
+      "lighting": "warm, soft light emanating from inside the speakeasy, creating a golden hue",
+      "lens": "50mm lens for a shallow depth of field",
+      "texture": "detailed wood grain and soft light reflections",
+      "subject_motion": "camera moves towards the door, enhancing the sense of secrecy",
+      "negative_prompt": "no warped or morphing subjects, deformed hands/faces, gibberish text, cartoon/CGI look, cheap stock look, flicker and watermarks"
+    },
+    {
+      "scene": 2,
+      "beat": "tension_3_15",
+      "duration_s": 12,
+      "prompt": "A sweeping aerial shot of a hidden rooftop garden with lush greenery and vibrant flowers, contrasting against the urban backdrop of the Las Vegas Strip. The camera pans smoothly across the garden, showcasing its beauty and the stunning skyline beyond.",
+      "camera": "aerial pan",
+      "lighting": "natural sunlight with a golden hour glow, casting soft shadows",
+      "lens": "wide-angle lens to capture the expansive view",
+      "texture": "rich foliage detail and smooth sky gradients",
+      "subject_motion": "camera glides over the garden, revealing its hidden charm",
+      "negative_prompt": "no warped or morphing subjects, deformed hands/faces, gibberish text, cartoon/CGI look, cheap stock look, flicker and watermarks"
+    },
+    {
+      "scene": 3,
+      "beat": "climax_15_25",
+      "duration_s": 10,
+      "prompt": "A dynamic shot of a bartender mixing a signature cocktail behind a concealed bar. The camera focuses on the bartender's skilled hands as they pour, shake, and garnish the drink, with soft, ambient lighting highlighting their movements.",
+      "camera": "close-up tracking shot",
+      "lighting": "soft, warm bar lighting with subtle highlights on the glassware",
+      "lens": "macro lens for intricate detail",
+      "texture": "smooth glass textures and vibrant colors of the cocktail",
+      "subject_motion": "bartender's hands in fluid motion, creating a sense of craftsmanship",
+      "negative_prompt": "no warped or morphing subjects, deformed hands/faces, gibberish text, cartoon/CGI look, cheap stock look, flicker and watermarks"
+    },
+    {
+      "scene": 4,
+      "beat": "loop_cta_25_30",
+      "duration_s": 5,
+      "prompt": "A quick, engaging shot of a smartphone displaying the Cyrus AI app interface, highlighting the 'Plan Your Trip' feature. The camera zooms in on the screen, emphasizing the ease of use.",
+      "camera": "quick zoom in",
+      "lighting": "bright, clear lighting to showcase the app interface",
+      "lens": "standard lens for clarity",
+      "texture": "smooth screen texture with vibrant app colors",
+      "subject_motion": "camera zooms in on the phone screen to draw attention to the app",
+      "negative_prompt": "no warped or morphing subjects, deformed hands/faces, gibberish text, cartoon/CGI look, cheap stock look, flicker and watermarks"
+    }
+  ],
+  "style": "Cinematic and vibrant, showcasing the hidden allure of the Las Vegas Strip.",
+  "negative_prompt": "no warped or morphing subjects, deformed hands/faces, gibberish text, cartoon/CGI look, cheap stock look, flicker and watermarks"
+}
