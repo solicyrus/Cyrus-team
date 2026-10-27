@@ -12,9 +12,16 @@ Statuses used by the pipeline:
     rejected          QA refused it (qa_reasons recorded) — it can
                       NEVER be promoted to the publish queue from
                       this state by the pipeline
-    awaiting_approval QA passed; waiting for Cyrus's approval
-                      (standing rule: videos are shown to him first)
-    approved          Cyrus approved; ready to publish
+    draft             QA passed; the item sits in the publishing
+                      queue as a DRAFT, held by the approval gate.
+                      It is published ONLY when the AUTO_PUBLISH
+                      environment flag is exactly "True" or a human
+                      flips it to approved (standing rule: videos
+                      are shown to Cyrus first). Queues written
+                      before 2026-10-27 used the label
+                      "awaiting_approval" for this same state; the
+                      gate treats both labels identically.
+    approved          manually approved; ready to publish
     published         every attempted channel reported a real send
     partial           some channels sent, some failed/skipped
 
@@ -33,6 +40,9 @@ DEFAULT_PATH = os.path.join(PROJECT_ROOT, "approval_queue.json")
 
 AWAITING_QA = "awaiting_qa"
 REJECTED = "rejected"
+DRAFT = "draft"
+# Legacy label for the draft state (pre-2026-10-27 queues). The
+# approval gate treats DRAFT and AWAITING_APPROVAL identically.
 AWAITING_APPROVAL = "awaiting_approval"
 APPROVED = "approved"
 PUBLISHED = "published"
