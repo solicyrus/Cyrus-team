@@ -1,7 +1,7 @@
 # SCRIPT — Hidden Gems of the Las Vegas Strip
 
-Queue draft id: `77302239` · status: **draft** (approval gate — NOT published)
-Regenerated 2026-10-27 under the tightened beat word budget (fix order, VIRAL-PROTOCOL.md §2). Supersedes draft `a4f904cd` (34.5s — over the hard 30s standard).
+Queue draft id: `cb84c943` · status: **draft** (approval gate — NOT published)
+Regenerated 2026-10-27 under **Forever Protocol v2** with topic-matched real Las Vegas footage (Wikimedia Commons, CC BY 3.0) after Cyrus rejected draft `77302239` (nature/river footage under a Las Vegas script — Critical Failure #001, see `smart_agents/ERROR-LOG.md`). The script itself is unchanged from the approved 77302239 script. Supersedes `77302239` and the earlier `a4f904cd` (34.5s — over the hard 30s standard).
 Format: 30-second golden formula (VIRAL-PROTOCOL.md §2)
 
 ## Beat sheet
