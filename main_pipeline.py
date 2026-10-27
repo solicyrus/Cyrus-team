@@ -7,12 +7,15 @@ output is the next one's input:
         -> Director           idea -> script package (+ optional
                               voice/render via the Developer)
         -> Strict QA gate     fact-scan + critic + media QA
-        -> publish queue      QA-passed items ONLY, as
-                              "awaiting_approval" — Cyrus approves
-                              (standing rule: videos shown to him
-                              first), then the Developer publishes
-                              approved items and records the REAL
-                              per-channel results.
+        -> publish queue      QA-passed items ONLY, landing as
+                              "draft" — the APPROVAL GATE holds
+                              every draft until AUTO_PUBLISH is
+                              exactly "True" in the environment or
+                              a human manually approves the item
+                              (standing rule: videos shown to Cyrus
+                              first). Only then does the Developer
+                              publish, recording the REAL per-channel
+                              results.
 
 A QA rejection stops the item: it lands in the queue as
 "rejected" with qa_reasons recorded, and this pipeline never
@@ -35,17 +38,42 @@ import sys
 import uuid
 from datetime import datetime
 
+# Load the repo-root .env (if present) before anything reads the
+# environment. Real values live ONLY in that local file — never in
+# the repo. Guarded: python-dotenv is a declared dependency, but
+# the pipeline must still start without it.
+try:
+    from dotenv import load_dotenv
+
+    load_dotenv(os.path.join(
+        os.path.dirname(os.path.abspath(__file__)), ".env"))
+except Exception:
+    pass
+
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from smart_agents import common  # noqa: E402
 from smart_agents import developer_agent, qa_agent  # noqa: E402
 from smart_agents.director_agent import DirectorAgent  # noqa: E402
 from smart_agents.queue import (APPROVED, AWAITING_APPROVAL,  # noqa: E402
-                                AWAITING_QA, PARTIAL, PUBLISHED,
-                                ApprovalQueue)
+                                AWAITING_QA, DRAFT, PARTIAL,
+                                PUBLISHED, ApprovalQueue)
 from smart_agents.strategist_agent import StrategistAgent  # noqa: E402
 
 log = common.get_logger("pipeline")
+
+# Statuses that mean "QA passed, sitting in the publishing queue
+# as a draft". DRAFT is the current label; AWAITING_APPROVAL is the
+# legacy label from queues written before 2026-10-27. The approval
+# gate treats them identically.
+DRAFT_STATES = (DRAFT, AWAITING_APPROVAL)
+
+
+def auto_publish_enabled():
+    """The AUTO_PUBLISH gate flag: only the exact string "True"
+    opens the gate. Unset, "False", or anything else keeps every
+    draft held for manual approval."""
+    return (os.environ.get("AUTO_PUBLISH") or "").strip() == "True"
 
 
 class Pipeline:
@@ -65,8 +93,8 @@ class Pipeline:
             target_seconds=30, with_video=False, dry_run=False):
         """Run the pipeline once. Returns a run report:
         {"ok": bool, "stage": ..., "items": [...], ...}.
-        "ok" is True only when at least one item reached
-        awaiting_approval. Every item carries its own true
+        "ok" is True only when at least one item reached the
+        publishing queue as a draft. Every item carries its own true
         outcome; failures name their stage and reason."""
         log.info("pipeline run: topics=%s with_video=%s dry_run=%s",
                  topics, with_video, dry_run)
@@ -83,7 +111,7 @@ class Pipeline:
                 idea, target_seconds=target_seconds,
                 with_video=with_video, dry_run=dry_run))
         passed = [i for i in items if i.get("status")
-                  == AWAITING_APPROVAL]
+                  in DRAFT_STATES]
         return {"ok": len(passed) > 0, "stage": "done",
                 "items": items,
                 "signals": strategy.get("signals", []),
@@ -146,18 +174,45 @@ class Pipeline:
 
     # -- human approval + publishing ----------------------------------
     def approve(self, entry_id):
-        """Mark a QA-passed entry approved (Cyrus's decision,
-        recorded by the manager). Returns True/False."""
+        """Manual approval: flip a QA-passed draft to approved
+        (Cyrus's decision, recorded by the manager). This marker
+        is one of the only two ways the publishing gate opens.
+        Returns True/False."""
         entry, err = self.queue.find(entry_id)
-        if err or entry.get("status") != AWAITING_APPROVAL:
+        if err or entry.get("status") not in DRAFT_STATES:
             return False
-        return self.queue.set_status(entry["id"], APPROVED)
+        return self.queue.set_status(
+            entry["id"], APPROVED, approved_by="manual",
+            approved_at=datetime.now().isoformat())
 
     def publish_approved(self):
-        """Publish every approved entry via the Developer and
-        record the REAL results. Returns a list of outcomes."""
+        """THE APPROVAL GATE. An entry is sent ONLY when:
+
+          * it carries the manual approval marker (status
+            "approved" — see approve()), OR
+          * AUTO_PUBLISH is exactly "True" in the environment and
+            the entry is a QA-passed draft.
+
+        Every other draft is HELD: nothing is sent, the hold is
+        logged, and the entry stays a draft. Returns the list of
+        outcomes for entries actually published (empty when the
+        gate held everything)."""
         outcomes = []
-        for entry in self.queue.by_status(APPROVED):
+        auto = auto_publish_enabled()
+        candidates = list(self.queue.by_status(APPROVED))
+        for entry in self.queue.all():
+            if entry.get("status") in DRAFT_STATES:
+                if auto:
+                    candidates.append(entry)
+                else:
+                    log.info(
+                        "approval gate: HOLD draft %s — AUTO_PUBLISH "
+                        "is not \"True\" and the item has no manual "
+                        "approval; nothing sent", entry.get("id"))
+        for entry in candidates:
+            basis = ("manual approval"
+                     if entry.get("status") == APPROVED
+                     else "AUTO_PUBLISH=True")
             result = self.developer.publish(entry)
             new_status = PUBLISHED if result["all_ok"] else PARTIAL
             self.queue.set_status(
@@ -165,7 +220,8 @@ class Pipeline:
                 published_at=datetime.now().isoformat())
             outcomes.append({"id": entry["id"], "status": new_status,
                              "results": result["results"]})
-            log.info("published %s -> %s", entry["id"], new_status)
+            log.info("approval gate: PUBLISH %s (%s) -> %s",
+                     entry["id"], basis, new_status)
         return outcomes
 
     def status(self):
@@ -212,7 +268,7 @@ def main(argv=None):
     if args.cmd == "approve":
         ok = pipeline.approve(args.entry_id)
         print("approved" if ok else
-              "not approved (unknown id or not awaiting_approval)")
+              "not approved (unknown id or not a QA-passed draft)")
         return 0 if ok else 1
     outcomes = pipeline.publish_approved()
     print(json.dumps(outcomes, ensure_ascii=False, indent=2))
