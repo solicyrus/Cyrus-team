@@ -2,13 +2,13 @@
   "passed": true,
   "reasons": [],
   "warnings": [
-    "critic score: 7.0/10 — Strong hook and clear focus on unique experiences, but ending lacks a decisive call to action.",
-    "viral Q1 [PASS]: The hook promises secret spots on the Las Vegas Strip, which is intriguing and specific.",
-    "viral Q2 [PASS]: The video maintains tension and interest with a clear payoff, avoiding filler.",
-    "viral Q3 [PASS]: Visual prompts are cinematic with detailed camera and lighting instructions, avoiding cheap effects.",
-    "viral Q4 [PASS]: The final line re-enters the hook, creating a seamless narrative loop."
+    "critic score: 6.0/10 — Strong hook and clear theme, but lacks a decisive ending.",
+    "viral Q1 [PASS]: The hook 'Secret spots on the Las Vegas Strip!' is a clear promise and pattern interrupt.",
+    "viral Q2 [PASS]: The pacing maintains tension and delivers a payoff with no filler.",
+    "viral Q3 [PASS]: Visual prompts are cinematic with specific camera and lighting details, and negative prompts are included.",
+    "viral Q4 [PASS]: The final line 'Secret spots await!' effectively loops back to the hook."
   ],
-  "critic_score": 7.0,
+  "critic_score": 6.0,
   "viral_checklist": {
     "ai_used": true,
     "passed": true,
@@ -16,33 +16,38 @@
       {
         "question": "Hook strength — does the first-3-seconds hook have multi-million-view stopping power (a real pattern interrupt plus a clear promise in the opening line)?",
         "pass": true,
-        "reason": "The hook promises secret spots on the Las Vegas Strip, which is intriguing and specific."
+        "reason": "The hook 'Secret spots on the Las Vegas Strip!' is a clear promise and pattern interrupt."
       },
       {
         "question": "Pacing — do story and rhythm hold all the way to second 30: no filler, tension maintained through 3-15s, and the payoff landing at 15-25s?",
         "pass": true,
-        "reason": "The video maintains tension and interest with a clear payoff, avoiding filler."
+        "reason": "The pacing maintains tension and delivers a payoff with no filler."
       },
       {
         "question": "Prompt quality — are the visual prompts genuinely cinematic (camera, lighting, lens, texture specified) and free of cheap/artificial effects, with negative prompts guarding against them?",
         "pass": true,
-        "reason": "Visual prompts are cinematic with detailed camera and lighting instructions, avoiding cheap effects."
+        "reason": "Visual prompts are cinematic with specific camera and lighting details, and negative prompts are included."
       },
       {
         "question": "Loop integrity — does the narrative loop actually work: does the final line of the script connect back into the opening hook line so an auto-replay feels seamless?",
         "pass": true,
-        "reason": "The final line re-enters the hook, creating a seamless narrative loop."
+        "reason": "The final line 'Secret spots await!' effectively loops back to the hook."
       }
     ]
   },
   "media_facts": {
     "exists": true,
     "readable": true,
-    "duration_s": 34.537,
+    "duration_s": 30.0,
     "width": 1080,
     "height": 1920,
     "has_audio": true,
     "has_video": true,
     "error": null
+  },
+  "duration_gate": {
+    "measured_s": 30.0,
+    "max_s": 31.0,
+    "passed": true
   }
 }
