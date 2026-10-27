@@ -172,3 +172,42 @@ in this team yet).
 
 Gate default at activation: `AUTO_PUBLISH=False` — every item
 stays a draft until Cyrus approves it or orders the flag on.
+
+## Activation outcome — 2026-10-27 (EXECUTED)
+
+Cyrus approved using the SAME OpenAI key that powers the robot
+team (its value lives in the factory's own env file). The value
+was copied file→file only — never printed, logged, committed,
+or pushed.
+
+- **Local `.env` (this repo's root, chmod 600, git-ignored,
+  NOT pushed):** `OPENAI_API_KEY` set from that value;
+  `AUTO_PUBLISH=False`. copied: yes. All other slots left
+  absent for now (Gemini, Telegram, YouTube, Instagram — the
+  staged steps in the list above).
+- **Health check with the real `.env` in place**
+  (`check_system_health.py`, exit 0):
+  - OpenAI (team brain) — OK — authenticated; 134 models visible
+  - Approval gate (AUTO_PUBLISH) — INFO — AUTO_PUBLISH=False — gate CLOSED
+  - ffmpeg + Piper — OK. Gemini/Telegram/YouTube/Instagram — NOT_SET (honest)
+  → **LOCAL TEAM ACTIVE.**
+- **First real pipeline run** (`main_pipeline.py run --topic
+  "Grand Canyon road trip" --with-video`):
+  - Strategist — 2 ideas from live web signals, source URLs
+    recorded (mygrandcanyonpark.com, earthtrekkers.com,
+    shakaguide.com)
+  - Director — gpt-4o scripts + image/video prompts (image
+    generation itself waits on GEMINI_API_KEY)
+  - Developer/render — TWO real videos rendered from house
+    footage + Piper voice: 30.0 s each, 1080×1920, audio
+    present (ffprobe-verified)
+  - QA — both items PASSED (fact-scan clean; critic 7.0/10
+    each, warning: endings lack a decisive call to action)
+  - Queue/gate — both items landed as **draft** and are HELD;
+    nothing was published (no platform credentials locally,
+    AUTO_PUBLISH=False)
+- **GitHub Actions secrets:** this team runs locally, so no
+  Actions secret is needed here. (The house-side attempt for
+  the Actions-based agents is recorded in cyrus-agents'
+  ACTIVATION-READY.md: the PAT lacks the Secrets permission —
+  403 — and that remains the one open step there.)
