@@ -58,14 +58,28 @@ log = common.get_logger("director")
 
 _SCRIPT_SYSTEM = (
     "You are THE CONTENT DIRECTOR of an AI travel content team "
-    "(Cyrus AI). You write short vertical videos that are "
-    "HOOK-FIRST: the hook is the exact line shown/spoken in the "
-    "first 2 seconds and it decides whether anyone watches. "
+    "(Cyrus AI). You write short vertical videos under the "
+    "VIRAL PROTOCOL's 30-SECOND GOLDEN FORMULA — every script "
+    "is built on exactly four timed beats: (1) HOOK 0-3s: a "
+    "visual + verbal pattern interrupt, the strongest visual "
+    "and one line of clarity + surprise — no greeting, no "
+    "wind-up; (2) TENSION 3-15s: fast narration, no filler, "
+    "every line a new visual fact that raises a question; "
+    "(3) CLIMAX 15-25s: the payoff the hook promised, cashed "
+    "in specifics; (4) LOOP & CTA 25-30s: ONE decisive call to "
+    "action, then a closing line written so it flows directly "
+    "back into the hook line — when the video auto-replays, "
+    "the sentence continues seamlessly (narrative loop; this "
+    "is a words-only device, footage is never looped). "
     "Scripts are spoken by a calm, confident host voice; keep "
     "sentences short and visual. " + APPROVED_FACTS + " "
     "End every description with one clear decision or call to "
     "action. Reply with ONLY valid JSON."
 )
+
+# The four beats of the golden formula, in order (VIRAL-PROTOCOL §2).
+BEAT_KEYS = ("hook_0_3", "tension_3_15", "climax_15_25",
+             "loop_cta_25_30")
 
 
 def write_script(idea, target_seconds=30):
@@ -81,20 +95,31 @@ def write_script(idea, target_seconds=30):
     seed_hook = str(idea.get("hook", "")).strip()
     title = str(idea.get("title", "")).strip()
     angle = str(idea.get("angle", "")).strip()
+    loop_hint = str(idea.get("loop", "")).strip()
     if not seed_hook and not title:
         return {"ok": False,
                 "error": "idea has neither hook nor title — "
                          "nothing to direct"}
     prompt = (
         f"Video idea:\n- seed hook: {seed_hook}\n- title: {title}\n"
-        f"- angle: {angle}\n- target length: about "
+        f"- angle: {angle}\n- loop concept from the strategist: "
+        f"{loop_hint or '(design one)'}\n- target length: about "
         f"{target_seconds} seconds of speech\n\n"
         "Write the full package as JSON with EXACTLY these fields:\n"
         '- "hook": the exact first-2-seconds line (may refine the '
         "seed hook, keep it explosive and honest)\n"
         '- "title": the video title\n'
-        '- "script": the full spoken script, timed to the target '
-        "length, one idea, one clear decision at the end\n"
+        '- "beats": an object with the four golden-formula beats, '
+        "each the exact spoken text for that segment:\n"
+        '  "hook_0_3" (0-3s pattern interrupt — must open with '
+        "the hook line),\n"
+        '  "tension_3_15" (3-15s fast story, no filler),\n'
+        '  "climax_15_25" (15-25s payoff in specifics),\n'
+        '  "loop_cta_25_30" (25-30s: ONE decisive call to action, '
+        "then a final line that flows straight back into the hook "
+        "line so a replay feels seamless)\n"
+        '- "script": the full spoken script — the four beats joined '
+        "in order, timed to the target length\n"
         '- "on_screen_text": short text overlays in order, '
         "comma-separated\n"
         '- "caption": a short social caption\n'
@@ -106,16 +131,19 @@ def write_script(idea, target_seconds=30):
     )
     data, ok = common.ask_json(prompt, _SCRIPT_SYSTEM,
                                role="thinking",
-                               max_tokens=1100, temperature=0.6)
+                               max_tokens=1400, temperature=0.6)
     if not ok or not data:
         return {"ok": False,
                 "error": ("AI unavailable (no key / no network / "
                           "bad response) — no script written, "
                           "none faked")}
+    raw_beats = data.get("beats") or {}
+    beats = {k: str(raw_beats.get(k, "")).strip() for k in BEAT_KEYS}
     script = {
         "hook": str(data.get("hook", "")).strip(),
         "title": str(data.get("title", "")).strip(),
         "script": str(data.get("script", "")).strip(),
+        "beats": beats,
         "on_screen_text": str(data.get("on_screen_text", "")).strip(),
         "caption": str(data.get("caption", "")).strip(),
         "description": str(data.get("description", "")).strip(),
@@ -124,6 +152,9 @@ def write_script(idea, target_seconds=30):
                      if str(h).strip()],
     }
     missing = [k for k in ("hook", "title", "script") if not script[k]]
+    missing_beats = [k for k in BEAT_KEYS if not beats[k]]
+    if missing_beats:
+        missing.append("beats." + ", beats.".join(missing_beats))
     if missing:
         return {"ok": False,
                 "error": ("AI returned an incomplete package "
@@ -144,10 +175,29 @@ _IMAGE_PROMPT_SYSTEM = (
 )
 
 _VIDEO_PROMPT_SYSTEM = (
-    "You write production prompts for short vertical travel "
-    "videos (9:16). Be precise: subject, setting, camera movement, "
-    "light, mood, duration per scene. No invented facts about "
-    "places. Reply with ONLY valid JSON."
+    "You write ULTRA-DETAILED CINEMATIC production prompts for "
+    "short vertical travel videos (9:16), to the standard in "
+    "VIRAL-PROTOCOL.md §3 — reusable assets for Sora / Runway / "
+    "Kling / Luma class video models. Every shot prompt must "
+    "specify: camera movement, cinematic lighting (source, "
+    "direction, colour feel), lens character, texture/surface "
+    "detail, exact subject motion, and vertical composition. "
+    "Every shot also gets a NEGATIVE prompt excluding warped or "
+    "morphing subjects, deformed hands/faces, gibberish text, "
+    "cartoon/CGI look, cheap stock look, flicker and watermarks. "
+    "Photorealistic, real-world texture, no cheap artificial "
+    "effects. No invented facts about places. Reply with ONLY "
+    "valid JSON."
+)
+
+# The global negative prompt every package carries
+# (VIRAL-PROTOCOL.md §3) — per-shot negatives extend it.
+GLOBAL_NEGATIVE_PROMPT = (
+    "warped or morphing subjects, deformed hands, deformed "
+    "faces, extra fingers, gibberish or warped text, cartoon "
+    "look, CGI look, cheap stock-photo look, oversaturated "
+    "colours, flicker, temporal inconsistency, watermark, logo "
+    "artefacts, low resolution, blurry"
 )
 
 
@@ -170,30 +220,74 @@ def build_image_prompt(script):
     return {"ok": True, "prompt": text}
 
 
-def build_video_prompt(script, scenes=3):
-    """A structured scene-by-scene production prompt."""
+def build_video_prompt(script, scenes=4):
+    """A structured, shot-by-shot CINEMATIC production prompt.
+
+    One shot per golden-formula beat by default (4). Each shot
+    carries the full VIRAL-PROTOCOL §3 spec — prompt, camera,
+    lighting, lens, texture, subject_motion, negative_prompt —
+    plus the package-level global negative prompt. The "prompt"
+    field stays for consumers written before this upgrade.
+    """
     script = script or {}
+    beats = script.get("beats") or {}
+    beats_text = " ".join(
+        f"[{k}] {beats[k]}" for k in BEAT_KEYS if beats.get(k))
     basis = (script.get("title", "") + ". "
-             + script.get("script", "")[:600]).strip()
+             + (beats_text or script.get("script", "")[:600])).strip()
     if not basis:
         return {"ok": False,
                 "error": "script has no title/text to prompt from"}
     prompt = (
-        "Video package:\n" + basis + "\n\n"
-        f"Break it into {scenes} scenes. Reply ONLY valid JSON: "
-        '{"scenes": [{"scene": 1, "duration_s": 10, "prompt": '
-        '"..."}], "style": "one line of overall visual style"}'
+        "Video package (title + timed beats):\n" + basis + "\n\n"
+        f"Break it into {scenes} shots, one per beat in order. "
+        "Durations follow the beats: shot 1 = 3s, shot 2 = 12s, "
+        "shot 3 = 10s, shot 4 = 5s (adjust only if scenes != 4). "
+        "Reply ONLY valid JSON: "
+        '{"scenes": [{"scene": 1, "beat": "hook_0_3", '
+        '"duration_s": 3, "prompt": "full cinematic description", '
+        '"camera": "camera movement", "lighting": "lighting '
+        'design", "lens": "lens character", "texture": "surface '
+        'texture detail", "subject_motion": "exact subject '
+        'motion", "negative_prompt": "shot-specific exclusions"'
+        '}], "style": "one line of overall visual style", '
+        '"negative_prompt": "package-level exclusions"}'
     )
     data, ok = common.ask_json(prompt, _VIDEO_PROMPT_SYSTEM,
                                role="volume",
-                               max_tokens=700, temperature=0.5)
+                               max_tokens=1400, temperature=0.5)
     if not ok or not data or not data.get("scenes"):
         return {"ok": False,
                 "error": ("AI unavailable or unusable response — "
                           "no video prompt produced, none faked")}
+    clean_scenes = []
+    for i, raw in enumerate(data["scenes"]):
+        if not isinstance(raw, dict):
+            continue
+        clean_scenes.append({
+            "scene": raw.get("scene", i + 1),
+            "beat": str(raw.get("beat", "")).strip(),
+            "duration_s": raw.get("duration_s"),
+            "prompt": str(raw.get("prompt", "")).strip(),
+            "camera": str(raw.get("camera", "")).strip(),
+            "lighting": str(raw.get("lighting", "")).strip(),
+            "lens": str(raw.get("lens", "")).strip(),
+            "texture": str(raw.get("texture", "")).strip(),
+            "subject_motion": str(raw.get("subject_motion",
+                                       "")).strip(),
+            "negative_prompt": str(
+                raw.get("negative_prompt", "")).strip(),
+        })
+    if not clean_scenes:
+        return {"ok": False,
+                "error": ("AI returned no usable scenes — no "
+                          "video prompt produced, none faked")}
+    negative = (str(data.get("negative_prompt", "")).strip()
+                or GLOBAL_NEGATIVE_PROMPT)
     return {"ok": True, "video_prompt": {
-        "scenes": data["scenes"],
+        "scenes": clean_scenes,
         "style": str(data.get("style", "")).strip(),
+        "negative_prompt": negative,
     }}
 
 
