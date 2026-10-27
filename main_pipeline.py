@@ -38,10 +38,23 @@ import sys
 import uuid
 from datetime import datetime
 
+# Interpreter standard (VIRAL-PROTOCOL §7): pipeline runs use
+# the robot-team venv python, which carries python-dotenv +
+# openai. Run as a script under any other interpreter, this
+# entry point re-execs itself under the venv python BEFORE the
+# .env load — the old guarded load skipped .env SILENTLY and the
+# team ran unconfigured while reporting nothing (2026-10-27 fix
+# order). Imported use (tests) never triggers the re-exec.
+if __name__ == "__main__":
+    import venv_bootstrap
+
+    venv_bootstrap.ensure_team_interpreter()
+
 # Load the repo-root .env (if present) before anything reads the
 # environment. Real values live ONLY in that local file — never in
-# the repo. Guarded: python-dotenv is a declared dependency, but
-# the pipeline must still start without it.
+# the repo. Guarded: when this module is IMPORTED (tests), the
+# caller owns the environment; the script path above guarantees
+# dotenv is importable before this point.
 try:
     from dotenv import load_dotenv
 
