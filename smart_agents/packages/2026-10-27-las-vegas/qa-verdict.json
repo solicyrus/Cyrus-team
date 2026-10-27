@@ -1,53 +1,169 @@
 {
+ "passed": true,
+ "reasons": [],
+ "warnings": [
+  "critic score: 6.0/10 — Strong hook and clear theme, but lacks a decisive call to action.",
+  "viral Q1 [PASS]: The hook 'Secret spots on the Las Vegas Strip!' is a clear promise and intriguing pattern interrupt.",
+  "viral Q2 [PASS]: The pacing maintains tension with no filler, and the payoff lands effectively between 15-25 seconds.",
+  "viral Q3 [PASS]: Visual prompts are cinematic with detailed camera and lighting specifications, and negative prompts ensure quality.",
+  "viral Q4 [FAIL]: The final line 'Secret spots await!' does not directly re-enter the hook, lacking a seamless narrative loop. (advisory — the hard gate decides)",
+  "hard gate Q1 [YES]: Visual match: does the footage match the script's topic and words 100%? YES — evidence: 6/6 sampled frames on-topic [2.4s: Aerial view of the Las Vegas Strip with neon lights and buildings.; 7.5s: View of the High Roller observation wheel and surrounding buildings on the Las Vegas Strip.; 12.6s: Close-up of the High Roller observation wheel with the Las Vegas skyline.; 17.4s: Aerial view of hotels and casinos on the Las Vegas Strip.; 22.5s: View of Caesars Palace and surrounding buildings on the Las Vegas Strip.; 27.6s: Aerial view of Bally's and nearby areas on the Las Vegas Strip.] | sync evidence: beat 3.0s -> cut 3.0s (offset 0.0s), beat 15.0s -> cut 15.0s (offset 0.0s), beat 25.0s -> cut 27.033s (offset 2.033s); tolerance ±0.75s",
+  "hard gate Q2 [YES]: viral checklist hook judgement: The hook 'Secret spots on the Las Vegas Strip!' is a clear promise and intriguing pattern interrupt.",
+  "hard gate Q3 [YES]: 6/6 sampled frames judged real and cinematic (no watermark/cartoon/cheap effects); render 1080x1920; native sharpness enforced at selection (Law 3)",
+  "hard gate Q4 [YES]: peak -1.0 dB (clipping at 0 dBFS; fail if > -0.2), mean -20.3 dB, longest mid-video silence 4.11s (limit 5.5s), speech in every beat: True",
+  "hard gate Q5 [YES]: beats complete: True; final beat re-enters the hook line: True; duration 30.0s inside [29.0, 31.0]: True; viral loop judgement: The final line 'Secret spots await!' does not directly re-enter the hook, lacking a seamless narrative loop."
+ ],
+ "critic_score": 6.0,
+ "viral_checklist": {
+  "ai_used": true,
+  "passed": false,
+  "answers": [
+   {
+    "question": "Hook strength — does the first-3-seconds hook have multi-million-view stopping power (a real pattern interrupt plus a clear promise in the opening line)?",
+    "pass": true,
+    "reason": "The hook 'Secret spots on the Las Vegas Strip!' is a clear promise and intriguing pattern interrupt."
+   },
+   {
+    "question": "Pacing — do story and rhythm hold all the way to second 30: no filler, tension maintained through 3-15s, and the payoff landing at 15-25s?",
+    "pass": true,
+    "reason": "The pacing maintains tension with no filler, and the payoff lands effectively between 15-25 seconds."
+   },
+   {
+    "question": "Prompt quality — are the visual prompts genuinely cinematic (camera, lighting, lens, texture specified) and free of cheap/artificial effects, with negative prompts guarding against them?",
+    "pass": true,
+    "reason": "Visual prompts are cinematic with detailed camera and lighting specifications, and negative prompts ensure quality."
+   },
+   {
+    "question": "Loop integrity — does the narrative loop actually work: does the final line of the script connect back into the opening hook line so an auto-replay feels seamless?",
+    "pass": false,
+    "reason": "The final line 'Secret spots await!' does not directly re-enter the hook, lacking a seamless narrative loop."
+   }
+  ]
+ },
+ "media_facts": {
+  "exists": true,
+  "readable": true,
+  "duration_s": 30.0,
+  "width": 1080,
+  "height": 1920,
+  "has_audio": true,
+  "has_video": true,
+  "error": null
+ },
+ "duration_gate": {
+  "measured_s": 30.0,
+  "max_s": 31.0,
+  "passed": true
+ },
+ "visual_match": {
+  "ran": true,
   "passed": true,
-  "reasons": [],
-  "warnings": [
-    "critic score: 6.0/10 — Strong hook and clear theme, but lacks a decisive ending.",
-    "viral Q1 [PASS]: The hook 'Secret spots on the Las Vegas Strip!' is a clear promise and pattern interrupt.",
-    "viral Q2 [PASS]: The pacing maintains tension and delivers a payoff with no filler.",
-    "viral Q3 [PASS]: Visual prompts are cinematic with specific camera and lighting details, and negative prompts are included.",
-    "viral Q4 [PASS]: The final line 'Secret spots await!' effectively loops back to the hook."
+  "answer": "Visual match: does the footage match the script's topic and words 100%? YES — evidence: 6/6 sampled frames on-topic [2.4s: Aerial view of the Las Vegas Strip with neon lights and buildings.; 7.5s: View of the High Roller observation wheel and surrounding buildings on the Las Vegas Strip.; 12.6s: Close-up of the High Roller observation wheel with the Las Vegas skyline.; 17.4s: Aerial view of hotels and casinos on the Las Vegas Strip.; 22.5s: View of Caesars Palace and surrounding buildings on the Las Vegas Strip.; 27.6s: Aerial view of Bally's and nearby areas on the Las Vegas Strip.]",
+  "on_topic_count": 6,
+  "cinematic_count": 6,
+  "total": 6,
+  "frames": [
+   {
+    "t_s": 2.4,
+    "on_topic": true,
+    "cinematic": true,
+    "shows": "Aerial view of the Las Vegas Strip with neon lights and buildings."
+   },
+   {
+    "t_s": 7.5,
+    "on_topic": true,
+    "cinematic": true,
+    "shows": "View of the High Roller observation wheel and surrounding buildings on the Las Vegas Strip."
+   },
+   {
+    "t_s": 12.6,
+    "on_topic": true,
+    "cinematic": true,
+    "shows": "Close-up of the High Roller observation wheel with the Las Vegas skyline."
+   },
+   {
+    "t_s": 17.4,
+    "on_topic": true,
+    "cinematic": true,
+    "shows": "Aerial view of hotels and casinos on the Las Vegas Strip."
+   },
+   {
+    "t_s": 22.5,
+    "on_topic": true,
+    "cinematic": true,
+    "shows": "View of Caesars Palace and surrounding buildings on the Las Vegas Strip."
+   },
+   {
+    "t_s": 27.6,
+    "on_topic": true,
+    "cinematic": true,
+    "shows": "Aerial view of Bally's and nearby areas on the Las Vegas Strip."
+   }
   ],
-  "critic_score": 6.0,
-  "viral_checklist": {
-    "ai_used": true,
-    "passed": true,
-    "answers": [
-      {
-        "question": "Hook strength — does the first-3-seconds hook have multi-million-view stopping power (a real pattern interrupt plus a clear promise in the opening line)?",
-        "pass": true,
-        "reason": "The hook 'Secret spots on the Las Vegas Strip!' is a clear promise and pattern interrupt."
-      },
-      {
-        "question": "Pacing — do story and rhythm hold all the way to second 30: no filler, tension maintained through 3-15s, and the payoff landing at 15-25s?",
-        "pass": true,
-        "reason": "The pacing maintains tension and delivers a payoff with no filler."
-      },
-      {
-        "question": "Prompt quality — are the visual prompts genuinely cinematic (camera, lighting, lens, texture specified) and free of cheap/artificial effects, with negative prompts guarding against them?",
-        "pass": true,
-        "reason": "Visual prompts are cinematic with specific camera and lighting details, and negative prompts are included."
-      },
-      {
-        "question": "Loop integrity — does the narrative loop actually work: does the final line of the script connect back into the opening hook line so an auto-replay feels seamless?",
-        "pass": true,
-        "reason": "The final line 'Secret spots await!' effectively loops back to the hook."
-      }
-    ]
-  },
-  "media_facts": {
-    "exists": true,
-    "readable": true,
-    "duration_s": 30.0,
-    "width": 1080,
-    "height": 1920,
-    "has_audio": true,
-    "has_video": true,
-    "error": null
-  },
-  "duration_gate": {
-    "measured_s": 30.0,
-    "max_s": 31.0,
-    "passed": true
+  "note": ""
+ },
+ "hard_gate": {
+  "ran": true,
+  "passed": true,
+  "answers": [
+   {
+    "q": 1,
+    "question": "Does the recorded image match the narrator's text 100%?",
+    "pass": true,
+    "evidence": "Visual match: does the footage match the script's topic and words 100%? YES — evidence: 6/6 sampled frames on-topic [2.4s: Aerial view of the Las Vegas Strip with neon lights and buildings.; 7.5s: View of the High Roller observation wheel and surrounding buildings on the Las Vegas Strip.; 12.6s: Close-up of the High Roller observation wheel with the Las Vegas skyline.; 17.4s: Aerial view of hotels and casinos on the Las Vegas Strip.; 22.5s: View of Caesars Palace and surrounding buildings on the Las Vegas Strip.; 27.6s: Aerial view of Bally's and nearby areas on the Las Vegas Strip.] | sync evidence: beat 3.0s -> cut 3.0s (offset 0.0s), beat 15.0s -> cut 15.0s (offset 0.0s), beat 25.0s -> cut 27.033s (offset 2.033s); tolerance ±0.75s"
+   },
+   {
+    "q": 2,
+    "question": "Does the 3-second hook have thumb-stopping power?",
+    "pass": true,
+    "evidence": "viral checklist hook judgement: The hook 'Secret spots on the Las Vegas Strip!' is a clear promise and intriguing pattern interrupt."
+   },
+   {
+    "q": 3,
+    "question": "Is the footage real, clear, and free of ugly effects?",
+    "pass": true,
+    "evidence": "6/6 sampled frames judged real and cinematic (no watermark/cartoon/cheap effects); render 1080x1920; native sharpness enforced at selection (Law 3)"
+   },
+   {
+    "q": 4,
+    "question": "Are the narrator voice and sound effects clean and cinematic?",
+    "pass": true,
+    "evidence": "peak -1.0 dB (clipping at 0 dBFS; fail if > -0.2), mean -20.3 dB, longest mid-video silence 4.11s (limit 5.5s), speech in every beat: True"
+   },
+   {
+    "q": 5,
+    "question": "Is the closing verbal loop executed smoothly?",
+    "pass": true,
+    "evidence": "beats complete: True; final beat re-enters the hook line: True; duration 30.0s inside [29.0, 31.0]: True; viral loop judgement: The final line 'Secret spots await!' does not directly re-enter the hook, lacking a seamless narrative loop."
+   }
+  ],
+  "sync": {
+   "ran": true,
+   "synced": false,
+   "offsets": [
+    {
+     "beat_boundary_s": 3.0,
+     "nearest_cut_s": 3.0,
+     "offset_s": 0.0
+    },
+    {
+     "beat_boundary_s": 15.0,
+     "nearest_cut_s": 15.0,
+     "offset_s": 0.0
+    },
+    {
+     "beat_boundary_s": 25.0,
+     "nearest_cut_s": 27.033,
+     "offset_s": 2.033
+    }
+   ],
+   "detected_cuts_s": [
+    3.0,
+    15.0,
+    27.033
+   ],
+   "plan_verified": false,
+   "note": "beat boundaries without a matching cut: 25.0"
   }
+ }
 }
