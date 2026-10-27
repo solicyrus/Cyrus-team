@@ -68,6 +68,26 @@ PADDING IS FORBIDDEN FOREVER: renders use distinct real clips
 from the footage bank (`looping=False`), as the footage planner
 guarantees. A narrative loop never justifies a footage loop.
 
+**WORD BUDGET (hard — calibrated 2026-10-27):** the 30 seconds
+is a standard, not a target. The Piper voice
+(en_US-amy-medium) is measured at **2.374 words/second** (an
+82-word script produced 34.54s of speech — draft `a4f904cd`,
+the overshoot that triggered this rule). Per-beat caps,
+enforced in the Director (`director_agent.BEAT_WORD_BUDGET`)
+BEFORE rendering — an over-budget script is rejected, never
+rendered long and forgiven:
+
+| Beat | Cap |
+|---|---|
+| hook_0_3 | ≤ 7 words |
+| tension_3_15 | ≤ 28 words |
+| climax_15_25 | ≤ 23 words |
+| loop_cta_25_30 | ≤ 11 words |
+| **full script** | **≤ 69 words (≈ 29s of voice)** |
+
+A compliant script's take lands at 28–30s. One retry with the
+violations fed back is allowed; still over budget = rejected.
+
 ## 3. CINEMATIC PROMPT STANDARD (Director — reusable assets)
 
 Alongside every script, the Director produces a shot-by-shot
@@ -118,6 +138,12 @@ real vertical video, real duration, audio present). When the AI
 judge is unavailable it ABSTAINS and says so — it never
 fabricates a verdict.
 
+**DURATION GATE (added 2026-10-27):** media QA measures the
+finished video with ffprobe and records the measurement on the
+verdict (`duration_gate`). **Longer than 31s is a hard FAIL**
+(`qa_agent.MAX_VIDEO_DURATION_S`) — no package ships over the
+formula's length, however good its script scored.
+
 ## 5. SELF-EVOLUTION LOOP
 
 - **Daily duty:** at least ONE complete package per day —
@@ -165,3 +191,18 @@ effective 2026-10-27, on these exact terms:
 | 09:15 | QA gate (fact-scan + critic + 4-question viral checklist + media QA) | Strict QA |
 | 09:30 | Draft ready in the approval queue for Cyrus's review | Pipeline |
 | — | Publish ONLY after Cyrus approves (approval gate unchanged) | Developer |
+
+## 7. RUNTIME STANDARD — INTERPRETER (added 2026-10-27)
+
+Pipeline entry points (`main_pipeline.py`,
+`check_system_health.py`) run on the **robot-team venv
+python** — `~/workspace/ultimate-robot-team/venv/bin/python` —
+which carries python-dotenv + openai. An entry point started
+under any other interpreter **re-execs itself** under the venv
+python before doing anything else
+(`venv_bootstrap.ensure_team_interpreter()`), or fails loudly
+with the exact fix. Silently skipping the .env load is
+FORBIDDEN: under the system python the old guarded load once
+made the health check report every service NOT_SET while the
+.env was fully configured — a silent no-op that looked like a
+result.
