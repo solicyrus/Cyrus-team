@@ -1,0 +1,223 @@
+{
+  "topic": "hidden spots on Las Vegas Strip",
+  "topic_class": "urban",
+  "visual_world": "Footage of the Las Vegas Strip showcasing vibrant murals, tucked-away bars, and elusive art pieces in a bustling urban setting.",
+  "queries": [
+    "Las Vegas Strip night",
+    "Las Vegas casino",
+    "Las Vegas aerial",
+    "Las Vegas murals",
+    "hidden bars Las Vegas",
+    "Las Vegas street art"
+  ],
+  "keyword_ai_used": true,
+  "target_seconds": 30,
+  "attempts": [
+    {
+      "query": "Las Vegas Strip night",
+      "source": "pexels",
+      "result": "skipped — no API key in env"
+    },
+    {
+      "query": "Las Vegas Strip night",
+      "source": "pixabay",
+      "result": "skipped — no API key in env"
+    },
+    {
+      "query": "Las Vegas Strip night",
+      "source": "wikimedia_commons",
+      "result": "2 candidates"
+    },
+    {
+      "query": "Las Vegas Strip night",
+      "source": "openverse",
+      "result": "error: HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "query": "Las Vegas Strip night",
+      "source": "archive_org",
+      "result": "0 candidates"
+    },
+    {
+      "query": "Las Vegas casino",
+      "source": "pexels",
+      "result": "skipped — no API key in env"
+    },
+    {
+      "query": "Las Vegas casino",
+      "source": "pixabay",
+      "result": "skipped — no API key in env"
+    },
+    {
+      "query": "Las Vegas casino",
+      "source": "wikimedia_commons",
+      "result": "6 candidates"
+    },
+    {
+      "query": "Las Vegas casino",
+      "source": "openverse",
+      "result": "error: HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "query": "Las Vegas casino",
+      "source": "archive_org",
+      "result": "0 candidates"
+    },
+    {
+      "query": "Las Vegas aerial",
+      "source": "pexels",
+      "result": "skipped — no API key in env"
+    },
+    {
+      "query": "Las Vegas aerial",
+      "source": "pixabay",
+      "result": "skipped — no API key in env"
+    },
+    {
+      "query": "Las Vegas aerial",
+      "source": "wikimedia_commons",
+      "result": "6 candidates"
+    },
+    {
+      "query": "Las Vegas aerial",
+      "source": "openverse",
+      "result": "error: HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "query": "Las Vegas aerial",
+      "source": "archive_org",
+      "result": "0 candidates"
+    },
+    {
+      "query": "Las Vegas murals",
+      "source": "pexels",
+      "result": "skipped — no API key in env"
+    },
+    {
+      "query": "Las Vegas murals",
+      "source": "pixabay",
+      "result": "skipped — no API key in env"
+    },
+    {
+      "query": "Las Vegas murals",
+      "source": "wikimedia_commons",
+      "result": "0 candidates"
+    },
+    {
+      "query": "Las Vegas murals",
+      "source": "openverse",
+      "result": "error: RemoteDisconnected: Remote end closed connection without response"
+    },
+    {
+      "query": "Las Vegas murals",
+      "source": "archive_org",
+      "result": "0 candidates"
+    },
+    {
+      "query": "hidden bars Las Vegas",
+      "source": "pexels",
+      "result": "skipped — no API key in env"
+    },
+    {
+      "query": "hidden bars Las Vegas",
+      "source": "pixabay",
+      "result": "skipped — no API key in env"
+    },
+    {
+      "query": "hidden bars Las Vegas",
+      "source": "wikimedia_commons",
+      "result": "0 candidates"
+    },
+    {
+      "query": "hidden bars Las Vegas",
+      "source": "openverse",
+      "result": "error: RemoteDisconnected: Remote end closed connection without response"
+    },
+    {
+      "query": "hidden bars Las Vegas",
+      "source": "archive_org",
+      "result": "0 candidates"
+    },
+    {
+      "query": "Las Vegas street art",
+      "source": "pexels",
+      "result": "skipped — no API key in env"
+    },
+    {
+      "query": "Las Vegas street art",
+      "source": "pixabay",
+      "result": "skipped — no API key in env"
+    },
+    {
+      "query": "Las Vegas street art",
+      "source": "wikimedia_commons",
+      "result": "6 candidates"
+    },
+    {
+      "query": "Las Vegas street art",
+      "source": "openverse",
+      "result": "error: RemoteDisconnected: Remote end closed connection without response"
+    },
+    {
+      "query": "Las Vegas street art",
+      "source": "archive_org",
+      "result": "0 candidates"
+    }
+  ],
+  "accepted": [
+    {
+      "title": "File:Aerial views of Las Vegas Strip, Nevada, USA at night including The Bellagio, The Flamingo, MGM Grand Hotel, Caesars Palace, The Cosmopolitan, Mirage Hotel and Casino and the Venetian Palazzo Resort Casino.webm",
+      "source": "wikimedia_commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Aerial_views_of_Las_Vegas_Strip,_Nevada,_USA_at_night_including_The_Bellagio,_The_Flamingo,_MGM_Grand_Hotel,_Caesars_Palace,_The_Cosmopolitan,_Mirage_Hotel_and_Casino_and_the_Venetian_Palazzo_Resort_Casino.webm",
+      "download_url": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Aerial_views_of_Las_Vegas_Strip%2C_Nevada%2C_USA_at_night_including_The_Bellagio%2C_The_Flamingo%2C_MGM_Grand_Hotel%2C_Caesars_Palace%2C_The_Cosmopolitan%2C_Mirage_Hotel_and_Casino_and_the_Venetian_Palazzo_Resort_Casino.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "Las Vegas Strip night",
+      "license": "CC BY 3.0",
+      "metadata_gate": {
+        "passed": true,
+        "stopped": false,
+        "matched_terms": [
+          "aerial",
+          "casino",
+          "las",
+          "night",
+          "strip",
+          "vegas"
+        ],
+        "class_hits": [],
+        "reason": "metadata matches topic terms: ['aerial', 'casino', 'las', 'night', 'strip', 'vegas']"
+      },
+      "native_width": 3840,
+      "native_height": 2158,
+      "crop_factor": 0.89,
+      "id": "clip_01",
+      "path": "work/cb84c943/footage/clip_01.webm",
+      "downloaded_url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b4/Aerial_views_of_Las_Vegas_Strip%2C_Nevada%2C_USA_at_night_including_The_Bellagio%2C_The_Flamingo%2C_MGM_Grand_Hotel%2C_Caesars_Palace%2C_The_Cosmopolitan%2C_Mirage_Hotel_and_Casino_and_the_Venetian_Palazzo_Resort_Casino.webm/Aerial_views_of_Las_Vegas_Strip%2C_Nevada%2C_USA_at_night_including_The_Bellagio%2C_The_Flamingo%2C_MGM_Grand_Hotel%2C_Caesars_Palace%2C_The_Cosmopolitan%2C_Mirage_Hotel_and_Casino_and_the_Venetian_Palazzo_Resort_Casino.webm.720p.vp9.webm",
+      "duration_s": 342.166,
+      "width": 1280,
+      "height": 720,
+      "has_audio": false,
+      "visual_check": {
+        "ran": true,
+        "on_topic": true,
+        "frames": [
+          {
+            "t_s": 102.65,
+            "on_topic": true,
+            "cinematic": true,
+            "shows": "Aerial view of large hotel buildings on the Las Vegas Strip at night with illuminated signage."
+          },
+          {
+            "t_s": 239.52,
+            "on_topic": true,
+            "cinematic": true,
+            "shows": "Aerial view of a hotel and casino on the Las Vegas Strip with neon lights and signage."
+          }
+        ],
+        "note": ""
+      }
+    }
+  ],
+  "rejected": [],
+  "accepted_seconds": 342.166,
+  "generated_at": "2026-10-27T23:36:14.707313"
+}
