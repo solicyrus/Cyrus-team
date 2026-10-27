@@ -154,10 +154,39 @@ _IDEA_SYSTEM = (
     "only — the signals are given to you with their source URLs. "
     "You never claim something is trending unless a signal says so. "
     "Every idea is HOOK-FIRST: the hook is the exact line shown in "
-    "the first 2 seconds and must stop the scroll. Never invent "
+    "the first 2 seconds and must stop the scroll. "
+    "VIRAL PROTOCOL (standing): every idea is designed for the "
+    "30-second golden formula — 0-3s Hook, 3-15s Tension, "
+    "15-25s Climax (payoff), 25-30s Loop & CTA — and must name "
+    "its LOOP: how the final spoken line hands back into the "
+    "hook line so an auto-replay feels seamless (a NARRATIVE "
+    "loop for watch time; footage looping is forbidden and is "
+    "never what 'loop' means here). The team's living formula "
+    "file, when provided, is binding craft knowledge — follow "
+    "its hook formulas and anti-patterns. Never invent "
     "prices, hours, phone numbers or facts about places. Reply with "
     "ONLY valid JSON."
 )
+
+
+_RESEARCH_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                             "research")
+VIRAL_FORMULAS_PATH = os.path.join(_RESEARCH_DIR, "VIRAL-FORMULAS.md")
+
+
+def load_viral_formulas(max_chars=3000):
+    """Read the team's living viral-formula knowledge file
+    (research/VIRAL-FORMULAS.md, VIRAL-PROTOCOL.md §1/§5).
+
+    Returns its text (truncated to max_chars) or "" when the
+    file does not exist yet — idea generation then proceeds on
+    the protocol alone and says nothing it cannot ground.
+    """
+    try:
+        with open(VIRAL_FORMULAS_PATH, "r", encoding="utf-8") as f:
+            return f.read()[:max_chars]
+    except OSError:
+        return ""
 
 
 def generate_ideas(signals, n=3, niche="travel"):
@@ -177,17 +206,26 @@ def generate_ideas(signals, n=3, niche="travel"):
     signal_block = "\n".join(
         f"- [{s.get('topic', niche)}] {s['title']} ({s['url']})"
         for s in signals[:15])
+    formulas = load_viral_formulas()
+    formulas_block = (
+        "\nTEAM VIRAL FORMULA FILE (living knowledge — apply its "
+        "hook formulas, pacing and loop rules):\n" + formulas + "\n"
+        if formulas else "")
     prompt = (
         f"REAL trend signals collected just now from the live web:\n"
-        f"{signal_block}\n\n"
+        f"{signal_block}\n"
+        f"{formulas_block}\n"
         f"Design {n} short-video ideas for the {niche} niche, each "
         "grounded in at least one signal above. For each idea give:\n"
         "- hook: the exact first-2-seconds on-screen line\n"
         "- title: a short, honest title\n"
         "- angle: one sentence — what the video shows/decides\n"
+        "- loop: how the final line hands back into the hook "
+        "(narrative seamless loop per the Viral Protocol)\n"
         "- source_urls: the signal URL(s) it is grounded in\n"
         'Reply ONLY valid JSON: {"ideas": [{"hook": "...", '
-        '"title": "...", "angle": "...", "source_urls": ["..."]}]}'
+        '"title": "...", "angle": "...", "loop": "...", '
+        '"source_urls": ["..."]}]}'
     )
     data, ok = common.ask_json(prompt, _IDEA_SYSTEM, role="thinking",
                                max_tokens=900, temperature=0.6)
@@ -210,6 +248,7 @@ def generate_ideas(signals, n=3, niche="travel"):
             "hook": hook,
             "title": title,
             "angle": str(raw.get("angle", "")).strip(),
+            "loop": str(raw.get("loop", "")).strip(),
             "topic": niche,
             "source_urls": urls,
         })
