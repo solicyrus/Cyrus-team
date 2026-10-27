@@ -36,6 +36,18 @@ import urllib.request
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 
+# Interpreter standard (VIRAL-PROTOCOL §7): this check runs on
+# the robot-team venv python (python-dotenv + openai). Run under
+# any other interpreter it re-execs itself under the venv python
+# BEFORE the .env load — previously the guarded load below
+# skipped .env silently and this check reported every service
+# NOT_SET while .env was fully configured (a silent no-op,
+# 2026-10-27 fix order).
+if __name__ == "__main__":
+    import venv_bootstrap
+
+    venv_bootstrap.ensure_team_interpreter()
+
 try:
     from dotenv import load_dotenv
 
