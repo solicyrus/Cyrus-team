@@ -32,6 +32,19 @@ import logging
 import os
 import time
 
+# Load the repo-root .env (if present) so every agent sees the
+# same configuration. Real values live ONLY in that local file —
+# never in the repo. Guarded: python-dotenv is a declared
+# dependency, but the team must still import cleanly without it.
+try:
+    from dotenv import load_dotenv
+
+    load_dotenv(os.path.join(
+        os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+        ".env"))
+except Exception:
+    pass
+
 # ------------------------------------------------------------------
 # Logging — one setup for the whole team (charter: professional
 # logging throughout; no agent prints ad-hoc).
