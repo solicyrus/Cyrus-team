@@ -28,9 +28,14 @@ Three layers, in order:
    judge ran; when it cannot run, it abstains like the critic.
 3. MEDIA QA — ffprobe on the rendered video: existence, video
    stream, duration, resolution (vertical 9:16 at >= 720 wide),
-   audio-stream presence. A video that fails is rejected on
-   measured facts, not opinions. (The old team had NOTHING that
-   inspected a finished render — audit diagnosis #6.)
+   audio-stream presence — AND a hard DURATION GATE: a finished
+   video longer than 31s FAILS the package. The Viral
+   Protocol's 30s formula is a hard standard, not a target (fix
+   order 2026-10-27, after draft a4f904cd rendered 34.5s and
+   passed the old gate, which had no ceiling). A video that
+   fails is rejected on measured facts, not opinions. (The old
+   team had NOTHING that inspected a finished render — audit
+   diagnosis #6.)
 
 Two-state rule: a package is either verified PASS, or REJECTED
 with reasons. There is no third, pretend state.
@@ -58,6 +63,11 @@ CRITIC_REJECT_BELOW = 4.0
 
 MIN_VIDEO_WIDTH = 720
 MIN_VIDEO_HEIGHT = 1280
+
+# DURATION GATE (VIRAL-PROTOCOL §2/§4): the golden formula is
+# 30s. A finished video longer than this ceiling FAILS the
+# package — measured by ffprobe, recorded on the verdict.
+MAX_VIDEO_DURATION_S = 31.0
 
 
 # ==================================================================
@@ -305,7 +315,8 @@ def probe_video(path):
     return facts_out
 
 
-def check_video(path, min_duration_s=None, expect_audio=True,
+def check_video(path, min_duration_s=None, max_duration_s=None,
+                expect_audio=True,
                 min_width=MIN_VIDEO_WIDTH, min_height=MIN_VIDEO_HEIGHT):
     """Technical gate over a rendered video. Returns
     {"passed": bool, "flags": [...], "facts": {...}} — every flag
@@ -325,6 +336,13 @@ def check_video(path, min_duration_s=None, expect_audio=True,
     elif min_duration_s is not None and duration < min_duration_s:
         flags.append(
             f"video too short: {duration}s < {min_duration_s}s")
+    if (duration is not None and duration > 0
+            and max_duration_s is not None
+            and duration > max_duration_s):
+        flags.append(
+            f"video too long: {duration}s > {max_duration_s}s "
+            "— DURATION GATE: the 30s golden formula is a hard "
+            "standard, not a target (VIRAL-PROTOCOL §2/§4)")
     width = facts_out["width"] or 0
     height = facts_out["height"] or 0
     if width < min_width or height < min_height:
@@ -398,7 +416,9 @@ def check_package(package, queue=None):
 
     media_qa = None
     if package.get("video_path"):
-        media_qa = check_video(package["video_path"])
+        media_qa = check_video(
+            package["video_path"],
+            max_duration_s=MAX_VIDEO_DURATION_S)
         reasons.extend(media_qa["flags"])
 
     passed = len(reasons) == 0
@@ -429,6 +449,15 @@ def _verdict_summary(verdict):
     viral = verdict.get("viral_checklist") or {}
     media = verdict.get("media_qa") or {}
     media_facts = media.get("facts") if media else None
+    duration_gate = None
+    if media_facts:
+        measured = media_facts.get("duration_s")
+        duration_gate = {
+            "measured_s": measured,
+            "max_s": MAX_VIDEO_DURATION_S,
+            "passed": (measured is not None
+                       and 0 < measured <= MAX_VIDEO_DURATION_S),
+        }
     return {
         "passed": verdict["passed"],
         "reasons": verdict["reasons"],
@@ -440,6 +469,7 @@ def _verdict_summary(verdict):
             "answers": viral.get("answers", []),
         },
         "media_facts": media_facts,
+        "duration_gate": duration_gate,
     }
 
 
