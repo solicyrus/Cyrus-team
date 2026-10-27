@@ -448,6 +448,64 @@ def whatsapp_build_package(text, out_path, title=""):
 
 
 # ==================================================================
+# 4b. TIKTOK — manual one-tap cross-post package (distribution-only)
+#
+# Cyrus's decision (2026-10-27): TikTok is REOPENED as a
+# distribution channel only — no API, no auto-post, no separate
+# growth work. The daily package's vertical render is cross-posted
+# by Cyrus from his phone (@cyrusoutdoor). 2-week data test; dead
+# numbers after ~2 weeks of daily posts close it again
+# (VIRAL-PROTOCOL.md).
+# ==================================================================
+
+_TIKTOK_URL = "https://www.tiktok.com/@cyrusoutdoor"
+
+
+def tiktok_build_package(video_path, caption, hashtags,
+                         cover_text, out_path, title=""):
+    """Build the ready-to-post TikTok package file for one video.
+
+    HONEST BY DESIGN: no TikTok API exists for this team — Cyrus
+    posts with one tap on his phone. This writes the package
+    (video reference + TikTok-native caption + hashtag set +
+    on-screen cover text line) and reports automated=False. It
+    NEVER claims anything was posted. The package as a whole
+    stays behind the same approval gate as every other channel.
+    """
+    tags = " ".join(
+        "#" + str(h).strip().lstrip("#")
+        for h in (hashtags or []) if str(h).strip())
+    lines = [
+        f"# TikTok package — {title or 'Cyrus AI daily video'}",
+        "",
+        "Channel: Cyrus Outdoors (@cyrusoutdoor) — "
+        f"{_TIKTOK_URL}",
+        "How: Cyrus posts the video below from his phone (one "
+        "tap). Nothing is auto-posted — no TikTok API is "
+        "configured for this team. Distribution-only channel "
+        "(2-week data test, opened 2026-10-27).",
+        "",
+        f"VIDEO FILE: {video_path}",
+        f"COVER TEXT (on-screen, first frame): {cover_text}",
+        "",
+        "---- CAPTION (copy into TikTok) ----",
+        caption or "",
+        "",
+        "---- HASHTAGS ----",
+        tags,
+        "",
+    ]
+    directory = os.path.dirname(os.path.abspath(out_path))
+    os.makedirs(directory, exist_ok=True)
+    with open(out_path, "w", encoding="utf-8") as f:
+        f.write("\n".join(lines))
+    return {"ok": True, "path": out_path, "automated": False,
+            "note": ("TikTok package ready for Cyrus's one tap "
+                     "— NOT posted (no TikTok API); "
+                     "distribution-only 2-week test channel")}
+
+
+# ==================================================================
 # 5. RENDER HANDLING — run the Director's engine for a package
 # ==================================================================
 
@@ -548,6 +606,12 @@ def publish_entry(entry):
                 "reason": ("WhatsApp is manual one-tap — build "
                            "the package with "
                            "whatsapp_build_package()")}
+        elif channel == "tiktok":
+            results[channel] = {
+                "ok": False, "skipped": True,
+                "reason": ("TikTok is manual one-tap "
+                           "distribution-only — build the package "
+                           "with tiktok_build_package()")}
         else:
             results[channel] = {"ok": False,
                                 "error": f"unknown channel {channel!r}"}
