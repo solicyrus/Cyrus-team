@@ -21,6 +21,11 @@ Three layers, in order:
    CAN reject — but only when it actually ran (ai_used) and scores
    a package below 4/10 with a stated reason. When the AI is
    unavailable the critic abstains; it never fabricates a verdict.
+2b. VIRAL CHECKLIST — the Viral Protocol's 4 questions
+   (VIRAL-PROTOCOL.md §4: hook strength, pacing to 30s, prompt
+   quality, loop integrity), answered literally with pass/fail +
+   reason on every review. A failed question rejects when the
+   judge ran; when it cannot run, it abstains like the critic.
 3. MEDIA QA — ffprobe on the rendered video: existence, video
    stream, duration, resolution (vertical 9:16 at >= 720 wide),
    audio-stream presence. A video that fails is rejected on
@@ -139,6 +144,116 @@ def critic_score(script):
                           "abstained"}
     return {"ai_used": True, "score": score,
             "reason": str(data.get("reason", "")).strip()}
+
+
+# ==================================================================
+# 2b. VIRAL CHECKLIST — the Protocol's 4 questions (VIRAL-PROTOCOL §4)
+#
+# Asked LITERALLY on every review, answered pass/fail + reason by
+# the thinking tier. A failed question rejects the package when
+# the judge actually ran — the protocol's Strict QA Gate. When
+# the AI is unavailable the checklist ABSTAINS (ai_used=False,
+# passed=None) and never fabricates an answer.
+# ==================================================================
+
+VIRAL_QUESTIONS = (
+    "Hook strength — does the first-3-seconds hook have "
+    "multi-million-view stopping power (a real pattern interrupt "
+    "plus a clear promise in the opening line)?",
+    "Pacing — do story and rhythm hold all the way to second "
+    "30: no filler, tension maintained through 3-15s, and the "
+    "payoff landing at 15-25s?",
+    "Prompt quality — are the visual prompts genuinely "
+    "cinematic (camera, lighting, lens, texture specified) and "
+    "free of cheap/artificial effects, with negative prompts "
+    "guarding against them?",
+    "Loop integrity — does the narrative loop actually work: "
+    "does the final line of the script connect back into the "
+    "opening hook line so an auto-replay feels seamless?",
+)
+
+_VIRAL_SYSTEM = (
+    "You are THE STRICT QA of an AI travel content team, running "
+    "the VIRAL PROTOCOL checklist. You judge a short-video "
+    "package against four exact questions and answer each with "
+    "pass (true/false) and ONE concrete reason. You are ruthless "
+    "and specific: a vague hook, filler, a missing payoff, "
+    "generic prompts, or a final line that does not re-enter "
+    "the hook all FAIL. Average work fails. Reply with ONLY "
+    "valid JSON."
+)
+
+
+def viral_checklist(script, video_prompt=None):
+    """Answer the Protocol's 4 questions for one package.
+
+    Returns {"ai_used": bool, "passed": bool|None,
+             "answers": [{"question", "pass", "reason"}]}.
+    passed is None (and answers empty) when the judge abstained
+    — no verdict was fabricated.
+    """
+    script = script or {}
+    beats = script.get("beats") or {}
+    scenes = (video_prompt or {}).get("scenes") or []
+    scene_lines = []
+    for s in scenes:
+        if isinstance(s, dict):
+            scene_lines.append(
+                f"shot {s.get('scene')}: "
+                f"{str(s.get('prompt', ''))[:200]} | camera: "
+                f"{s.get('camera', '')} | negatives: "
+                f"{str(s.get('negative_prompt', ''))[:120]}")
+    package_text = "\n".join([
+        f"hook: {script.get('hook', '')}",
+        f"title: {script.get('title', '')}",
+        "beats: " + "; ".join(
+            f"{k} = {beats[k]}" for k in beats if beats.get(k)),
+        f"full script: {script.get('script', '')}",
+        "video prompts:\n" + ("\n".join(scene_lines)
+                               or "(none provided)"),
+        f"global negative prompt: "
+        f"{(video_prompt or {}).get('negative_prompt', '')}",
+    ])
+    questions_block = "\n".join(
+        f"Q{i + 1}. {q}" for i, q in enumerate(VIRAL_QUESTIONS))
+    prompt = (
+        "Judge this video package against the four Viral "
+        "Protocol questions.\n\n" + package_text[:3500] + "\n\n"
+        + questions_block + "\n\n"
+        'Reply ONLY valid JSON: {"answers": [{"q": 1, '
+        '"pass": true, "reason": "one concrete sentence"}, '
+        '... exactly 4 answers, q = 1..4]}'
+    )
+    data, ok = common.ask_json(prompt, _VIRAL_SYSTEM,
+                               role="thinking",
+                               max_tokens=700, temperature=0.2)
+    if not ok or not data or not isinstance(data.get("answers"),
+                                            list):
+        return {"ai_used": False, "passed": None, "answers": [],
+                "note": "viral checklist judge unavailable — "
+                        "abstained"}
+    by_q = {}
+    for raw in data["answers"]:
+        if not isinstance(raw, dict):
+            continue
+        try:
+            qn = int(raw.get("q"))
+        except (TypeError, ValueError):
+            continue
+        if 1 <= qn <= len(VIRAL_QUESTIONS):
+            by_q[qn] = {
+                "question": VIRAL_QUESTIONS[qn - 1],
+                "pass": bool(raw.get("pass")),
+                "reason": str(raw.get("reason", "")).strip(),
+            }
+    if len(by_q) != len(VIRAL_QUESTIONS):
+        return {"ai_used": False, "passed": None, "answers": [],
+                "note": ("viral checklist judge returned an "
+                         "incomplete answer set — abstained")}
+    answers = [by_q[i] for i in range(1, len(VIRAL_QUESTIONS) + 1)]
+    return {"ai_used": True,
+            "passed": all(a["pass"] for a in answers),
+            "answers": answers}
 
 
 # ==================================================================
@@ -265,6 +380,22 @@ def check_package(package, queue=None):
     else:
         warnings.append(f"critic abstained: {critic['reason']}")
 
+    viral = viral_checklist(script, package.get("video_prompt"))
+    if viral["ai_used"]:
+        for i, answer in enumerate(viral["answers"], start=1):
+            mark = "PASS" if answer["pass"] else "FAIL"
+            line = (f"viral Q{i} [{mark}]: {answer['reason']}")
+            if answer["pass"]:
+                warnings.append(line)
+            else:
+                reasons.append(
+                    f"viral checklist failed Q{i} "
+                    f"({answer['question'].split(' — ')[0]}): "
+                    f"{answer['reason']}")
+    else:
+        warnings.append(
+            f"viral checklist abstained: {viral.get('note', '')}")
+
     media_qa = None
     if package.get("video_path"):
         media_qa = check_video(package["video_path"])
@@ -273,7 +404,8 @@ def check_package(package, queue=None):
     passed = len(reasons) == 0
     verdict = {"passed": passed, "reasons": reasons,
                "warnings": warnings, "text_qa": text_qa,
-               "critic": critic, "media_qa": media_qa}
+               "critic": critic, "viral_checklist": viral,
+               "media_qa": media_qa}
 
     if queue is not None and package.get("id"):
         if passed:
@@ -294,6 +426,7 @@ def check_package(package, queue=None):
 def _verdict_summary(verdict):
     """Compact, JSON-safe summary stored on the queue entry."""
     critic = verdict.get("critic") or {}
+    viral = verdict.get("viral_checklist") or {}
     media = verdict.get("media_qa") or {}
     media_facts = media.get("facts") if media else None
     return {
@@ -301,6 +434,11 @@ def _verdict_summary(verdict):
         "reasons": verdict["reasons"],
         "warnings": verdict["warnings"],
         "critic_score": critic.get("score"),
+        "viral_checklist": {
+            "ai_used": viral.get("ai_used", False),
+            "passed": viral.get("passed"),
+            "answers": viral.get("answers", []),
+        },
         "media_facts": media_facts,
     }
 
