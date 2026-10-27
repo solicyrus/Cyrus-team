@@ -42,7 +42,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(
 
 from smart_agents import common  # noqa: E402
 from smart_agents import facts  # noqa: E402
-from smart_agents.queue import AWAITING_APPROVAL, REJECTED  # noqa: E402
+from smart_agents.queue import DRAFT, REJECTED  # noqa: E402
 
 log = common.get_logger("qa")
 
@@ -238,7 +238,8 @@ def check_package(package, queue=None):
               "text_qa": ..., "critic": ..., "media_qa": ...}.
 
     When `queue` is given and the package has an "id", the verdict
-    is APPLIED: pass -> status awaiting_approval; fail -> status
+    is APPLIED: pass -> status draft (publishing queue, held by
+    the approval gate); fail -> status
     rejected with qa_reasons recorded. A rejected package can
     never be promoted by the pipeline from that state.
     """
@@ -276,9 +277,10 @@ def check_package(package, queue=None):
 
     if queue is not None and package.get("id"):
         if passed:
-            queue.set_status(package["id"], AWAITING_APPROVAL,
+            queue.set_status(package["id"], DRAFT,
                              qa_verdict=_verdict_summary(verdict))
-            log.info("QA PASS: %s -> awaiting_approval",
+            log.info("QA PASS: %s -> draft (publishing queue, "
+                     "approval gate holds it)",
                      package["id"])
         else:
             queue.set_status(package["id"], REJECTED,
