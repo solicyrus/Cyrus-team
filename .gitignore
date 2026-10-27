@@ -1,0 +1,8 @@
+.env
+__pycache__/
+*.pyc
+approval_queue.json
+*.tmp
+work/
+smart_agents/content_calendar.json
+youtube_token.json
