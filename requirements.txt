@@ -1,2 +1,7 @@
-crewai
-langchain-openai
+# Cyrus Team — Python dependencies for the parts that need them.
+# The core agents run on the standard library alone; these unlock
+# the AI wrapper and the YouTube uploader.
+openai>=1.30
+google-genai
+google-api-python-client
+google-auth-oauthlib
