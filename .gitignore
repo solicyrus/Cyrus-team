@@ -1,8 +1,13 @@
 .env
+.env.*
+!.env.example
 __pycache__/
 *.pyc
 approval_queue.json
+publishing_queue.json
 *.tmp
 work/
 smart_agents/content_calendar.json
 youtube_token.json
+*token*.json
+client_secret*.json
