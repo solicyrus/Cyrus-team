@@ -133,6 +133,37 @@ def create_with_retry(client, **kwargs):
     raise last_exc
 
 
+# ------------------------------------------------------------------
+# ERROR LOG — Zero-Waste Protocol (Cyrus, 2026-10-27)
+#
+# Every STOP or rejection produced by the new gates (pre-render
+# metadata stop, footage-coverage stop, visual rejection, QA
+# hard-gate rejection) is appended to smart_agents/ERROR-LOG.md.
+# Failures are institutional memory: logged, never hidden.
+# ------------------------------------------------------------------
+
+ERROR_LOG_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                              "ERROR-LOG.md")
+
+
+def append_error_log(kind, summary, detail=""):
+    """Append one dated entry to smart_agents/ERROR-LOG.md.
+    Never raises — a logging failure must not break a gate."""
+    try:
+        from datetime import datetime
+
+        stamp = datetime.now().isoformat(timespec="seconds")
+        lines = [f"\n## {stamp} — {kind}", summary]
+        if detail:
+            lines.append(detail)
+        with open(ERROR_LOG_PATH, "a", encoding="utf-8") as f:
+            f.write("\n".join(lines) + "\n")
+        return True
+    except Exception as exc:
+        log.warning("could not append to ERROR-LOG.md: %s", exc)
+        return False
+
+
 # Team standard (from URT brain/llm.py, 2026-10-23 standing order):
 # reason step by step silently, then give only the final answer.
 SUPER_THINK = (
@@ -169,6 +200,64 @@ def ask(prompt, system, role="volume", max_tokens=600, temperature=0.7):
         return text, True
     except Exception as exc:
         log.warning("AI ask failed: %s: %s", type(exc).__name__, exc)
+        return None, False
+
+
+def ask_vision_json(image_paths, prompt, system, role="thinking",
+                    max_tokens=1000, temperature=0.2):
+    """Ask the vision-capable tier about local image files and
+    parse a JSON object out of the reply.
+
+    Returns (dict, True) on success, (None, False) on ANY failure
+    (no key, unreadable image, API error, non-JSON reply). Never
+    raises — callers abstain honestly instead of fabricating a
+    verdict, exactly like ask()/ask_json().
+    """
+    import base64
+
+    client = _client()
+    if client is None:
+        return None, False
+    content = [{"type": "text", "text": prompt}]
+    for path in image_paths or []:
+        try:
+            with open(path, "rb") as f:
+                encoded = base64.b64encode(f.read()).decode("ascii")
+        except Exception as exc:
+            log.warning("vision image unreadable: %s: %s",
+                        path, exc)
+            return None, False
+        content.append({
+            "type": "image_url",
+            "image_url": {
+                "url": f"data:image/jpeg;base64,{encoded}",
+                "detail": "low",
+            },
+        })
+    try:
+        resp = create_with_retry(
+            client,
+            model=model_for(role),
+            messages=[
+                {"role": "system", "content": SUPER_THINK + system},
+                {"role": "user", "content": content},
+            ],
+            max_tokens=max_tokens,
+            temperature=temperature,
+        )
+        text = (resp.choices[0].message.content or "").strip()
+        if not text:
+            return None, False
+        start, end = text.find("{"), text.rfind("}")
+        if start < 0 or end <= start:
+            return None, False
+        data = json.loads(text[start:end + 1])
+        if not isinstance(data, dict):
+            return None, False
+        return data, True
+    except Exception as exc:
+        log.warning("AI vision ask failed: %s: %s",
+                    type(exc).__name__, exc)
         return None, False
 
 
