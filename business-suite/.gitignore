@@ -1,0 +1,5 @@
+# Runtime data produced by the agents — never shipped, never committed.
+clients/*/data/
+clients/*/reports/
+__pycache__/
+*.pyc
